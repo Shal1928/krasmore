@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C825DDC6-5CF6-44E4-A209-01F986370752}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Try_out</RootNamespace>
+    <AssemblyName>Try-out</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="advanced_bgimg_slideshow\css\style.css" />
+    <Content Include="advanced_bgimg_slideshow\images\biking.jpg" />
+    <Content Include="advanced_bgimg_slideshow\images\btn_back.png" />
+    <Content Include="advanced_bgimg_slideshow\images\btn_next.png" />
+    <Content Include="advanced_bgimg_slideshow\images\btn_pause.png" />
+    <Content Include="advanced_bgimg_slideshow\images\btn_play.png" />
+    <Content Include="advanced_bgimg_slideshow\images\food.jpg" />
+    <Content Include="advanced_bgimg_slideshow\images\headerbg.png" />
+    <Content Include="advanced_bgimg_slideshow\images\logo.png" />
+    <Content Include="advanced_bgimg_slideshow\images\nature.jpg" />
+    <Content Include="advanced_bgimg_slideshow\images\textbg.png" />
+    <Content Include="advanced_bgimg_slideshow\images\vacation.jpg" />
+    <Content Include="advanced_bgimg_slideshow\images\work.jpg" />
+    <Content Include="advanced_bgimg_slideshow\index.html" />
+    <Content Include="advanced_bgimg_slideshow\js\script.js" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\._index.html" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\css\._style.css" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._biking.jpg" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._btn_back.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._btn_next.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._btn_pause.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._btn_play.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._food.jpg" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._headerbg.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._logo.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._nature.jpg" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._textbg.png" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._vacation.jpg" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._work.jpg" />
+    <Content Include="advanced_bgimg_slideshow\__MACOSX\js\._script.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="advanced_bgimg_slideshow\images\.DS_Store" />
+    <None Include="advanced_bgimg_slideshow\__MACOSX\images\._.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
