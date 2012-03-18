@@ -3,44 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Site", "site\Site.csproj", "{0517B9AF-78AF-41A1-A1EB-740A1EA520AD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "All photos", "All photos", "{5C93EB0E-C375-42A4-A06B-7BC8928C692C}"
-	ProjectSection(SolutionItems) = preProject
-		All photos\Бирюса (1).JPG = All photos\Бирюса (1).JPG
-		All photos\Бирюса (2).JPG = All photos\Бирюса (2).JPG
-		All photos\Бирюса (3).JPG = All photos\Бирюса (3).JPG
-		All photos\Бирюса (4).JPG = All photos\Бирюса (4).JPG
-		All photos\Бирюса (5).JPG = All photos\Бирюса (5).JPG
-		All photos\ГЭС (1).JPG = All photos\ГЭС (1).JPG
-		All photos\ГЭС (2).JPG = All photos\ГЭС (2).JPG
-		All photos\ГЭС (3).JPG = All photos\ГЭС (3).JPG
-		All photos\ГЭС (4).JPG = All photos\ГЭС (4).JPG
-		All photos\ГЭС (5).JPG = All photos\ГЭС (5).JPG
-		All photos\Катера (1).jpg = All photos\Катера (1).jpg
-		All photos\Катера (10).jpg = All photos\Катера (10).jpg
-		All photos\Катера (2).JPG = All photos\Катера (2).JPG
-		All photos\Катера (3).JPG = All photos\Катера (3).JPG
-		All photos\Катера (4).JPG = All photos\Катера (4).JPG
-		All photos\Катера (5).JPG = All photos\Катера (5).JPG
-		All photos\Катера (6).JPG = All photos\Катера (6).JPG
-		All photos\Катера (7).JPG = All photos\Катера (7).JPG
-		All photos\Катера (8).jpg = All photos\Катера (8).jpg
-		All photos\Катера (9).jpg = All photos\Катера (9).jpg
-		All photos\Костер1.JPG = All photos\Костер1.JPG
-		All photos\Костер2.JPG = All photos\Костер2.JPG
-		All photos\Поляна (1).jpg = All photos\Поляна (1).jpg
-		All photos\Поляна (10).jpg = All photos\Поляна (10).jpg
-		All photos\Поляна (11).jpg = All photos\Поляна (11).jpg
-		All photos\Поляна (2).jpg = All photos\Поляна (2).jpg
-		All photos\Поляна (3).jpg = All photos\Поляна (3).jpg
-		All photos\Поляна (4).jpg = All photos\Поляна (4).jpg
-		All photos\Поляна (5).JPG = All photos\Поляна (5).JPG
-		All photos\Поляна (6).JPG = All photos\Поляна (6).JPG
-		All photos\Поляна (7).JPG = All photos\Поляна (7).JPG
-		All photos\Поляна (8).jpg = All photos\Поляна (8).jpg
-		All photos\Поляна (9).jpg = All photos\Поляна (9).jpg
-		All photos\Разное.jpg = All photos\Разное.jpg
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Try-out", "Try-out\Try-out.csproj", "{C825DDC6-5CF6-44E4-A209-01F986370752}"
 EndProject
 Global

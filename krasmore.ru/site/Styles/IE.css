@@ -1,0 +1,11 @@
+﻿/* NAVIGATION */
+#Roof 
+{
+     height:75px; 
+     padding-top:0px; 
+     position:relative; 
+     top:0px; 
+     background-color: #FFFFFF;
+     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	 filter: alpha(opacity=80);
+}
