@@ -32,13 +32,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Images\biking.jpg" />
+    <Content Include="Images\bir1.jpg" />
+    <Content Include="Images\btn_back.png" />
+    <Content Include="Images\btn_next.png" />
+    <Content Include="Images\btn_pause.png" />
+    <Content Include="Images\btn_play.png" />
+    <Content Include="Images\food.jpg" />
+    <Content Include="Images\headerbg.png" />
+    <Content Include="Images\kat1.jpg" />
+    <Content Include="Images\kost1.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\nature.jpg" />
+    <Content Include="Images\pol1.jpg" />
+    <Content Include="Images\stol1.jpg" />
+    <Content Include="Images\textbg.png" />
+    <Content Include="Images\vacation.jpg" />
+    <Content Include="Images\work.jpg" />
     <Content Include="index.html" />
     <Content Include="Scripts\BackgroundScripts.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
-    <Content Include="Styles\Main.css" />
+    <Content Include="Styles\IE.css" />
+    <Content Include="Styles\Common.css" />
+    <Content Include="Styles\NormalBrowsers.css" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
