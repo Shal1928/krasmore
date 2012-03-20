@@ -178,3 +178,19 @@ $(document).ready(function () {
 
 });
 
+
+
+
+//Shadow
+
+        $(document).ready(function(){
+            $('.shadowed').each(function(){// ищем все элементы класса shadow
+               $(this).textDropShadow('shadow')//далее работает функция, которая в качестве параметра получает название класса тени
+            });
+        });
+        (function($) {
+             $.fn.textDropShadow = function(ShdwClass){//элементы заменяются. Вместо оригинала внутри будет два спана - один содержащий сам текст, а другой тень этого текста.
+             $(this).css('position','relative').html('<span class='+ShdwClass+'>'+$(this).html()+'</span><span style="position:relative;">'+$(this).html()+'</span>');
+             return $(this);
+             }
+        })(jQuery);

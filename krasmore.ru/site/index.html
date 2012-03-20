@@ -2,12 +2,19 @@
 <html>
 <head>
     <title>Krasmore.ru</title>
-
+    
+    <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
     <link rel="stylesheet" type="text/css" href="Styles/Common.css" />
     <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="Styles/IE.css" />
     <![endif]-->
-
+    
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
     
@@ -21,11 +28,7 @@
             
         </div>
         <!-- Top navigation on top of the images -->
-        <div id="Roof">
-            <div id="RoofText">
-                Отдых на красноярском море
-            </div>
-            <!--<div id="navigation">
+        <!--<div id="navigation">
                     <div id="menu">
                         <ul>
                             <li><a href="http://www.marcofolio.net/">Marcofolio</a></li>
@@ -37,9 +40,11 @@
                         </ul>
                     </div>
                 </div>-->
-        </div>
-        <!-- Slideshow controls -->
-        <div id="headernav-outer">
+        <div id="Roof">
+            <div id="RoofText" class="shadowed">
+                Отдых на красноярском море
+            </div>
+            
             <div id="headernav">
                 <div id="back" class="btn">
                 </div>
@@ -48,6 +53,10 @@
                 <div id="next" class="btn">
                 </div>
             </div>
+        </div>
+        <!-- Slideshow controls -->
+        <div id="headernav-outer">
+            
         </div>
         <!-- jQuery handles for the text displayed on top of the images -->
         <div id="headertxt">
