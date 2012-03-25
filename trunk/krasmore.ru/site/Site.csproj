@@ -35,9 +35,13 @@
     <Content Include="Images\biking.jpg" />
     <Content Include="Images\bir1.jpg" />
     <Content Include="Images\btn_back.png" />
+    <Content Include="Images\btn_back_i.png" />
     <Content Include="Images\btn_next.png" />
+    <Content Include="Images\btn_next_i.png" />
     <Content Include="Images\btn_pause.png" />
+    <Content Include="Images\btn_pause_i.png" />
     <Content Include="Images\btn_play.png" />
+    <Content Include="Images\btn_play_i.png" />
     <Content Include="Images\food.jpg" />
     <Content Include="Images\headerbg.png" />
     <Content Include="Images\kat1.jpg" />

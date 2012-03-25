@@ -48,17 +48,19 @@ img
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
     
         
-    height:50px; 
+    height:60px; 
     padding-top:0px; 
     position:relative; 
     top:0px; 
     
-    padding: 10px 0px 0px 50px;
+    
     box-shadow: 0px 2px 30px 1px #000000;
     overflow:visible;
     z-index: 0;
 }
-
+/*
+padding: 10px 0px 0px 50px;
+*/
 
 .shadow 
 {
@@ -69,14 +71,20 @@ img
     z-index: 0;
 }
         
+/*
+margin-top: -40px;
+*/
 #RoofText
 {
-    margin-top: 15px;
+    position:absolute;
+    margin-top: -34px;
+    margin-left: 30%;
     font-size: 14pt;
     color: #333;
     letter-spacing: 0px;
     opacity: initial;
     float: left;
+    display: inline;
 }
 
 /*
@@ -88,6 +96,8 @@ img
 */
 .logotype 
 {
+    margin-top: -50px;
+    margin-left: 25px;
     position:absolute;
     float: left;
 }
@@ -114,7 +124,14 @@ img
 #menu ul li a:hover { text-decoration:underline; }
 
 /* HEADER TEXT */
-#headertxt { width:960px; margin:0 auto; clear:both; position:relative; top:74px; }
+#headertxt 
+{
+    width:800px; 
+    left: 150px;
+    clear:both; 
+    position:absolute; 
+    top:150px;
+}
 #firstline { background-image:url("../images/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
 #secondline { background-image:url("../images/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
 #secondline:hover { text-decoration:underline; color:#7F000C; }
@@ -125,13 +142,18 @@ img
 
 /* CONTROLS */
 .btn { height:32px; width:32px; float:left; cursor:pointer; }
-#back { background-image:url("../images/btn_back.png"); }
-#next { background-image:url("../images/btn_next.png"); }
-#control { background-image:url("../images/btn_pause.png"); }
+#back { background-image:url("../images/btn_back_i.png"); }
+#next { background-image:url("../images/btn_next_i.png"); }
+#control { background-image:url("../images/btn_pause_i.png"); }
 
 /* HEADER HAVIGATION */
 #headernav-outer { position:relative; top:400px; margin:0 auto; width:960px; }
-#headernav { padding-left:864px; }
+#headernav 
+{ 
+    margin-left: 90%;
+    margin-top: -45px; 
+    position:absolute;
+}
 
 /* CONTENT */
 #content { color:#575757; background-color:#eee; }

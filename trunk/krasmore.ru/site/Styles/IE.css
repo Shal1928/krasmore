@@ -10,3 +10,33 @@
      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 	 filter: alpha(opacity=80);
 }*/
+
+#RoofText
+{
+    position:absolute;
+    margin-top: -50px;
+    margin-left: 30%;
+    font-size: 14pt;
+    color: #333;
+    letter-spacing: 0px;
+    opacity: initial;
+    float: left;
+    display: inline;
+}
+
+#headernav 
+{ 
+    margin-left: 90%;
+    margin-top: -80px; 
+    position:absolute;
+}
+
+/*
+#headertxt 
+{
+    width:960px; 
+    margin:0 auto;
+    clear:both; 
+    position:absolute; 
+    top:74px;
+}*/
