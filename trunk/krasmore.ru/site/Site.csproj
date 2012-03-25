@@ -43,6 +43,10 @@
     <Content Include="Images\kat1.jpg" />
     <Content Include="Images\kost1.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\Logo300x60.gif" />
+    <Content Include="Images\Logo_150x100.png" />
+    <Content Include="Images\Logo_150x100_Border.png" />
+    <Content Include="Images\Logo_175x110_HalfBorder.png" />
     <Content Include="Images\nature.jpg" />
     <Content Include="Images\pol1.jpg" />
     <Content Include="Images\stol1.jpg" />
