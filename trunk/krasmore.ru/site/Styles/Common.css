@@ -126,42 +126,11 @@ margin-top: -40px;
 {
 
 }
-
-#navigation { height:100px; width:960px; margin:0 auto; background-image:url("../images/logo.png"); background-position:top left; background-repeat:no-repeat; }
-
-
-
-/* SEARCH */
-#search { background-color:#051733; float:right; width:220px; padding:10px; }
-#searchtxt { padding:3px; width:150px; }
-#searchbtn { border:1px solid #eee !important; background-color:#CD2B3A; color:#eee; padding:3px; margin-left:5px; }
-
 /*
-.menu 
-{
-     position:relative; 
-}
-.menu ul 
-{
-     list-style:none;
-}
-.menu ul li {
-        width: 200px;
-        min-height: 250px;
-        border: 1px solid #000;
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: top;
-        margin: 5px;
-        zoom: 1;
-        display: inline;
-        _height: 250px;
-    }
-    
-.menu ul li a { color:white; text-decoration:none; font-weight:bold; padding-right:20px; }
-.menu ul li a:hover { text-decoration:underline; }
+#navigation { height:100px; width:960px; margin:0 auto; background-image:url("../images/logo.png"); background-position:top left; background-repeat:no-repeat; }
 */
-/* HEADER TEXT */
+
+
 #headertxt 
 {
     width:800px; 
@@ -170,13 +139,14 @@ margin-top: -40px;
     position:absolute; 
     top:150px;
 }
-#firstline { background-image:url("../images/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
-#secondline { background-image:url("../images/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
-#secondline:hover { text-decoration:underline; color:#7F000C; }
 
-.pictured { background-color:#CC3333; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; }
+#firstline { background-image:url("../images/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
+/*#secondline { background-image:url("../images/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
+#secondline:hover { text-decoration:underline; color:#7F000C; }*/
+
+/*.pictured { background-color:#CC3333; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; }
 .pictured a { font-size:16px; font-style:italic; letter-spacing:0; text-transform:none; color:#FFF; text-decoration:none; }
-.pictured a:hover { text-decoration:underline; }
+.pictured a:hover { text-decoration:underline; }*/
 
 /* CONTROLS */
 .btn { height:32px; width:32px; float:left; cursor:pointer; }
