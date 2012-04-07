@@ -1,57 +1,54 @@
-﻿//First Attempt
-var bgrounds=new Array(
-"http://img-fotki.yandex.ru/get/4429/23478606.4/0_67a5e_b5feb5d9_L",
-"http://img-fotki.yandex.ru/get/5414/23478606.4/0_678fd_b72f43d5_L",
-"http://img-fotki.yandex.ru/get/5502/shal1928.3/0_4e97c_a08cfa4_L");
-
-function changeBg() 
-{ 
-    var i=Math.floor(bgrounds.length*Math.random());
-    document.body.background=bgrounds[i];
-    setTimeout('changeBg()', 5000);
-
-}
-
-
-//Second Attempt
-/*
-* Author:      Marco Kuiper (http://www.marcofolio.net/)
-*/
+﻿//Author: Marco Kuiper (http://www.marcofolio.net/)
 
 // Speed of the automatic slideshow
-var slideshowSpeed = 5000;
+var slideshowSpeed = 4000;
 
 // Variable to store the images we need to set as background
 // which also includes some text and url's.
-var photos = [{
-//    "title": "Экскурсии",
-    "image": "bir1.jpg",
-    "url": "http://www.sxc.hu/photo/1271909",
-    "firstline": "Эксукрсии по красноярскому морю"//,
-//    "secondline": "Бирюса"
-}, {
-//    "title": "Доставка",
-    "image": "kat1.jpg",
-    "url": "http://www.sxc.hu/photo/1265695",
-    "firstline": "Доставка на большом и маленьком катере"
-}, {
-//    "title": "Поляна",
-    "image": "pol1.jpg",
-    "url": "http://www.sxc.hu/photo/1221065",
-    "firstline": "Отдых на природе"
-//    "secondline": "Всей семьей"
-}, {
-//    "title": "Костер",
+var photos = [
+{
     "image": "kost1.jpg",
-    "url": "http://www.sxc.hu/photo/1271915",
-    "firstline": "Еда на костре"
-//    "secondline": "Шашлыки"
-}, {
-//    "title": "Стол",
+    "firstline": "Чай у костра"
+},
+{
+    "image": "nav1.jpg",
+    "firstline": "Отличное место для дружных компаний"
+},
+{
     "image": "stol1.jpg",
-    "url": "http://www.sxc.hu/photo/1042413",
-    "firstline": "Большой компанией"
-//    "secondline": "Застолье"
+    "firstline": "Отличное место для дружных компаний"
+},
+{
+    "image": "nav2.jpg",
+    "firstline": "Отличное место для дружных компаний"  
+},
+{
+    "image": "pol1.jpg",
+    "firstline": "Вдали от шума городского"
+},
+{
+    "image": "pol2.jpg",
+    "firstline": "Вдали от шума городского"
+},
+{
+    "image": "pol3.jpg",
+    "firstline": "Вдали от шума городского"
+},
+{
+    "image": "kat1.jpg",
+    "firstline": "Доставка на удобных катерах"
+},
+{
+    "image": "kat2.jpg",
+    "firstline": "Доставка на удобных катерах"
+},
+{
+    "image": "bir1.jpg",
+    "firstline": "Экскурсии по Красноярскому морю"
+},
+{
+    "image": "bir2.jpg",
+    "firstline": "Экскурсии по Красноярскому морю"
 }
 ];
 
@@ -178,18 +175,16 @@ $(document).ready(function () {
 });
 
 
-
-
 //Shadow
 
-        $(document).ready(function(){
-            $('.shadowed').each(function(){// ищем все элементы класса shadow
-               $(this).textDropShadow('shadow')//далее работает функция, которая в качестве параметра получает название класса тени
-            });
-        });
-        (function($) {
-             $.fn.textDropShadow = function(ShdwClass){//элементы заменяются. Вместо оригинала внутри будет два спана - один содержащий сам текст, а другой тень этого текста.
-             $(this).css('position','relative').html('<span class='+ShdwClass+'>'+$(this).html()+'</span><span style="position:relative;">'+$(this).html()+'</span>');
-             return $(this);
-             }
-        })(jQuery);
+$(document).ready(function(){
+    $('.shadowed').each(function(){// ищем все элементы класса shadow
+       $(this).textDropShadow('shadow')//далее работает функция, которая в качестве параметра получает название класса тени
+    });
+});
+(function($) {
+     $.fn.textDropShadow = function(ShdwClass){//элементы заменяются. Вместо оригинала внутри будет два спана - один содержащий сам текст, а другой тень этого текста.
+     $(this).css('position','relative').html('<span class='+ShdwClass+'>'+$(this).html()+'</span><span style="position:relative;">'+$(this).html()+'</span>');
+     return $(this);
+     }
+})(jQuery);

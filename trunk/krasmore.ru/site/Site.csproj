@@ -33,15 +33,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Images\bir1.jpg" />
+    <Content Include="Images\bir2.jpg" />
     <Content Include="Images\btn_back_i.png" />
     <Content Include="Images\btn_next_i.png" />
     <Content Include="Images\btn_pause_i.png" />
     <Content Include="Images\btn_play_i.png" />
     <Content Include="Images\headerbg.png" />
     <Content Include="Images\kat1.jpg" />
+    <Content Include="Images\kat2.jpg" />
     <Content Include="Images\kost1.jpg" />
     <Content Include="Images\Logo_175x110_HalfBorder.png" />
+    <Content Include="Images\nav1.jpg" />
+    <Content Include="Images\nav2.jpg" />
     <Content Include="Images\pol1.jpg" />
+    <Content Include="Images\pol2.jpg" />
+    <Content Include="Images\pol3.jpg" />
     <Content Include="Images\stol1.jpg" />
     <Content Include="Images\textbg.png" />
     <Content Include="index.html" />
