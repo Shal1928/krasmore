@@ -2,11 +2,31 @@
 ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:0; padding:0;}
 
 /* HTML ELEMENTS 62.5%  */
-body { background-color:#ffffff; font: 14 Verdana,Georgia,'Times New Roman',serif; letter-spacing:1; }
+body 
+{
+     background-color:#ffffff; 
+     font: 14 Georgia,'Times New Roman',serif;
+}
 
 img 
 {
     border: none;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #3984b4;
+    font-weight: normal;    
+}
+
+ul 
+{
+    list-style: square outside;
+}
+
+li 
+{
+    margin-top: 2px;    
 }
 
 /* COMMON CLASSES */
@@ -78,7 +98,7 @@ margin-top: -40px;
 {
     position:absolute;
     margin-top: -34px;
-    margin-left: 30%;
+    margin-left: 35%;
     font-size: 14pt;
     color: #333;
     letter-spacing: 0px;
@@ -116,7 +136,7 @@ margin-top: -40px;
 #searchtxt { padding:3px; width:150px; }
 #searchbtn { border:1px solid #eee !important; background-color:#CD2B3A; color:#eee; padding:3px; margin-left:5px; }
 
-/* MENU */
+/*
 .menu 
 {
      position:relative; 
@@ -140,7 +160,7 @@ margin-top: -40px;
     
 .menu ul li a { color:white; text-decoration:none; font-weight:bold; padding-right:20px; }
 .menu ul li a:hover { text-decoration:underline; }
-
+*/
 /* HEADER TEXT */
 #headertxt 
 {
@@ -178,37 +198,63 @@ margin-top: -40px;
 {
     color:#333; 
     background-color:#eee;
+    position: absolute;
 }
 
-.innerDataBlock 
+.innerDataBlock, .innerHorizontalDataBlock, .innerVerticalDataBlock, .undergroundHorizontalDataBlock
 {
+    left: 150px;
     display: inline-block;
     float: left;
     margin-top: 50px;
-    margin-right: 50px;
-}
-
-.content 
-{
-    padding-top: 10px; 
-    font-size:11pt;
-    width: 300px;
-    left: 150px;
     position: relative;
 }
 
+.innerHorizontalDataBlock
+{
+    margin-right: 30%;   
+    margin-top: 25px;
+}
+
+.innerVerticalDataBlock 
+{
+    margin-right: 5%;
+}
+
+.undergroundHorizontalDataBlock 
+{
+    margin-right: 30%;
+    float: none;
+    height: 100px;
+    display: block;
+}
+
+.content, .subContent
+{
+    padding-top: 10px; 
+    position: relative;
+    font: 12pt Georgia;
+}
+
+.subContent, .subContentBold 
+{
+    font: 10pt Georgia;
+}
+
+.subContentBold, .menuSubContentBold
+{
+    font-weight: bold;
+}
+
+.menuSubContentBold 
+{
+    list-style: none;
+}
 /*
 orange: #e6a044;
 light blue: #3984b4;
 */
-.header1
-{
-    left: 150px;
-    color: #3984b4;
-    font-size: 14pt;
-    letter-spacing: 0px;
-    position: relative;
-}
+
 
 #content p a { text-decoration:none; color:#CD2B3A; }
 #content p a:hover { text-decoration:underline; color:#7F000C; }
