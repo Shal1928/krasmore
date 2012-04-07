@@ -19,40 +19,39 @@ function changeBg()
 */
 
 // Speed of the automatic slideshow
-var slideshowSpeed = 4500;
+var slideshowSpeed = 5000;
 
 // Variable to store the images we need to set as background
 // which also includes some text and url's.
 var photos = [{
-    "title": "Экскурсии",
+//    "title": "Экскурсии",
     "image": "bir1.jpg",
     "url": "http://www.sxc.hu/photo/1271909",
     "firstline": "Эксукрсии по красноярскому морю"//,
 //    "secondline": "Бирюса"
 }, {
-    "title": "Доставка",
+//    "title": "Доставка",
     "image": "kat1.jpg",
     "url": "http://www.sxc.hu/photo/1265695",
-    "firstline": "Доставка на большом и маленьком катере",
-    "secondline": ""
+    "firstline": "Доставка на большом и маленьком катере"
 }, {
-    "title": "Поляна",
+//    "title": "Поляна",
     "image": "pol1.jpg",
     "url": "http://www.sxc.hu/photo/1221065",
-    "firstline": "Отдых на природе",
-    "secondline": "Всей семьей"
+    "firstline": "Отдых на природе"
+//    "secondline": "Всей семьей"
 }, {
-    "title": "Костер",
+//    "title": "Костер",
     "image": "kost1.jpg",
     "url": "http://www.sxc.hu/photo/1271915",
-    "firstline": "Еда на костре",
-    "secondline": "Шашлыки"
+    "firstline": "Еда на костре"
+//    "secondline": "Шашлыки"
 }, {
-    "title": "Стол",
+//    "title": "Стол",
     "image": "stol1.jpg",
     "url": "http://www.sxc.hu/photo/1042413",
-    "firstline": "Большой компанией",
-    "secondline": "Застолье"
+    "firstline": "Большой компанией"
+//    "secondline": "Застолье"
 }
 ];
 
@@ -138,16 +137,16 @@ $(document).ready(function () {
         });
 
         // Hide the header text
-        $("#headertxt").css({ "display": "none" });
+//        $("#headertxt").css({ "display": "none" });
 
         // Set the new header text
         $("#firstline").html(photoObject.firstline);
-        $("#secondline")
-			.attr("href", photoObject.url)
-			.html(photoObject.secondline);
-        $("#pictureduri")
-			.attr("href", photoObject.url)
-			.html(photoObject.title);
+//        $("#secondline")
+//			.attr("href", photoObject.url)
+//			.html(photoObject.secondline);
+//        $("#pictureduri")
+//			.attr("href", photoObject.url)
+//			.html(photoObject.title);
 
 
         // Fade out the current container
