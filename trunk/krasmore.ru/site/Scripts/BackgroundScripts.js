@@ -3,7 +3,7 @@
 // Speed of the automatic slideshow
 var slideshowSpeed = 4000;
 
-// Variable to store the images we need to set as background
+// Variable to store the Images we need to set as background
 // which also includes some text and url's.
 var photos = [
 {
@@ -73,7 +73,7 @@ $(document).ready(function () {
         stopAnimation();
     }, function () {
         // Change the background image to "pause"
-        $(this).css({ "background-image": "url(images/btn_pause_i.png)" });
+        $(this).css({ "background-image": "url(Images/btn_pause_i.png)" });
 
         // Show the next image
         navigate("next");
@@ -128,7 +128,7 @@ $(document).ready(function () {
 
         // Set the background image of the new active container
         $("#headerimg" + activeContainer).css({
-            "background-image": "url(images/" + photoObject.image + ")",
+            "background-image": "url(Images/" + photoObject.image + ")",
             "display": "block",
             "z-index": currentZindex
         });
@@ -158,7 +158,7 @@ $(document).ready(function () {
 
     var stopAnimation = function () {
         // Change the background image to "play"
-        $("#control").css({ "background-image": "url(images/btn_play_i.png)" });
+        $("#control").css({ "background-image": "url(Images/btn_play_i.png)" });
 
         // Clear the interval
         clearInterval(interval);
