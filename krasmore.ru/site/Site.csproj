@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="error404.html" />
     <Content Include="Images\bir1.jpg" />
     <Content Include="Images\bir2.jpg" />
     <Content Include="Images\btn_back_i.png" />
@@ -51,6 +52,7 @@
     <Content Include="Images\stol1.jpg" />
     <Content Include="Images\textbg.png" />
     <Content Include="index.html" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\BackgroundScripts.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Styles\IE.css" />
