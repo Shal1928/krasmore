@@ -206,7 +206,7 @@ margin-top: -40px;
     font: 12pt Georgia;
 }
 
-.subContent, .subContentBold 
+.subContent, .subContentBold, .mapContent, iframe
 {
     font: 10pt Georgia;
 }
@@ -219,6 +219,18 @@ margin-top: -40px;
 .menuSubContentBold 
 {
     list-style: none;
+}
+
+iframe
+{
+    
+    width: 400px;
+    height: 250px; 
+    margin-top: 40px;
+    border-width: 0;
+    scrolling: no; 
+    marginheight: 0;
+    marginwidth: 0;
 }
 /*
 orange: #e6a044;
