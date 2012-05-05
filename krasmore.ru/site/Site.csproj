@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="error404.html" />
+    <Content Include="googled40e4dec7b80ae1d.html" />
     <Content Include="Images\bir1.jpg" />
     <Content Include="Images\bir2.jpg" />
     <Content Include="Images\btn_back_i.png" />
@@ -58,6 +59,7 @@
     <Content Include="Styles\IE.css" />
     <Content Include="Styles\Common.css" />
     <Content Include="Styles\NormalBrowsers.css" />
+    <Content Include="yandex_5658e3fbcbacf090.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
