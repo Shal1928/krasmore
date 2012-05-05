@@ -206,7 +206,7 @@ margin-top: -40px;
     font: 12pt Georgia;
 }
 
-.subContent, .subContentBold, .mapContent, iframe
+.subContent, .subContentBold, .mapContent
 {
     font: 10pt Georgia;
 }
@@ -221,16 +221,15 @@ margin-top: -40px;
     list-style: none;
 }
 
-iframe
+.mapContent
 {
-    
-    width: 400px;
+    width: 425px;
     height: 250px; 
     margin-top: 40px;
     border-width: 0;
-    scrolling: no; 
-    marginheight: 0;
-    marginwidth: 0;
+    overflow: hidden; 
+    margin-left: 0;
+    margin-bottom: 0;
 }
 /*
 orange: #e6a044;
