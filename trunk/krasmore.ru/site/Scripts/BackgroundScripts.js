@@ -7,47 +7,67 @@ var slideshowSpeed = 4000;
 // which also includes some text and url's.
 var photos = [
 {
-    "image": "kost1.jpg",
+    "image": "teaBonfire0.1.jpg",
     "firstline": "Чай у костра"
 },
 {
-    "image": "nav1.jpg",
+    "image": "teaBonfire1.0.jpg",
+    "firstline": "Чай у костра"
+},
+{
+    "image": "goodPlace0.1.jpg",
     "firstline": "Отличное место для дружных компаний"
 },
 {
-    "image": "stol1.jpg",
+    "image": "goodPlace1.0.jpg",
     "firstline": "Отличное место для дружных компаний"
 },
 {
-    "image": "nav2.jpg",
-    "firstline": "Отличное место для дружных компаний"  
+    "image": "goodPlace1.1.jpg",
+    "firstline": "Отличное место для дружных компаний"
 },
 {
-    "image": "pol1.jpg",
+    "image": "goodPlace0.2.jpg",
+    "firstline": "Отличное место для дружных компаний"
+},
+{
+    "image": "farAway0.1.jpg",
     "firstline": "Вдали от шума городского"
 },
 {
-    "image": "pol2.jpg",
+    "image": "farAway1.0.jpg",
     "firstline": "Вдали от шума городского"
 },
 {
-    "image": "pol3.jpg",
+    "image": "farAway1.1.jpg",
     "firstline": "Вдали от шума городского"
 },
 {
-    "image": "kat1.jpg",
+    "image": "comfortableBoats0.1.jpg",
     "firstline": "Доставка на удобных катерах"
 },
 {
-    "image": "kat2.jpg",
+    "image": "comfortableBoats1.0.jpg",
     "firstline": "Доставка на удобных катерах"
+},    
+{
+    "image": "drivingBun1.0.jpg",
+    "firstline": "Катание на «плюшках»"
 },
 {
-    "image": "bir1.jpg",
+    "image": "comfortableBeach1.0.jpg",
+    "firstline": "Удобный берег"
+},
+{
+    "image": "comfortableBeach1.1.jpg",
+    "firstline": "Удобный берег"
+},
+{
+    "image": "excursionsBiryusa0.1.jpg",
     "firstline": "Экскурсии по Красноярскому морю"
 },
 {
-    "image": "bir2.jpg",
+    "image": "excursionsBiryusa0.2.jpg",
     "firstline": "Экскурсии по Красноярскому морю"
 }
 ];
