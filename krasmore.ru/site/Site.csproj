@@ -32,7 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="apple-touch-favicon.png" />
     <Content Include="error404.html" />
+    <Content Include="favicon.png" />
     <Content Include="googled40e4dec7b80ae1d.html" />
     <Content Include="Images\comfortableBeach1.0.jpg" />
     <Content Include="Images\comfortableBeach1.1.jpg" />
