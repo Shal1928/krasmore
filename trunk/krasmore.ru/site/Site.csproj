@@ -63,6 +63,7 @@
     <Content Include="index.html" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\BackgroundScripts.js" />
+    <Content Include="Scripts\Helper.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Styles\IE.css" />
     <Content Include="Styles\Common.css" />

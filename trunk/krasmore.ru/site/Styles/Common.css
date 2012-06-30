@@ -253,3 +253,36 @@ light blue: #3984b4;
 {
     zoom: 1;
 }
+
+
+#text {margin:50px auto;width: 500px;}
+.hotspot {color:#900; padding-bottom:1px; border-bottom:1px dotted #900; cursor:pointer}
+
+/*  ToolTip Style   */
+
+.toolTipPlace 
+{
+    border-bottom: 1px dashed;
+    cursor: default;
+}
+
+#tt 
+{
+    position:absolute; 
+    display:block; 
+    background: #FFF;
+}
+
+#ttcont 
+{
+    display:block; 
+    padding:2px 12px 3px 7px;
+    width: auto;
+    background: #FFF; 
+    color: #333;
+}
+
+#ttcontImage 
+{
+    /**/
+}
