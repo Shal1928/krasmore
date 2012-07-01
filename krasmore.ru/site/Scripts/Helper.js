@@ -13,11 +13,9 @@ var tooltip = function () {
     var tt, c, h, image;
 
     return {
-        show: function (element, imgSrc, imgWidth) 
-        {
+        show: function (element, imgSrc, imgWidth) {
             imgWidth = imgWidth == null ? 400 : imgWidth;
-            if (tt == null) 
-            {
+            if (tt == null) {
                 tt = document.createElement('div');
                 tt.setAttribute('id', id);
 
@@ -41,8 +39,13 @@ var tooltip = function () {
             image.setAttribute('width', imgWidth);
 
             tt.style.display = 'block';
-            c.innerHTML = $(element).text();
             tt.style.width = 'auto';
+            
+            if (element == null) c.style.display = 'none';
+            else {
+                c.style.display = 'block';
+                c.innerHTML = $(element).text();
+            }
 
             if (tt.offsetWidth > imgWidth) tt.style.width = imgWidth + 'px';
             h = parseInt(tt.offsetHeight) + top;
