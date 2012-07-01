@@ -14,9 +14,10 @@ var tooltip = function () {
     var tt, c, h, image;
     var ie = document.all ? true : false;
     return {
-        show: function (element, imgSrc, imgWidth) {
-
-            if (tt == null) {
+        show: function (element, imgSrc, imgWidth) 
+        {
+            if (tt == null) 
+            {
                 imgWidth = imgWidth == null ? 400 : imgWidth;
 
                 tt = document.createElement('div');
@@ -45,12 +46,13 @@ var tooltip = function () {
             c.innerHTML = $(element).text();
             tt.style.width = 'auto';
 
-            if (tt.offsetWidth > imgWidth) { tt.style.width = imgWidth + 'px'; }
+            if (tt.offsetWidth > imgWidth) tt.style.width = imgWidth + 'px';
             h = parseInt(tt.offsetHeight) + top;
             clearInterval(tt.timer);
             tt.timer = setInterval(function () { tooltip.fade(1); }, timer);
         },
-        pos: function (e) {
+        pos: function (e) 
+        {
             var u = ie ? event.clientY + document.documentElement.scrollTop : e.pageY;
             var l = ie ? event.clientX + document.documentElement.scrollLeft : e.pageX;
             tt.style.top = (u - h) + 'px';
@@ -58,25 +60,23 @@ var tooltip = function () {
         },
         fade: function (d) {
             var a = alpha;
-            if ((a != endalpha && d == 1) || (a != 0 && d == -1)) {
+            if ((a != endalpha && d == 1) || (a != 0 && d == -1)) 
+            {
                 var i = speed;
-                if (endalpha - a < speed && d == 1) {
-                    i = endalpha - a;
-                } else if (alpha < speed && d == -1) {
-                    i = a;
-                }
+                if (endalpha - a < speed && d == 1) i = endalpha - a;
+                else if (alpha < speed && d == -1) i = a;
                 alpha = a + (i * d);
                 tt.style.opacity = alpha * .01;
                 tt.style.filter = 'alpha(opacity=' + alpha + ')';
-            } else {
+            } 
+            else 
+            {
                 clearInterval(tt.timer);
-                if (d == -1) {
-                    tt.style.display = 'none';
-                    //tt = null;
-                }
+                if (d == -1) tt.style.display = 'none';
             }
         },
-        hide: function () {
+        hide: function () 
+        {
             clearInterval(tt.timer);
             tt.timer = setInterval(function () { tooltip.fade(-1); }, timer);
         }
