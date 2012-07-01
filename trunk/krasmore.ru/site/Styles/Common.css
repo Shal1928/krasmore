@@ -281,6 +281,7 @@ light blue: #3984b4;
 #ttcontImage 
 {
     border-left: solid 5px #FFF;
+    border-top: solid 5px #FFF;
     border-right: solid 5px #FFF;
     border-bottom: solid 5px #FFF;
 }
