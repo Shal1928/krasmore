@@ -1,5 +1,6 @@
 ﻿//  ToolTip
 //  {
+//      <span class="toolTipPlace" onmouseover="tooltip.show(this,'comfortableBoats0.1.jpg');" onmouseout="tooltip.hide();">
 
 var tooltip = function () {
     var id = 'tt';
@@ -8,12 +9,13 @@ var tooltip = function () {
     //var maxw = 300;
     var speed = 10;
     var timer = 20;
-    var endalpha = 95;
+    var endalpha = 100;
     var alpha = 0;
     var tt, c, h, image;
     var ie = document.all ? true : false;
     return {
         show: function (element, imgSrc, imgWidth) {
+
             if (tt == null) {
                 imgWidth = imgWidth == null ? 400 : imgWidth;
 
@@ -25,18 +27,20 @@ var tooltip = function () {
 
                 image = document.createElement('img');
                 image.setAttribute('id', id + 'contImage');
-                image.setAttribute('src', 'Images/' + imgSrc);
-                image.setAttribute('width', imgWidth);
 
                 tt.appendChild(c);
                 tt.appendChild(image);
-                
+
                 document.body.appendChild(tt);
-                
+
                 tt.style.opacity = 0;
                 tt.style.filter = 'alpha(opacity=0)';
                 document.onmousemove = this.pos;
             }
+
+            image.setAttribute('src', 'Images/' + imgSrc);
+            image.setAttribute('width', imgWidth);
+
             tt.style.display = 'block';
             c.innerHTML = $(element).text();
             tt.style.width = 'auto';
@@ -66,12 +70,15 @@ var tooltip = function () {
                 tt.style.filter = 'alpha(opacity=' + alpha + ')';
             } else {
                 clearInterval(tt.timer);
-                if (d == -1) { tt.style.display = 'none' }
+                if (d == -1) {
+                    tt.style.display = 'none';
+                    //tt = null;
+                }
             }
         },
         hide: function () {
             clearInterval(tt.timer);
-            tt.timer = setInterval(function () { tooltip.fade(-1) }, timer);
+            tt.timer = setInterval(function () { tooltip.fade(-1); }, timer);
         }
     };
 } ();
