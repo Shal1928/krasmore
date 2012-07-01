@@ -6,20 +6,18 @@ var tooltip = function () {
     var id = 'tt';
     var top = 3;
     var left = 3;
-    //var maxw = 300;
     var speed = 10;
     var timer = 20;
     var endalpha = 100;
     var alpha = 0;
     var tt, c, h, image;
-    //var ie = document.all ? true : false;
+
     return {
         show: function (element, imgSrc, imgWidth) 
         {
+            imgWidth = imgWidth == null ? 400 : imgWidth;
             if (tt == null) 
             {
-                imgWidth = imgWidth == null ? 400 : imgWidth;
-
                 tt = document.createElement('div');
                 tt.setAttribute('id', id);
 
@@ -43,7 +41,7 @@ var tooltip = function () {
             image.setAttribute('width', imgWidth);
 
             tt.style.display = 'block';
-            //c.innerHTML = $(element).text();
+            c.innerHTML = $(element).text();
             tt.style.width = 'auto';
 
             if (tt.offsetWidth > imgWidth) tt.style.width = imgWidth + 'px';
@@ -51,31 +49,21 @@ var tooltip = function () {
             clearInterval(tt.timer);
             tt.timer = setInterval(function () { tooltip.fade(1); }, timer);
         },
-//        pos: function (e) {
-//            var u = document.all ? event.clientY + document.documentElement.scrollTop : e.pageY;
-//            var l = document.all ? event.clientX + document.documentElement.scrollLeft : e.pageX;
-//            tt.style.top = (u - h) + 'px';
-//            tt.style.left = (l + left) + 'px';
-        //        },
-        pos:function(e)
-        {
+        pos: function (e) {
             var u = 0, l = 0;
-            if(typeof(window.pageYOffset) == 'number') 
-            {
+            if (typeof (window.pageYOffset) == 'number') {
                 u = window.pageYOffset;
                 l = window.pageXOffset;
-            } 
-            else if(document.body && (document.body.scrollLeft || document.body.scrollTop)) 
-            {
+            }
+            else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
                 u = document.body.scrollTop;
                 l = document.body.scrollLeft;
-            } 
-            else if(document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) 
-            {
+            }
+            else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
                 u = document.documentElement.scrollTop;
                 l = document.documentElement.scrollLeft;
             }
-            
+
             u = document.all ? event.clientY + u : e.pageY;
             l = document.all ? event.clientX + l : e.pageX;
             tt.style.top = (u - h) + 'px';
@@ -83,8 +71,7 @@ var tooltip = function () {
         },
         fade: function (d) {
             var a = alpha;
-            if ((a != endalpha && d == 1) || (a != 0 && d == -1)) 
-            {
+            if ((a != endalpha && d == 1) || (a != 0 && d == -1)) {
                 var i = speed;
                 if (endalpha - a < speed && d == 1) i = endalpha - a;
                 else if (alpha < speed && d == -1) i = a;
@@ -92,14 +79,12 @@ var tooltip = function () {
                 tt.style.opacity = alpha * .01;
                 tt.style.filter = 'alpha(opacity=' + alpha + ')';
             }
-            else 
-            {
+            else {
                 clearInterval(tt.timer);
                 if (d == -1) tt.style.display = 'none';
             }
         },
-        hide: function () 
-        {
+        hide: function () {
             clearInterval(tt.timer);
             tt.timer = setInterval(function () { tooltip.fade(-1); }, timer);
         }
