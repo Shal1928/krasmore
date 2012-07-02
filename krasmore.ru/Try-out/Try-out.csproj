@@ -66,6 +66,9 @@
     <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._vacation.jpg" />
     <Content Include="advanced_bgimg_slideshow\__MACOSX\images\._work.jpg" />
     <Content Include="advanced_bgimg_slideshow\__MACOSX\js\._script.js" />
+    <Content Include="GoogleMaps\default.css" />
+    <Content Include="GoogleMaps\GoogleMap.html" />
+    <Content Include="GoogleMaps\GoogleMap2.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="advanced_bgimg_slideshow\images\.DS_Store" />
