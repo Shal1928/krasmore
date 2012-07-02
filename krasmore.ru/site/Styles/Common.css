@@ -236,9 +236,10 @@ orange: #e6a044;
 light blue: #3984b4;
 */
 
-
+/*
 #content p a { text-decoration:none; color:#CD2B3A; }
 #content p a:hover { text-decoration:underline; color:#7F000C; }
+*/
 
 * html .clear
 {
@@ -256,8 +257,7 @@ light blue: #3984b4;
 
 .end
 {
-    display: inline-block;
-    height: 30px;
+    /*display: inline-block;*/
     margin-top: 30px;
     margin-left: 30%;
     margin-right: 30%;
