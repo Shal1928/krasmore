@@ -240,6 +240,11 @@ light blue: #3984b4;
 #content p a { text-decoration:none; color:#CD2B3A; }
 #content p a:hover { text-decoration:underline; color:#7F000C; }
 
+* html .clear
+{
+    zoom: 1;
+}
+
 .clear 
 {
     content: ".";
@@ -249,11 +254,16 @@ light blue: #3984b4;
     visibility: hidden
 }
 
-* html .clear 
+.end
 {
-    zoom: 1;
+    display: inline-block;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 30%;
+    margin-right: 30%;
+    position:relative;
+    margin-bottom: 75px;
 }
-
 /*  ToolTip Style   */
 
 .toolTipPlace 
