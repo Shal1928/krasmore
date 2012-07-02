@@ -44,15 +44,6 @@ li
     position:absolute;
 }
 
-/*
-    background-color: #FFFFFF;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF');
-    background: -webkit-linear-gradient(top, #FFFFFF 15%, #FFFFFF);
-    background: -moz-linear-gradient(top,  #FFFFFF 15%,  #FFFFFF);
-    background: -o-linear-gradient(top, #FFFFFF 15%, #FFFFFF);
-    background: -ms-linear-gradient(top,  #FFFFFF 15%,  #FFFFFF);
-*/
-
 /* NAVIGATION opacity: .8; */
 #Roof 
 {
@@ -78,9 +69,6 @@ li
     overflow:visible;
     z-index: 0;
 }
-/*
-padding: 10px 0px 0px 50px;
-*/
 
 .shadow 
 {
@@ -91,9 +79,6 @@ padding: 10px 0px 0px 50px;
     z-index: 0;
 }
         
-/*
-margin-top: -40px;
-*/
 #RoofText
 {
     position:absolute;
@@ -107,13 +92,6 @@ margin-top: -40px;
     display: inline;
 }
 
-/*
-    width: 175px;
-    height: 110px;
-    background-image:url("../Images/Logo_175x110_HalfBorder.png");
-    background-position:top left; 
-    background-repeat:no-repeat;
-*/
 .logotype 
 {
     margin-top: -50px;
@@ -126,10 +104,6 @@ margin-top: -40px;
 {
 
 }
-/*
-#navigation { height:100px; width:960px; margin:0 auto; background-image:url("../Images/logo.png"); background-position:top left; background-repeat:no-repeat; }
-*/
-
 
 #headertxt 
 {
@@ -141,12 +115,6 @@ margin-top: -40px;
 }
 
 #firstline { background-image:url("../Images/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
-/*#secondline { background-image:url("../Images/textbg.png"); color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
-#secondline:hover { text-decoration:underline; color:#7F000C; }*/
-
-/*.pictured { background-color:#CC3333; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; }
-.pictured a { font-size:16px; font-style:italic; letter-spacing:0; text-transform:none; color:#FFF; text-decoration:none; }
-.pictured a:hover { text-decoration:underline; }*/
 
 /* CONTROLS */
 .btn { height:32px; width:32px; float:left; cursor:pointer; }
@@ -231,15 +199,6 @@ margin-top: -40px;
     margin-left: 0;
     margin-bottom: 0;
 }
-/*
-orange: #e6a044;
-light blue: #3984b4;
-*/
-
-/*
-#content p a { text-decoration:none; color:#CD2B3A; }
-#content p a:hover { text-decoration:underline; color:#7F000C; }
-*/
 
 * html .clear
 {
@@ -257,13 +216,14 @@ light blue: #3984b4;
 
 .end
 {
-    /*display: inline-block;*/
-    margin-top: 30px;
-    margin-left: 30%;
-    margin-right: 30%;
     position:relative;
-    margin-bottom: 75px;
+    display: block;
+    margin-left: 40%;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
+
+
 /*  ToolTip Style   */
 
 .toolTipPlace 
