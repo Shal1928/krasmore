@@ -5,30 +5,89 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>Google Maps JavaScript API v3 Example: Simple Controls</title>
 <link href="default.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript">
-    function initialize() {
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="richmarker.js"></script>
 
-        var polyanaLatLng = new google.maps.LatLng(55.830445, 92.255008);
+    <script type="text/javascript">
 
-        var options = {
-            zoom: 15,
-            center: polyanaLatLng,
-            mapTypeControl: true,
-            mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-            zoomControl: true,
-            zoomControOptions: {style: google.maps.ZoomControlStyle.SMALL},
-            mapTypeId: google.maps.MapTypeId.HYBRID
-        };
+        function div() {
+            var m = document.createElement('DIV');
+            m.innerHTML = '<div class="arrow"></div>';
+            return m;
+        }
 
-        var map = new google.maps.Map(document.getElementById("map_canvas"), options);
+        function initialize() {
 
-        var marker = {
-            position: polyanaLatLng,
-            map: map,
-            title: "Поляна"
-        };
-    }
+            var polyanaLatLng = new google.maps.LatLng(55.831250, 92.251116);
+        
+            var options = {
+                zoom: 15,
+                center: polyanaLatLng,
+                mapTypeControl: true,
+                mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+                zoomControl: true,
+                zoomControOptions: {style: google.maps.ZoomControlStyle.LARGE},
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                streetViewControl: false
+            };
+
+            var map = new google.maps.Map(document.getElementById("map_canvas"), options);
+
+            //var markerSvg = new google.maps.MarkerImage('Marker.svg');
+            var marker = new RichMarker({
+                content: document.getElementById("MarkerSvg"),
+                position: polyanaLatLng,
+                map: map,
+                title: "Поляна",
+                shadow: false
+            });
+
+            google.maps.event.addListenerOnce(map, 'idle', function () {
+                $('.arrow').svg({ onLoad: 'Marker.svg' });
+            });
+
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                    '</div>' +
+                        '<h2 id="firstHeading" class="firstHeading">Поляна</h2>' +
+                            '<div id="bodyContent">' +
+                                '<p>Находится в 12 км от Красноярской ГЭС, за Бирюсинским заливом. ' +
+                                    'Если идти на Амуре, то путь занимает примерно 20 минут, а на большом катере 40. ' +
+                                        'Поляна достаточно удалена от фарватера, чтобы проходящие мимо катера ' +
+                                            'не мешали вам отдыхать и купаться.</p>' +
+                                                '</div>' +
+                                                    '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+
+
+            var placesArray = {};
+            placesArray['polyana'] = {
+                center: new google.maps.LatLng(55.831150, 92.251516)};
+        
+            var cityCircle;
+
+            for (var city in placesArray) {
+                // Construct the circle for each value in citymap. We scale population by 20.
+                var populationOptions = {
+                    strokeColor: "#FFF", //EEB744
+                    strokeOpacity: 0.4,
+                    strokeWeight: 2,
+                    fillColor: "#97C35F", //97C35F
+                    fillOpacity: 0.2,
+                    map: map,
+                    center: placesArray[city].center,
+                    radius: 130
+                };
+                cityCircle = new google.maps.Circle(populationOptions);
+            }
+        }
 
 //    // Create a base icon for all of our markers that specifies the
 //    // shadow, icon dimensions, etc.
@@ -60,6 +119,20 @@
 </script>
 </head>
 <body onload="initialize()">
-  <div id="map_canvas"></div>
+    <div id="map_canvas"></div>
+    
+    <svg version="1.0" id="MarkerSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g>
+	<path fill="none" stroke="#3984B4" stroke-miterlimit="10" d="M25,43.843"/>
+	<g>
+		<polygon fill="#FFFFFF" points="16.684,11.426 25,43.843 33.316,11.426 25,3.513 		"/>
+		<path fill="#3984B4" d="M25,47.867l-9.431-36.761L25,2.133l9.431,8.974L25,47.867z M17.798,11.746L25,39.818l7.202-28.072
+			L25,4.894L17.798,11.746z"/>
+	</g>
+	<path fill="none" stroke="#3984B4" stroke-miterlimit="10" d="M16.684,11.426L25,3.513L16.684,11.426z"/>
+	<polyline fill="#3984B4" points="17.777,15.689 32.223,15.689 33.316,11.426 25,3.513 16.684,11.426 	"/>
+</g>
+</svg>
 </body>
 </html>

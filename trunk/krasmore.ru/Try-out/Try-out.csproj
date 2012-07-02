@@ -69,6 +69,9 @@
     <Content Include="GoogleMaps\default.css" />
     <Content Include="GoogleMaps\GoogleMap.html" />
     <Content Include="GoogleMaps\GoogleMap2.html" />
+    <Content Include="GoogleMaps\marker.png" />
+    <Content Include="GoogleMaps\Marker.svg" />
+    <Content Include="GoogleMaps\richmarker.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="advanced_bgimg_slideshow\images\.DS_Store" />
