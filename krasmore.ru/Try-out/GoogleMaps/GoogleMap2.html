@@ -33,13 +33,17 @@
 
             var map = new google.maps.Map(document.getElementById("map_canvas"), options);
 
+            var markerContentString = '<div style="color: #FFF; font: 14 Verdana;">' +
+                                            'Поляна' + 
+                                        '</div>';
+
             //var markerSvg = new google.maps.MarkerImage('Marker.svg');
             var marker = new RichMarker({
-                content: document.getElementById("MarkerSvg"),
-                position: polyanaLatLng,
+                content: markerContentString,//document.getElementById("MarkerSvg"),
+                position: new google.maps.LatLng(55.829900, 92.249116),
                 map: map,
                 title: "Поляна",
-                shadow: false
+                shadow: true
             });
 
             google.maps.event.addListenerOnce(map, 'idle', function () {
@@ -87,6 +91,15 @@
                 };
                 cityCircle = new google.maps.Circle(populationOptions);
             }
+
+
+            var weatherLayer = new google.maps.weather.WeatherLayer({
+                temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
+            });
+            weatherLayer.setMap(map);
+
+            var cloudLayer = new google.maps.weather.CloudLayer();
+            cloudLayer.setMap(map);
         }
 
 //    // Create a base icon for all of our markers that specifies the
