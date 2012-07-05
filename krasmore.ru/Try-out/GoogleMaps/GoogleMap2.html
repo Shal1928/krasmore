@@ -40,15 +40,31 @@
             //var markerSvg = new google.maps.MarkerImage('Marker.svg');
             var marker = new RichMarker({
                 content: markerContentString,//document.getElementById("MarkerSvg"),
-                position: new google.maps.LatLng(55.829900, 92.249116),
+                position: new google.maps.LatLng(55.830300, 92.250116),
                 map: map,
                 title: "Поляна",
-                shadow: true
+                shadow: false,
+                anchor: RichMarkerPosition.TOP_RIGHT
             });
 
-            google.maps.event.addListenerOnce(map, 'idle', function () {
-                $('.arrow').svg({ onLoad: 'Marker.svg' });
+
+            var markerFlagContentString = '<div style="color: #000; font: 10 Verdana;">' +
+                                            '<div style="z-index:99; top: 18px; left: 5px; float: left; position: relative;">навес</div><img src="markerFlag.png" style="z-index: 1; position: relative;"></img>' +
+                                        '</div>';
+
+            var markerFlage = new RichMarker({
+                content: markerFlagContentString, //document.getElementById("MarkerSvg"),
+                position: new google.maps.LatLng(55.830300, 92.250116),
+                map: map,
+                title: "Поляна",
+                shadow: true,
+                anchor: RichMarkerPosition.BOTTOM_LEFT
             });
+
+
+//            google.maps.event.addListenerOnce(map, 'idle', function () {
+//                $('.arrow').svg({ onLoad: 'Marker.svg' });
+//            });
 
             var contentString = '<div id="content">' +
                 '<div id="siteNotice">' +

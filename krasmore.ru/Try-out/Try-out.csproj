@@ -71,6 +71,8 @@
     <Content Include="GoogleMaps\GoogleMap2.html" />
     <Content Include="GoogleMaps\marker.png" />
     <Content Include="GoogleMaps\Marker.svg" />
+    <Content Include="GoogleMaps\markerFlag.png" />
+    <Content Include="GoogleMaps\markerwithlabel.js" />
     <Content Include="GoogleMaps\richmarker.js" />
   </ItemGroup>
   <ItemGroup>
