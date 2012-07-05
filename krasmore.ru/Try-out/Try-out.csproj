@@ -69,6 +69,10 @@
     <Content Include="GoogleMaps\default.css" />
     <Content Include="GoogleMaps\GoogleMap.html" />
     <Content Include="GoogleMaps\GoogleMap2.html" />
+    <Content Include="GoogleMaps\GoogleMapSlider\css\style.css" />
+    <Content Include="GoogleMaps\GoogleMapSlider\images\marker.png" />
+    <Content Include="GoogleMaps\GoogleMapSlider\images\shadow.png" />
+    <Content Include="GoogleMaps\GoogleMapSlider\index.html" />
     <Content Include="GoogleMaps\marker.png" />
     <Content Include="GoogleMaps\Marker.svg" />
     <Content Include="GoogleMaps\markerFlag.png" />
