@@ -189,17 +189,6 @@ li
     list-style: none;
 }
 
-.mapContent
-{
-    width: 425px;
-    height: 250px; 
-    margin-top: 40px;
-    border-width: 0;
-    overflow: hidden; 
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-
 * html .clear
 {
     zoom: 1;
@@ -221,6 +210,32 @@ li
     margin-left: 40%;
     padding-top: 30px;
     padding-bottom: 50px;
+}
+
+
+/*  Map   */
+
+.mapContent
+{
+    width: 425px;
+    height: 250px; 
+    margin-top: 40px;
+    border-width: 0;
+    overflow: hidden; 
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+#map_canvas 
+{
+  /*height: 100%;*/
+  width: 425px;
+    height: 250px; 
+    margin-top: 40px;
+    border-width: 0;
+    overflow: hidden; 
+    margin-left: 0px;
+    margin-bottom: 0px;
 }
 
 
