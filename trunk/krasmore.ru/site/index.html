@@ -20,9 +20,12 @@
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
     <script type="text/javascript" src="Scripts/Helper.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="Scripts/Map.js"></script>
+
 
 </head>
-<body>
+<body onload="initializeMap()">
     <div id="header">
         <!-- jQuery handles to place the header background images -->
         <div id="headerimgs">
@@ -142,22 +145,25 @@
         </div>
         
         <div class="innerVerticalDataBlock">
-            <iframe class="mapContent" src="http://maps.google.ru/maps/ms?msid=214573484758789252535.0004bf2d5a47af8aa7b6a&amp;msa=0&amp;ie=UTF8&amp;ll=55.830445,92.255008&amp;spn=0.006544,0.021136&amp;t=h&amp;output=embed"></iframe>
+            
+            <div id="map_canvas"></div>
+            <!--<iframe class="mapContent" src="http://maps.google.ru/maps/ms?msid=214573484758789252535.0004bf2d5a47af8aa7b6a&amp;msa=0&amp;ie=UTF8&amp;ll=55.830445,92.255008&amp;spn=0.006544,0.021136&amp;t=h&amp;output=embed"></iframe>
             <p class="subContent">
                 Посмотреть <a href="http://maps.google.ru/maps/ms?msid=214573484758789252535.0004bf2d5a47af8aa7b6a&amp;msa=0&amp;ie=UTF8&amp;ll=55.830445,92.255008&amp;spn=0.006544,0.021136&amp;t=h&amp;source=embed">поляну</a> на карте большего размера
-            </p>
+            </p>-->
+
         </div>
         
         <div class="clear"></div>
 
-        <div class="end">
+        <!--<div class="end">
             <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
             <div style="float: left;">
                 <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,lj,gplus"></div> 
             </div>
             
             <div style="font: 10pt Georgia; padding-top: 5px;">&#151&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
-        </div>
+        </div>-->
     </div>
 
 <!-- Yandex.Metrika counter -->
@@ -165,25 +171,25 @@
 </script>
 
     <script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter14223298 = new Ya.Metrika({ id: 14223298, enableAll: true, trackHash: true, webvisor: true, params: window.yaParams || {} });
-            } catch (e) { }
-        });
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter14223298 = new Ya.Metrika({ id: 14223298, enableAll: true, trackHash: true, webvisor: true, params: window.yaParams || {} });
+                } catch (e) { }
+            });
 
-        var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
 
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
 <noscript><div><img src="//mc.yandex.ru/watch/14223298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
