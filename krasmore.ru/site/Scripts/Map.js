@@ -4,25 +4,16 @@
     // Setting padding to 5 px will offset the control
     // from the edge of the map
     controlDiv.style.padding = '5px';
-
+    controlDiv.title = 'Увеличить карту';
+    
     // Set CSS for the control border
-    var controlUI = document.createElement('div');
-    controlUI.style.backgroundColor = 'white';
-    controlUI.style.borderStyle = 'solid';
-    controlUI.style.borderWidth = '2px';
+    var controlUI = document.createElement('img');
+    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
+    controlUI.setAttribute('width', 22);
+    controlUI.setAttribute('height', 22);
+    controlUI.setAttribute('alt', 'Увеличить карту');
     controlUI.style.cursor = 'pointer';
-    controlUI.style.textAlign = 'center';
-    controlUI.title = 'Click to set the map to Home';
     controlDiv.appendChild(controlUI);
-
-    // Set CSS for the control interior
-    var controlText = document.createElement('div');
-    controlText.style.fontFamily = 'Arial,sans-serif';
-    controlText.style.fontSize = '12px';
-    controlText.style.paddingLeft = '4px';
-    controlText.style.paddingRight = '4px';
-    controlText.innerHTML = '<b>Home</b>';
-    controlUI.appendChild(controlText);
 
     // Setup the click event listeners: simply set the map to
     // Chicago
@@ -42,9 +33,9 @@ function initializeMap() {
         zoom: 15,
         center: mapCenter,
         mapTypeControl: true,
-        mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU },
+        mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU, position: google.maps.ControlPosition.TOP_RIGHT },
         zoomControl: true,
-        zoomControOptions: { style: google.maps.ZoomControlStyle.LARGE },
+        zoomControOptions: { style: google.maps.ZoomControlStyle.LARGE, position: google.maps.ControlPosition.TOP_LEFT },
         mapTypeId: google.maps.MapTypeId.HYBRID,
         streetViewControl: false
     };
