@@ -1,4 +1,6 @@
-﻿function HomeControl(controlDiv, map) {
+﻿var mapDiv;
+
+function HomeControl(controlDiv, map) {
 
     // Set CSS styles for the DIV containing the control
     // Setting padding to 5 px will offset the control
@@ -47,7 +49,9 @@ function initializeMap() {
 
     homeControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
-    
+
+    //document.getElementById("map_canvas")
+
 //    var markerContentString = '<div style="color: #FFF; font: 14 Verdana;">' +
 //                                            'Поляна' +
 //                                        '</div>';
