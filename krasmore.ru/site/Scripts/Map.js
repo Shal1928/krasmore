@@ -1,29 +1,29 @@
-﻿var mapDiv;
+﻿//var mapDiv;
 
-function HomeControl(controlDiv, map) {
+//function HomeControl(controlDiv, map) {
 
-    // Set CSS styles for the DIV containing the control
-    // Setting padding to 5 px will offset the control
-    // from the edge of the map
-    controlDiv.style.padding = '5px';
-    controlDiv.title = 'Увеличить карту';
-    
-    // Set CSS for the control border
-    var controlUI = document.createElement('img');
-    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
-    controlUI.setAttribute('width', 22);
-    controlUI.setAttribute('height', 22);
-    controlUI.setAttribute('alt', 'Увеличить карту');
-    controlUI.style.cursor = 'pointer';
-    controlDiv.appendChild(controlUI);
+//    // Set CSS styles for the DIV containing the control
+//    // Setting padding to 5 px will offset the control
+//    // from the edge of the map
+//    controlDiv.style.padding = '5px';
+//    controlDiv.title = 'Увеличить карту';
+//    
+//    // Set CSS for the control border
+//    var controlUI = document.createElement('img');
+//    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
+//    controlUI.setAttribute('width', 22);
+//    controlUI.setAttribute('height', 22);
+//    controlUI.setAttribute('alt', 'Увеличить карту');
+//    controlUI.style.cursor = 'pointer';
+//    controlDiv.appendChild(controlUI);
 
-    // Setup the click event listeners: simply set the map to
-    // Chicago
-    google.maps.event.addDomListener(controlUI, 'click', function () {
-        alert('To big Map!');
-    });
+//    // Setup the click event listeners: simply set the map to
+//    // Chicago
+//    google.maps.event.addDomListener(controlUI, 'click', function () {
+//        alert('To big Map!');
+//    });
 
-}
+//}
 
 function initializeMap() {
 
@@ -111,7 +111,7 @@ function initializeMap() {
         center: new google.maps.LatLng(55.831150, 92.251516)
     };
 
-    var cityCircle;
+    var placeCircle;
 
     for (var city in placesArray) {
         // Construct the circle for each value in citymap. We scale population by 20.
@@ -125,7 +125,7 @@ function initializeMap() {
             center: placesArray[city].center,
             radius: 130
         };
-        cityCircle = new google.maps.Circle(populationOptions);
+        placeCircle = new google.maps.Circle(populationOptions);
     }
 
 
