@@ -34,7 +34,7 @@ function initializeMap() {
     var options = {
         zoom: 15,
         center: mapCenter,
-        mapTypeControl: true,
+        mapTypeControl: false,
         mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU, position: google.maps.ControlPosition.TOP_RIGHT },
         zoomControl: true,
         zoomControOptions: { style: google.maps.ZoomControlStyle.LARGE, position: google.maps.ControlPosition.TOP_LEFT },
@@ -44,11 +44,11 @@ function initializeMap() {
 
     var map = new google.maps.Map(document.getElementById("map_canvas"), options);
 
-    var homeControlDiv = document.createElement('div');
-    var homeControl = new HomeControl(homeControlDiv, map);
+//    var homeControlDiv = document.createElement('div');
+//    var homeControl = new HomeControl(homeControlDiv, map);
 
-    homeControlDiv.index = 1;
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+//    homeControlDiv.index = 1;
+//    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 
     //document.getElementById("map_canvas")
 
@@ -129,11 +129,11 @@ function initializeMap() {
     }
 
 
-    var weatherLayer = new google.maps.weather.WeatherLayer({
-        temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
-    });
-    weatherLayer.setMap(map);
+//    var weatherLayer = new google.maps.weather.WeatherLayer({
+//        temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
+//    });
+//    weatherLayer.setMap(map);
 
-    var cloudLayer = new google.maps.weather.CloudLayer();
-    cloudLayer.setMap(map);
+//    var cloudLayer = new google.maps.weather.CloudLayer();
+//    cloudLayer.setMap(map);
 }
