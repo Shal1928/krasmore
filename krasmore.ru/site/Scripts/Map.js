@@ -1,29 +1,29 @@
 ﻿//var mapDiv;
 
-//function HomeControl(controlDiv, map) {
+function ToEnlargeControl(controlDiv, map) 
+{
+    controlDiv.style.padding = '5px';
+    controlDiv.title = 'Увеличить карту';
+    
+    var controlUI = document.createElement('img');
+    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
+    controlUI.setAttribute('width', 22);
+    controlUI.setAttribute('height', 22);
+    controlUI.setAttribute('alt', 'Увеличить карту');
+    controlUI.style.cursor = 'pointer';
+    controlDiv.appendChild(controlUI);
 
-//    // Set CSS styles for the DIV containing the control
-//    // Setting padding to 5 px will offset the control
-//    // from the edge of the map
-//    controlDiv.style.padding = '5px';
-//    controlDiv.title = 'Увеличить карту';
-//    
-//    // Set CSS for the control border
-//    var controlUI = document.createElement('img');
-//    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
-//    controlUI.setAttribute('width', 22);
-//    controlUI.setAttribute('height', 22);
-//    controlUI.setAttribute('alt', 'Увеличить карту');
-//    controlUI.style.cursor = 'pointer';
-//    controlDiv.appendChild(controlUI);
+    google.maps.event.addDomListener(controlUI, 'click', function () {
+        var mapCanvas = document.getElementById("map_canvas");
 
-//    // Setup the click event listeners: simply set the map to
-//    // Chicago
-//    google.maps.event.addDomListener(controlUI, 'click', function () {
-//        alert('To big Map!');
-//    });
+        mapCanvas.style.width = 800 + 'px';
+        //mapCanvas.setAttribute('width', 500 + 'px');
+        //mapCanvas.setAttribute('height', 500 + 'px');
+        alert(mapCanvas.style.width);
+        //mapCanvas.setAttribute('zIndex', 99);
 
-//}
+    });
+}
 
 function initializeMap() {
 
@@ -44,13 +44,13 @@ function initializeMap() {
 
     var map = new google.maps.Map(document.getElementById("map_canvas"), options);
 
-//    var homeControlDiv = document.createElement('div');
-//    var homeControl = new HomeControl(homeControlDiv, map);
+    var toEnlargeControlDiv = document.createElement('div');
+    var toEnlargeControl = new ToEnlargeControl(toEnlargeControlDiv, map);
 
-//    homeControlDiv.index = 1;
-//    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+    toEnlargeControlDiv.index = 1;
+    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toEnlargeControlDiv);
 
-    //document.getElementById("map_canvas")
+    document.getElementById("map_canvas");
 
 //    var markerContentString = '<div style="color: #FFF; font: 14 Verdana;">' +
 //                                            'Поляна' +
