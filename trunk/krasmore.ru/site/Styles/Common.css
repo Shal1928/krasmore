@@ -215,17 +215,6 @@ li
 
 /*  Map   */
 
-.mapContent
-{
-    width: 425px;
-    height: 250px; 
-    margin-top: 40px;
-    border-width: 0;
-    overflow: hidden; 
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-
 #map_canvas 
 {
   /*height: 100%;*/
@@ -243,7 +232,9 @@ li
 
 .toolTipPlace 
 {
-    border-bottom: 1px dashed;
+    /*border-bottom: 1px dashed;
+    border-bottom-color: #A4A4A4;
+    font-style: italic;*/
     cursor: default;
 }
 
@@ -269,4 +260,11 @@ li
     border-top: solid 5px #FFF;
     border-right: solid 5px #FFF;
     border-bottom: solid 5px #FFF;
+}
+
+.ttPreview 
+{
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: -3px;
 }
