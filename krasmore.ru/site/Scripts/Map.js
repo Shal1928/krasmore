@@ -1,29 +1,29 @@
 ﻿//var mapDiv;
 
-function ToEnlargeControl(controlDiv, map) 
-{
-    controlDiv.style.padding = '5px';
-    controlDiv.title = 'Увеличить карту';
-    
-    var controlUI = document.createElement('img');
-    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
-    controlUI.setAttribute('width', 22);
-    controlUI.setAttribute('height', 22);
-    controlUI.setAttribute('alt', 'Увеличить карту');
-    controlUI.style.cursor = 'pointer';
-    controlDiv.appendChild(controlUI);
+//function ToEnlargeControl(controlDiv, map) 
+//{
+//    controlDiv.style.padding = '5px';
+//    controlDiv.title = 'Увеличить карту';
+//    
+//    var controlUI = document.createElement('img');
+//    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
+//    controlUI.setAttribute('width', 22);
+//    controlUI.setAttribute('height', 22);
+//    controlUI.setAttribute('alt', 'Увеличить карту');
+//    controlUI.style.cursor = 'pointer';
+//    controlDiv.appendChild(controlUI);
 
-    google.maps.event.addDomListener(controlUI, 'click', function () {
-        var mapCanvas = document.getElementById("map_canvas");
+//    google.maps.event.addDomListener(controlUI, 'click', function () {
+//        var mapCanvas = document.getElementById("map_canvas");
 
-        mapCanvas.style.width = 800 + 'px';
-        //mapCanvas.setAttribute('width', 500 + 'px');
-        //mapCanvas.setAttribute('height', 500 + 'px');
-        alert(mapCanvas.style.width);
-        //mapCanvas.setAttribute('zIndex', 99);
+//        mapCanvas.style.width = 800 + 'px';
+//        //mapCanvas.setAttribute('width', 500 + 'px');
+//        //mapCanvas.setAttribute('height', 500 + 'px');
+//        alert(mapCanvas.style.width);
+//        //mapCanvas.setAttribute('zIndex', 99);
 
-    });
-}
+//    });
+//}
 
 function initializeMap() {
 
@@ -44,11 +44,11 @@ function initializeMap() {
 
     var map = new google.maps.Map(document.getElementById("map_canvas"), options);
 
-    var toEnlargeControlDiv = document.createElement('div');
-    var toEnlargeControl = new ToEnlargeControl(toEnlargeControlDiv, map);
+//    var toEnlargeControlDiv = document.createElement('div');
+//    var toEnlargeControl = new ToEnlargeControl(toEnlargeControlDiv, map);
 
-    toEnlargeControlDiv.index = 1;
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toEnlargeControlDiv);
+//    toEnlargeControlDiv.index = 1;
+//    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toEnlargeControlDiv);
 
     document.getElementById("map_canvas");
 
