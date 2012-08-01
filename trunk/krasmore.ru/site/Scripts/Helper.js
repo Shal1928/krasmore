@@ -96,3 +96,13 @@ var tooltip = function () {
 
 //  ToolTip 
 //  }
+
+//  ToolTopPreview
+//  {
+//$("#content2 div.someBlock") вернет div-элементы с классом someBlock, которые находятся внутри элемента с идентификатором content2.
+$(document).ready(function () {
+
+    $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
+});
+//  }
+//  ToolTopPreview
