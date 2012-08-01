@@ -292,9 +292,10 @@ li
     border-bottom: solid 5px #FFF;
 }
 
+/*src="Images/lookMe.png" alt="" */
 .ttPreview 
 {
-    margin-left: 2px;
+    margin-left: 1px;
     margin-right: 3px;
     margin-bottom: -3px;
 }
