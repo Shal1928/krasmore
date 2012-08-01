@@ -100,9 +100,65 @@ var tooltip = function () {
 //  ToolTopPreview
 //  {
 //$("#content2 div.someBlock") вернет div-элементы с классом someBlock, которые находятся внутри элемента с идентификатором content2.
+
+var toolTipPlacesCollection = new Object();
+
 $(document).ready(function () {
 
     $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
+
+
+    //    $("span.toolTipPlace").each(function () {
+    //        alert(findPos(this)); // выведет содержимое ссылок
+    //    });
+   
+
+    $("span.toolTipPlace").each(function (i, value) {
+
+        toolTipPlacesCollection[i] = findPos(value);
+    });
+
+//    for (var key in toolTipPlacesCollection) {
+//        alert(toolTipPlacesCollection[key]);
+//    }
+
+
 });
+
+$(document).mousemove(function (e) {
+
+    var key = 0;
+    for (key in toolTipPlacesCollection) {
+
+        var previewTop = toolTipPlacesCollection[key]['y'] - 25;
+
+        if (e.pageY >= previewTop) alert(toolTipPlacesCollection[key][0]);
+
+    }
+
+});
+
 //  }
 //  ToolTopPreview
+
+function findPos(obj) {
+    if (obj) {
+        var curleft = 0;
+        var curtop = 0;
+        if (obj.offsetParent) {
+            curleft = obj.offsetLeft;
+            curtop = obj.offsetTop;
+            while (obj = obj.offsetParent) {
+                curleft += obj.offsetLeft;
+                curtop += obj.offsetTop;
+            }
+        }
+
+        var result = new Object();
+
+        result['x'] = curleft;
+        result['y'] = curtop;
+
+        return result;
+    }
+}
