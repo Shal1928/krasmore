@@ -105,7 +105,7 @@ var toolTipPlacesCollection = new Object();
 
 $(document).ready(function () {
 
-    $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
+    //$("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
 
 
     //    $("span.toolTipPlace").each(function () {
@@ -131,8 +131,13 @@ $(document).mousemove(function (e) {
     for (key in toolTipPlacesCollection) {
 
         var previewTop = toolTipPlacesCollection[key]['y'] - 25;
+        var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
 
-        if (e.pageY >= previewTop) alert(toolTipPlacesCollection[key][0]);
+        if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) {
+            $("span.toolTipPlace").each(function () {
+                if ((findPos(this)['y'] == toolTipPlacesCollection[key]['y']) && (!$("img.ttPreview").length)) $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(this);
+            });
+        }
 
     }
 
