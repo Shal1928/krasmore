@@ -127,15 +127,30 @@ $(document).ready(function () {
 
 $(document).mousemove(function (e) {
 
-    var key = 0;
-    for (key in toolTipPlacesCollection) {
+    for (var key in toolTipPlacesCollection) {
 
         var previewTop = toolTipPlacesCollection[key]['y'] - 25;
         var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
 
         if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) {
             $("span.toolTipPlace").each(function () {
-                if ((findPos(this)['y'] == toolTipPlacesCollection[key]['y']) && (!$("img.ttPreview").length)) $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(this);
+
+                var idConst = "ttPreviewId";
+                var x = findPos(this)['x'];
+                var y = findPos(this)['y'];
+                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
+                
+
+                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
+
+
+                    //                    if ($("img.ttPreview").length) {
+
+                    //                    }
+
+                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
+                    //alert($("span.toolTipPlace img.ttPreview").length);
+                }
             });
         }
 
