@@ -142,14 +142,7 @@ $(document).mousemove(function (e) {
                 
 
                 if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
-
-
-                    //                    if ($("img.ttPreview").length) {
-
-                    //                    }
-
                     $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
-                    //alert($("span.toolTipPlace img.ttPreview").length);
                 }
             });
         }
