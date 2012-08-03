@@ -88,6 +88,10 @@ li
     height:600px; 
     position:absolute;
 }
+.caption 
+{
+    /**/
+}
 
 /* NAVIGATION opacity: .8; */
 #Roof 
@@ -122,6 +126,11 @@ li
     color: #FFF;
     position: absolute;
     z-index: 0;
+}
+
+.shadowed 
+{
+    /**/
 }
         
 #RoofText
