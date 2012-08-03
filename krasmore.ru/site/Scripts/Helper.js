@@ -132,6 +132,7 @@ $(document).mousemove(function (e)
         
                 if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) 
                 {
+                    //console.log("Add ("+x+":"+y+")");
                     $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
                 }
             });
@@ -140,16 +141,18 @@ $(document).mousemove(function (e)
         
         if ((e.pageY < previewTop) || (e.pageY > previewBottom))  
         {
+            //var iteration = 0;
             $("span.toolTipPlace").each(function () 
             {
-                var idConst = "ttPreviewId";
-                var x = findPos(this)['x'];
-                var y = findPos(this)['y'];
-                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
+                //iteration++;
+                var idConst2 = "ttPreviewId";
+                var x2 = findPos(this)['x'];
+                var y2 = findPos(this)['y'];
+                var imagePreviewCollection = $("#" + idConst2 + x2 + "_" + y2);
         
-                if ((y == toolTipPlacesCollection[key]['y'])&&(imagePreviewCollection.length))
+                if ((y2 == toolTipPlacesCollection[key]['y'])&&(imagePreviewCollection.length))
                 {
-                    //console.log('message...');
+                    //console.log("Remove ("+x+":"+y+") Iteration:"+iteration);
                     imagePreviewCollection.remove();
                 }
             });
