@@ -103,14 +103,24 @@ var tooltip = function () {
 
 var toolTipPlacesCollection = new Object();
 
-$(document).ready(function ()
+$(document).ready(function() 
+{
+    FillToolTipPlaceCollection();
+});
+
+$(window).resize(function() 
+{
+    FillToolTipPlaceCollection();
+});
+
+function FillToolTipPlaceCollection() 
 {
     $("span.toolTipPlace").each(function(i, value) 
     {
         toolTipPlacesCollection[i] = findPos(value);
         $(this).attr("id", "toolTipPlaceId" + findPos(value)["x"] + "_" + findPos(value)["y"]);
     });
-});
+}
 
 $(document).mousemove(function (e) 
 {
