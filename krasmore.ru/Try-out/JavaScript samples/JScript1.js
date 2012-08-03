@@ -13,8 +13,10 @@
 //                 var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
 
 //                 if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
-//                 {
+// 
 
+//console.log('message...');
+    
 //alert("Mouse enter");
 //            $("span.toolTipPlace").each(function () {
 
@@ -60,3 +62,25 @@
 //    for (var key in toolTipPlacesCollection) {
 //        alert(toolTipPlacesCollection[key]);
 //    }
+
+
+
+//      else {
+//          for (var key2 in toolTipPlacesCollection) {
+//              var previewTop2 = toolTipPlacesCollection[key2]['y'] - 25;
+//              var previewBottom2 = toolTipPlacesCollection[key2]['y'] + 25;
+
+//              $("span.toolTipPlace").each(function () {
+
+//                  var idConst = "ttPreviewId";
+//                  var x = findPos(this)['x'];
+//                  var y = findPos(this)['y'];
+//                  var imagePreviewCollection = $("#" + idConst + x + "_" + y);
+
+
+//                  if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
+//                      $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
+//                  }
+//              });
+//          }
+//      }

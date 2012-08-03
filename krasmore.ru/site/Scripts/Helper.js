@@ -97,6 +97,7 @@ var tooltip = function () {
 //  ToolTip 
 //  }
 
+
 //  ToolTopPreview
 //  {
 //$("#content2 div.someBlock") вернет div-элементы с классом someBlock, которые находятся внутри элемента с идентификатором content2.
@@ -105,31 +106,58 @@ var toolTipPlacesCollection = new Object();
 var areaElement;
 //var imagePreview;
 
-$(document).ready(function () {
+$(document).ready(function ()
+{
+    $("span.toolTipPlace").each(function(i, value) 
+    {
+        toolTipPlacesCollection[i] = findPos(value);
+    });
+});
 
-//    $("span.toolTipPlace").each(function (i, value) {
+$(document).mousemove(function (e) 
+{
+    for (var key in toolTipPlacesCollection) 
+    {
+        var previewTop = toolTipPlacesCollection[key]['y'] - 25;
+        var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
 
-//        toolTipPlacesCollection[i] = findPos(value);
-//    });
-
-    var imagePreview = $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
-    imagePreview.css({ opacity: 0 });
-
-
-    imagePreview.bind({
-        mouseenter: function (e) 
+        if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
         {
-            alert("Mouse enter");
-             for (var key in toolTipPlacesCollection) 
-             {
+            $("span.toolTipPlace").each(function () 
+            {
+                var idConst = "ttPreviewId";
+                var x = findPos(this)['x'];
+                var y = findPos(this)['y'];
+                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
+        
+                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) 
+                {
+                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
+                }
+            });
+        
+        } 
+        
+        if ((e.pageY < previewTop) || (e.pageY > previewBottom))  
+        {
+            $("span.toolTipPlace").each(function () 
+            {
+                var idConst = "ttPreviewId";
+                var x = findPos(this)['x'];
+                var y = findPos(this)['y'];
+                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
+        
+                if ((y == toolTipPlacesCollection[key]['y'])&&(imagePreviewCollection.length))
+                {
+                    //console.log('message...');
+                    imagePreviewCollection.remove();
+                }
+            });
+         }
 
-                 var previewTop = toolTipPlacesCollection[key]['y'] - 25;
-                 var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
-
-                 if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
-                 {
-
-                     alert("Mouse enter");
+         //console.log('message...');
+//        if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
+//        { 
 //            $("span.toolTipPlace").each(function () {
 
 //                var idConst = "ttPreviewId";
@@ -137,91 +165,16 @@ $(document).ready(function () {
 //                var y = findPos(this)['y'];
 //                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
 
-
-//                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
+//                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) 
+//                {
 //                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
-////                    var divElement = $("<img width='1px' height='50px' id='ShowTrigger'></img>").appendTo(this);
-////                    $(divElement).hide();
 //                }
 //            });
-                 }
-             }
-        },
-        mouseleave: function () {
-            alert("leave");
-        }
-    });
-
-    //    .bind("hover",
-    //        function () {
-    //            alert("enter");
-    //        }
-    //    );
-
-    //areaElement
-    //$(divElement).hide();
-
-    //    $("span.toolTipPlace").each(function () {
-    //        alert(findPos(this)); // выведет содержимое ссылок
-    //    });
-
-
-   
-
-    //    for (var key in toolTipPlacesCollection) {
-    //        alert(toolTipPlacesCollection[key]);
-    //    }
-
-
-});
-
-//$(document).mousemove(function (e) {
-function ShowPreviewImages(){
-
-    for (var key in toolTipPlacesCollection) {
-
-        var previewTop = toolTipPlacesCollection[key]['y'] - 25;
-        var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
-
-        if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) {
-            $("span.toolTipPlace").each(function () {
-
-                var idConst = "ttPreviewId";
-                var x = findPos(this)['x'];
-                var y = findPos(this)['y'];
-                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
-
-
-                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
-                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
-//                    var divElement = $("<img width='1px' height='50px' id='ShowTrigger'></img>").appendTo(this);
-//                    $(divElement).hide();
-                }
-            });
-        }
-        //      else {
-        //          for (var key2 in toolTipPlacesCollection) {
-        //              var previewTop2 = toolTipPlacesCollection[key2]['y'] - 25;
-        //              var previewBottom2 = toolTipPlacesCollection[key2]['y'] + 25;
-
-        //              $("span.toolTipPlace").each(function () {
-
-        //                  var idConst = "ttPreviewId";
-        //                  var x = findPos(this)['x'];
-        //                  var y = findPos(this)['y'];
-        //                  var imagePreviewCollection = $("#" + idConst + x + "_" + y);
-
-
-        //                  if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
-        //                      $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
-        //                  }
-        //              });
-        //          }
-        //      }
-
+//        }
+        
     }
 
-}; //);
+});
 
 //  }
 //  ToolTopPreview

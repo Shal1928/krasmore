@@ -78,6 +78,7 @@
     <Content Include="GoogleMaps\markerFlag.png" />
     <Content Include="GoogleMaps\markerwithlabel.js" />
     <Content Include="GoogleMaps\richmarker.js" />
+    <Content Include="JavaScript samples\JScript1.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="advanced_bgimg_slideshow\images\.DS_Store" />
