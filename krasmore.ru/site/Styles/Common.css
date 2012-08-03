@@ -8,34 +8,49 @@ body
      font: 14 Georgia,'Times New Roman',serif;
 }
 
-/*Links*/
-a:link, a:visited 
+/*Links*/ 
+a:link
 {
     text-decoration: none;
-    background: -moz-linear-gradient(left, #B0C8DF, #B0C8DF 100%);
-    background: -ms-linear-gradient(left, #B0C8DF, #B0C8DF 100%);
-    background: -o-linear-gradient(left, #B0C8DF, #B0C8DF 100%);
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(#B0C8DF), to(#B0C8DF));
-    background: -webkit-linear-gradient(left, #B0C8DF, #B0C8DF 100%);
-    background: linear-gradient(left, #B0C8DF, #B0C8DF 100%);
+    background: -moz-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: -ms-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: -o-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#99ccff), to(#99ccff));
+    background: -webkit-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: linear-gradient(left, #99ccff, #99ccff 100%);
     background-position: 0 100%;
     background-size: 10px 1px;
     background-repeat: repeat-x;
-    color: #3984b4;
+    color: #003366;
+}
+
+a:visited 
+{
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #66ccff, #66ccff 100%);
+    background: -ms-linear-gradient(left, #66ccff, #66ccff 100%);
+    background: -o-linear-gradient(left, #66ccff, #66ccff 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#66ccff), to(#66ccff));
+    background: -webkit-linear-gradient(left, #66ccff, #66ccff 100%);
+    background: linear-gradient(left, #66ccff, #66ccff 100%);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #3399cc;
 }
 
 a:hover, a:active {
     text-decoration: none;
-    background: -moz-linear-gradient(left, #C5E1A2, #C5E1A2 100%);
-    background: -ms-linear-gradient(left, #C5E1A2, #C5E1A2 100%);
-    background: -o-linear-gradient(left, #C5E1A2, #C5E1A2 100%);
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(#C5E1A2), to(#C5E1A2));
-    background: -webkit-linear-gradient(left, #C5E1A2, #C5E1A2 100%);
-    background: linear-gradient(left, #C5E1A2, #C5E1A2 100%);
+    background: -moz-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: -ms-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: -o-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#99cc99), to(#99cc99));
+    background: -webkit-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: linear-gradient(left, #99cc99, #99cc99 100%);
     background-position: 0 100%;
     background-size: 10px 1px;
     background-repeat: repeat-x;
-    color: #97c35f;
+    color: #669933;
 }
 
 img 
@@ -262,10 +277,16 @@ li
 
 .toolTipPlace 
 {
-    /*border-bottom: 1px dashed;
-    border-bottom-color: #A4A4A4;
-    font-style: italic;*/
     cursor: default;
+    background: -moz-linear-gradient(left, #999, #999 60%, transparent 60%);
+    background: -ms-linear-gradient(left, #999, #999 60%, transparent 60%);
+    background: -o-linear-gradient(left, #999, #999 60%, transparent 60%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#999), color-stop(0.6, #999), color-stop(0.6, transparent));
+    background: -webkit-linear-gradient(left, #999, #999 60%, transparent 60%);
+    background: linear-gradient(left, #999, #999 60%, transparent 60%);
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
 }
 
 #tt 
