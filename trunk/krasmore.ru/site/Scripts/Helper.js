@@ -103,23 +103,29 @@ var tooltip = function () {
 //$("#content2 div.someBlock") вернет div-элементы с классом someBlock, которые находятся внутри элемента с идентификатором content2.
 
 var toolTipPlacesCollection = new Object();
-var areaElement;
+//var areaElement;
 //var imagePreview;
 
 $(document).ready(function ()
 {
+    //var imagePreview = $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
+    //imagePreview.css({ opacity: 0 });
+    
     $("span.toolTipPlace").each(function(i, value) 
     {
         toolTipPlacesCollection[i] = findPos(value);
+        $(this).attr("id", "toolTipPlaceId" + findPos(value)["x"] + "_" + findPos(value)["y"]);
     });
+
+    //imagePreview.hide();
 });
 
 $(document).mousemove(function (e) 
 {
     for (var key in toolTipPlacesCollection) 
     {
-        var previewTop = toolTipPlacesCollection[key]['y'] - 25;
-        var previewBottom = toolTipPlacesCollection[key]['y'] + 25;
+        var previewTop = toolTipPlacesCollection[key]["y"] - 50;
+        var previewBottom = toolTipPlacesCollection[key]["y"] + 50;
 
         if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
         {
@@ -128,12 +134,17 @@ $(document).mousemove(function (e)
                 var idConst = "ttPreviewId";
                 var x = findPos(this)['x'];
                 var y = findPos(this)['y'];
-                var imagePreviewCollection = $("#" + idConst + x + "_" + y);
-        
-                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) 
+                var toolTipPlaceX = toolTipPlacesCollection[key]['x'];
+                var toolTipPlaceY = toolTipPlacesCollection[key]['y'];
+                var imagePreviewCollection = $(this).find("#" + idConst + toolTipPlaceX + "_" + toolTipPlaceY);//$("#" + idConst + x + "_" + y);
+                var toolTipPlaceId = $(this).attr("id");
+                
+                var toolTipPlaceTargetId = "toolTipPlaceId" + toolTipPlaceX + "_" + toolTipPlaceY;
+
+                if ((toolTipPlaceId == toolTipPlaceTargetId) && (!imagePreviewCollection.length)) 
                 {
-                    //console.log("Add ("+x+":"+y+")");
-                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
+                    console.log(toolTipPlaceId);
+                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + toolTipPlaceX + "_" + toolTipPlaceY + "' />").appendTo(this);
                 }
             });
         
@@ -148,12 +159,18 @@ $(document).mousemove(function (e)
                 var idConst2 = "ttPreviewId";
                 var x2 = findPos(this)['x'];
                 var y2 = findPos(this)['y'];
-                var imagePreviewCollection = $("#" + idConst2 + x2 + "_" + y2);
-        
-                if ((y2 == toolTipPlacesCollection[key]['y'])&&(imagePreviewCollection.length))
+                var toolTipPlaceX2 = toolTipPlacesCollection[key]['x'];
+                var toolTipPlaceY2 = toolTipPlacesCollection[key]['y'];
+                var imagePreviewCollection2 = $(this).find("#" + idConst2 + toolTipPlaceX2 + "_" + toolTipPlaceY2);
+                var toolTipPlaceId2 = $(this).attr("id");
+                
+                var toolTipPlaceTargetId2 = "toolTipPlaceId" + toolTipPlaceX2 + "_" + toolTipPlaceY2;
+
+
+                if ((toolTipPlaceId2 == toolTipPlaceTargetId2)&&(imagePreviewCollection2.length))
                 {
                     //console.log("Remove ("+x+":"+y+") Iteration:"+iteration);
-                    imagePreviewCollection.remove();
+                    imagePreviewCollection2.remove();
                 }
             });
          }
