@@ -115,59 +115,86 @@ $(window).resize(function()
 
 function FillToolTipPlaceCollection() 
 {
-    $("span.toolTipPlace").each(function(i, value) 
+    $("span.toolTipPlace").each(function (i, value) 
     {
         toolTipPlacesCollection[i] = findPos(value);
         $(this).attr("id", "toolTipPlaceId" + findPos(value)["x"] + "_" + findPos(value)["y"]);
-    });
-}
 
-$(document).mousemove(function (e) 
-{
-    var imagePreviewCollection;
-    var idConst = "ttPreviewId";
-    var ttPlaceIdConst = "toolTipPlaceId";
-    var toleranceConst = 75;
-    
-    for (var key in toolTipPlacesCollection) 
-    {
-        var toolTipPlaceX = toolTipPlacesCollection[key]["x"];
-        var toolTipPlaceY = toolTipPlacesCollection[key]["y"];
-        var imagePreviewId = idConst + toolTipPlaceX + "_" + toolTipPlaceY;
-        var ttPreviewImage = "<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
-        var toolTipPlaceTargetId = ttPlaceIdConst + toolTipPlaceX + "_" + toolTipPlaceY;
+        var imagePreviewCollection;
+        var idConst = "ttPreviewId";
+        var ttPlaceIdConst = "toolTipPlaceId";
 
-        var previewTop = toolTipPlaceY - toleranceConst;
-        var previewBottom = toolTipPlaceY + toleranceConst;
-        
-        if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
-        {
-            $("span.toolTipPlace").each(function () 
-            {
+        for (var key in toolTipPlacesCollection) {
+            var toolTipPlaceX = toolTipPlacesCollection[key]["x"];
+            var toolTipPlaceY = toolTipPlacesCollection[key]["y"];
+            var imagePreviewId = idConst + toolTipPlaceX + "_" + toolTipPlaceY;
+            var ttPreviewImage = "<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
+            var toolTipPlaceTargetId = ttPlaceIdConst + toolTipPlaceX + "_" + toolTipPlaceY;
+
+            $("span.toolTipPlace").each(function () {
                 imagePreviewCollection = $(this).find("#" + idConst + toolTipPlaceX + "_" + toolTipPlaceY);
-                
-                if (($(this).attr("id") == toolTipPlaceTargetId) && (!imagePreviewCollection.length)) 
-                {
+
+                if (($(this).attr("id") == toolTipPlaceTargetId) && (!imagePreviewCollection.length)) {
                     $(ttPreviewImage).appendTo(this);
                 }
             });
-        } 
-        
-        if ((e.pageY < previewTop) || (e.pageY > previewBottom))  
-        {
-            $("span.toolTipPlace").each(function () 
-            {
-                imagePreviewCollection = $(this).find("#" + idConst + toolTipPlaceX + "_" + toolTipPlaceY);
+        }
+    });
+}
 
-                if (($(this).attr("id") == toolTipPlaceTargetId)&&(imagePreviewCollection.length))
-                {
-                    imagePreviewCollection.remove();
-                }
-            });
-         }
-    }
+//function FillToolTipPlaceCollection() {
+//    $("span.toolTipPlace").each(function (i, value) {
+//        toolTipPlacesCollection[i] = findPos(value);
+//        $(this).attr("id", "toolTipPlaceId" + findPos(value)["x"] + "_" + findPos(value)["y"]);
+//    });
+//}
 
-});
+//$(document).mousemove(function (e) 
+//{
+//    var imagePreviewCollection;
+//    var idConst = "ttPreviewId";
+//    var ttPlaceIdConst = "toolTipPlaceId";
+//    var toleranceConst = 75;
+//    
+//    for (var key in toolTipPlacesCollection) 
+//    {
+//        var toolTipPlaceX = toolTipPlacesCollection[key]["x"];
+//        var toolTipPlaceY = toolTipPlacesCollection[key]["y"];
+//        var imagePreviewId = idConst + toolTipPlaceX + "_" + toolTipPlaceY;
+//        var ttPreviewImage = "<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
+//        var toolTipPlaceTargetId = ttPlaceIdConst + toolTipPlaceX + "_" + toolTipPlaceY;
+
+//        var previewTop = toolTipPlaceY - toleranceConst;
+//        var previewBottom = toolTipPlaceY + toleranceConst;
+//        
+//        if ((e.pageY >= previewTop) && (e.pageY <= previewBottom)) 
+//        {
+//            $("span.toolTipPlace").each(function () 
+//            {
+//                imagePreviewCollection = $(this).find("#" + idConst + toolTipPlaceX + "_" + toolTipPlaceY);
+//                
+//                if (($(this).attr("id") == toolTipPlaceTargetId) && (!imagePreviewCollection.length)) 
+//                {
+//                    $(ttPreviewImage).appendTo(this);
+//                }
+//            });
+//        } 
+//        
+//        if ((e.pageY < previewTop) || (e.pageY > previewBottom))  
+//        {
+//            $("span.toolTipPlace").each(function () 
+//            {
+//                imagePreviewCollection = $(this).find("#" + idConst + toolTipPlaceX + "_" + toolTipPlaceY);
+
+//                if (($(this).attr("id") == toolTipPlaceTargetId)&&(imagePreviewCollection.length))
+//                {
+//                    imagePreviewCollection.remove();
+//                }
+//            });
+//         }
+//    }
+
+//});
 
 //  }
 //  ToolTopPreview
