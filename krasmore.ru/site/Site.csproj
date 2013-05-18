@@ -36,6 +36,10 @@
     <Content Include="error404.html" />
     <Content Include="favicon.png" />
     <Content Include="googled40e4dec7b80ae1d.html" />
+    <Content Include="Images\btn_back_i.gif" />
+    <Content Include="Images\btn_next_i.gif" />
+    <Content Include="Images\btn_pause_i.gif" />
+    <Content Include="Images\btn_play_i.gif" />
     <Content Include="Images\comfortableBeach1.0.jpg" />
     <Content Include="Images\comfortableBeach1.1.jpg" />
     <Content Include="Images\comfortableBoats1.0.jpg" />
@@ -43,10 +47,6 @@
     <Content Include="Images\drivingBun1.1.jpg" />
     <Content Include="Images\excursionsBiryusa0.1.jpg" />
     <Content Include="Images\excursionsBiryusa0.2.jpg" />
-    <Content Include="Images\btn_back_i.png" />
-    <Content Include="Images\btn_next_i.png" />
-    <Content Include="Images\btn_pause_i.png" />
-    <Content Include="Images\btn_play_i.png" />
     <Content Include="Images\farAway1.0.jpg" />
     <Content Include="Images\farAway1.1.jpg" />
     <Content Include="Images\goodPlace1.0.jpg" />

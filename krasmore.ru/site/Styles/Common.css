@@ -168,20 +168,34 @@ li
     top:150px;
 }
 
-#firstline { background-image:url("../Images/textbg.png"); color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
+#firstline 
+{
+     background-image:url("../Images/textbg.png"); 
+     color:#333; 
+     font-size:40px; 
+     padding:4px 13px 7px; 
+     float:left; 
+     display:block;
+}
 
 /* CONTROLS */
-.btn { height:32px; width:32px; float:left; cursor:pointer; }
-#back { background-image:url("../Images/btn_back_i.png"); }
-#next { background-image:url("../Images/btn_next_i.png"); }
-#control { background-image:url("../Images/btn_pause_i.png"); }
+.btn { height:10px; width:10px; float:left; cursor:pointer; margin: 3px; }
+#back { background-image:url("../Images/btn_back_i.gif"); }
+#next { background-image:url("../Images/btn_next_i.gif"); }
+#control { background-image:url("../Images/btn_pause_i.gif"); }
 
 /* HEADER HAVIGATION */
-#headernav-outer { position:relative; top:400px; margin:0 auto; width:960px; }
+#headernav-outer 
+{
+     position:relative; 
+     top:400px; 
+     margin:0 auto; 
+     width:960px;
+}
 #headernav 
 { 
-    margin-left: 90%;
-    margin-top: -45px; 
+    margin-left: 95%;
+    margin-top: -25px; 
     position:absolute;
 }
 

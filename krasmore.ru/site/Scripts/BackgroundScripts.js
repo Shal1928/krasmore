@@ -15,15 +15,15 @@ var photos = [
     "firstline": "Чай у костра"
 },
 {
-    "image": "goodPlace0.1.jpg",
-    "firstline": "Отличное место для дружных компаний"
-},
-{
     "image": "goodPlace1.0.jpg",
-    "firstline": "Отличное место для дружных компаний"
+    "firstline": "Отдых в палатках"
 },
 {
     "image": "goodPlace1.1.jpg",
+    "firstline": "Отдых в палатках"
+},
+{
+    "image": "goodPlace0.1.jpg",
     "firstline": "Отличное место для дружных компаний"
 },
 {
@@ -101,7 +101,7 @@ $(document).ready(function () {
         stopAnimation();
     }, function () {
         // Change the background image to "pause"
-        $(this).css({ "background-image": "url(Images/btn_pause_i.png)" });
+        $(this).css({ "background-image": "url(Images/btn_pause_i.gif)" });
 
         // Show the next image
         navigate("next");
@@ -186,7 +186,7 @@ $(document).ready(function () {
 
     var stopAnimation = function () {
         // Change the background image to "play"
-        $("#control").css({ "background-image": "url(Images/btn_play_i.png)" });
+        $("#control").css({ "background-image": "url(Images/btn_play_i.gif)" });
 
         // Clear the interval
         clearInterval(interval);
