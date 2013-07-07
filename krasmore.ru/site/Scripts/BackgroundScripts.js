@@ -72,11 +72,11 @@ var photos = [
 },
 {
     "image": "excursionsBiryusa0.1.jpg",
-    "firstline": "Экскурсии по Красноярскому морю"
+    "firstline": "Прогулки по Красноярскому морю"
 },
 {
     "image": "excursionsBiryusa0.2.jpg",
-    "firstline": "Экскурсии по Красноярскому морю"
+    "firstline": "Прогулки по Красноярскому морю"
 }
 ];
 
