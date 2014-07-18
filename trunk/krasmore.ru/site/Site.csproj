@@ -56,6 +56,7 @@
     <Content Include="Images\headerbg.png" />
     <Content Include="Images\comfortableBoats0.1.jpg" />
     <Content Include="Images\lookMe.png" />
+    <Content Include="Images\Store\drivingBun201407121.jpg" />
     <Content Include="Images\teaBonfire0.1.jpg" />
     <Content Include="Images\Logo_175x110_HalfBorder.png" />
     <Content Include="Images\goodPlace0.1.jpg" />
@@ -80,6 +81,7 @@
     <Content Include="Images\ttVelarium.jpg" />
     <Content Include="Images\ttWater-skis.jpg" />
     <Content Include="Images\ttWinter.jpg" />
+    <Content Include="Images\waterSkis0.5.jpg" />
     <Content Include="Images\waterSkis1.0.jpg" />
     <Content Include="index.html" />
     <Content Include="robots.txt" />

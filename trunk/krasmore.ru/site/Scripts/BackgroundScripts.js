@@ -59,6 +59,10 @@ var photos = [
     "firstline": "Катание на «плюшках»"
 },
 {
+    "image": "waterSkis0.5.jpg",
+    "firstline": "Водные лыжи"
+},
+{
     "image": "waterSkis1.0.jpg",
     "firstline": "Водные лыжи"
 },    
