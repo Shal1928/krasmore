@@ -76,6 +76,7 @@
     <Content Include="Images\ttFishing.jpg" />
     <Content Include="Images\ttMeadow.jpg" />
     <Content Include="Images\ttShipping.jpg" />
+    <Content Include="Images\ttSmallBoat.jpg" />
     <Content Include="Images\ttTable.jpg" />
     <Content Include="Images\ttTrochanter.jpg" />
     <Content Include="Images\ttVelarium.jpg" />
