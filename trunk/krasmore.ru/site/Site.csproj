@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="apple-touch-favicon.png" />
+    <Content Include="beta.html" />
     <Content Include="error404.html" />
     <Content Include="favicon.png" />
     <Content Include="googled40e4dec7b80ae1d.html" />
@@ -50,6 +51,7 @@
     <Content Include="Images\excursionsBiryusa0.2.jpg" />
     <Content Include="Images\farAway1.0.jpg" />
     <Content Include="Images\farAway1.1.jpg" />
+    <Content Include="Images\goodPlace0.1.2.jpg" />
     <Content Include="Images\goodPlace0.2.1.jpg" />
     <Content Include="Images\goodPlace0.2.2.jpg" />
     <Content Include="Images\goodPlace1.0.jpg" />
@@ -81,6 +83,7 @@
     <Content Include="Images\ttTable.jpg" />
     <Content Include="Images\ttTrochanter.jpg" />
     <Content Include="Images\ttVelarium.jpg" />
+    <Content Include="Images\ttVolleyball.jpg" />
     <Content Include="Images\ttWater-skis.jpg" />
     <Content Include="Images\ttWinter.jpg" />
     <Content Include="Images\waterSkis0.5.jpg" />

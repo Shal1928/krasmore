@@ -27,6 +27,10 @@ var photos = [
     "firstline": "Отличное место для дружных компаний"
 },
 {
+    "image": "goodPlace0.1.2.jpg",
+    "firstline": "Отличное место для дружных компаний"
+},
+{
     "image": "goodPlace0.2.jpg",
     "firstline": "Отличное место для дружных компаний"
 },
