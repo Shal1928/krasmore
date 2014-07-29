@@ -20,9 +20,9 @@
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
     <script type="text/javascript" src="Scripts/Helper.js"></script>
+    <script type="text/javascript" charset="UTF-8" async="async" src="http://share.cntrlmrktng.ru/1.1/goodshare.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="Scripts/Map.js"></script>
-
 
 </head>
 <body onload="initializeMap()">
@@ -153,47 +153,53 @@
         <div class="innerVerticalDataBlock">
             
             <!-- Gismeteo informer START -->
-<!-- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
-<div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
-  <div class="gsIContent">
-   <div id="cityLink">
-     <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
-   </div>
-   <div class="gsLinks">
-     <table>
-       <tr>
-         <td>
-           <div class="leftCol">
-             <a href="http://www.gismeteo.ru" target="_blank">
-               <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
-               <span>Gismeteo</span>
-             </a>
-           </div>
-           <div class="rightCol">
-             <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
-           </div>
-           </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-<script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>-->
-<!-- Gismeteo informer END -->
+            <!-- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
+            <div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
+              <div class="gsIContent">
+               <div id="cityLink">
+                 <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
+               </div>
+               <div class="gsLinks">
+                 <table>
+                   <tr>
+                     <td>
+                       <div class="leftCol">
+                         <a href="http://www.gismeteo.ru" target="_blank">
+                           <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                           <span>Gismeteo</span>
+                         </a>
+                       </div>
+                       <div class="rightCol">
+                         <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
+                       </div>
+                       </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>-->
+            <!-- Gismeteo informer END -->
             <div id="map_canvas"></div>
         </div>
         
+
         <div class="clear"></div>
         
-        <!--Uncomment this before release-->
-        <!--<div class="end">
-            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-            <div style="float: left;">
-                <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,lj,gplus"></div> 
-            </div>
+
+        
+        
+        <div class="end">
+            <!-- ShareButtonsBlock START -->
             
-            <div style="font: 10pt Georgia; padding-top: 5px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
-        </div>-->
+            <div style="float: left; margin-right: 2px;">
+                <div id="goodshare" themecolor="color" themestyle="square" socialnetworks="vkontakte,ok,facebook,lj,twitter,googleplus,mailru" iconsize="24" buttonfixed="none" viewcounter="false"></div>
+            </div>
+
+            <div style="font: 10pt Georgia; padding-top: 7px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
+            <!-- ShareButtonsBlock END -->
+            
+        </div>
     </div>
 
 <!-- Yandex.Metrika counter -->
