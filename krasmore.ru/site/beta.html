@@ -10,19 +10,23 @@
     }
   </style>
 <![endif]-->
-    <link rel="stylesheet" type="text/css" href="Styles/Common.css"></link>
+    <link rel="stylesheet" type="text/css" href="Styles/Common.css" />
     <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="Styles/IE.css"></link>
     <![endif]-->
 
-    <link rel="icon" type="image/png" href="favicon.png"></link>
-    <link rel="apple-touch-icon" href="apple-touch-favicon.png"></link>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-favicon.png" />
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
     <script type="text/javascript" src="Scripts/Helper.js"></script>
+    <script type="text/javascript" charset="UTF-8" async="async" src="http://share.cntrlmrktng.ru/1.1/goodshare.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="Scripts/Map.js"></script>
-
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+    <script type="text/javascript">
+        VK.init({ apiId: 4494959, onlyWidgets: true });
+    </script>
 
 </head>
 <body onload="initializeMap()">
@@ -92,6 +96,7 @@
                 Поляна&nbsp;&#151; отличное место для проведения выездных корпоративных мероприятий.
             </p>
         </div>
+       
         
         <div class="innerVerticalDataBlock">
             <h3 class="shadowed">
@@ -148,53 +153,71 @@
                 <li>8 908 219-25-50 <span class="subContent">Людмила</span></li>
                 <li>8 983 280-13-48 <span class="subContent">Юлия</span></li>
             </ul>
+            
+            <!-- GoogleMapBlock Start -->
+            <div id="map_canvas"></div>
+            <!-- GoogleMapBlock End -->
+            
+            <!-- ShareButtonsBlock START -->
+            <div style="float: left; margin-right: 2px;">
+                <div id="goodshare" themecolor="color" themestyle="square" socialnetworks="vkontakte,ok,facebook,lj,twitter,googleplus,mailru" iconsize="24" buttonfixed="none" viewcounter="false"></div>
+            </div>
+
+            <div style="font: 10pt Georgia; padding-top: 7px; margin-bottom: 7px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
+            <!-- ShareButtonsBlock END -->
         </div>
         
         <div class="innerVerticalDataBlock">
+            <h2 class="shadowed">
+                Отзывы
+            </h2>
             
+            <!-- VKCommentsBlock START -->
+            <div id="vk_comments" style="margin-top: 15px;"></div>
+            <script type="text/javascript">
+                VK.Widgets.Comments("vk_comments", { limit: 10, width: "520", attach: "*" });
+            </script>
+            <!-- VKCommentsBlock END -->
+
             <!-- Gismeteo informer START -->
- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
-<div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
-  <div class="gsIContent">
-   <div id="cityLink">
-     <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
-   </div>
-   <div class="gsLinks">
-     <table>
-       <tr>
-         <td>
-           <div class="leftCol">
-             <a href="http://www.gismeteo.ru" target="_blank">
-               <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
-               <span>Gismeteo</span>
-             </a>
-           </div>
-           <div class="rightCol">
-             <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
-           </div>
-           </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-<script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>
-<!-- Gismeteo informer END -->
-            <div id="map_canvas"></div>
+            <!-- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
+                <div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
+                    <div class="gsIContent">
+                        <div id="cityLink">
+                            <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
+                        </div>
+                        <div class="gsLinks">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="leftCol">
+                                            <a href="http://www.gismeteo.ru" target="_blank">
+                                                <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                                                <span>Gismeteo</span>
+                                            </a>
+                                        </div>
+                                        <div class="rightCol">
+                                            <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>-->
+            <!-- Gismeteo informer END -->
+            
         </div>
         
         <div class="clear"></div>
-        
-        <!--Uncomment this before release-->
-        <!--<div class="end">
-            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-            <div style="float: left;">
-                <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,lj,gplus"></div> 
-            </div>
+
+        <div class="end">
             
-            <div style="font: 10pt Georgia; padding-top: 5px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
-        </div>-->
+        </div>
+
     </div>
+
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">var yaParams = {/*Здесь параметры визита*/ };
