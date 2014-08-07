@@ -10,19 +10,23 @@
     }
   </style>
 <![endif]-->
-    <link rel="stylesheet" type="text/css" href="Styles/Common.css"></link>
+    <link rel="stylesheet" type="text/css" href="Styles/Common.css" />
     <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="Styles/IE.css"></link>
     <![endif]-->
 
-    <link rel="icon" type="image/png" href="favicon.png"></link>
-    <link rel="apple-touch-icon" href="apple-touch-favicon.png"></link>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-favicon.png" />
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
     <script type="text/javascript" src="Scripts/Helper.js"></script>
     <script type="text/javascript" charset="UTF-8" async="async" src="http://share.cntrlmrktng.ru/1.1/goodshare.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="Scripts/Map.js"></script>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+    <script type="text/javascript">
+        VK.init({ apiId: 4494959, onlyWidgets: true });
+    </script>
 
 </head>
 <body onload="initializeMap()">
@@ -86,12 +90,14 @@
                 На поляне для вашего удобства имеется <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVelarium.jpg');" onmouseout="tooltip.hide();">три&nbsp;навеса</span>, оборудованные <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTable.jpg');" onmouseout="tooltip.hide();">столом, скамейками</span>, 
                 небольшой кухней, освещением и&nbsp;электричеством. Рядом с&nbsp;каждым навесом оборудовано <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFireplaces.jpg');" onmouseout="tooltip.hide();">место для костра</span>. 
                 Если есть желание приготовить мясо&nbsp;&#151; к&nbsp;вашим услугам мангал, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTrochanter.jpg');" onmouseout="tooltip.hide();">вертел</span> и&nbsp;решетка для барбекю. 
-                Также отдыхающим предоставляются питьевая вода, дрова, котелки и&nbsp;столовая посуда. Для купания в&nbsp;заливе <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttComfortCoast.jpg');" onmouseout="tooltip.hide();">удобный&nbsp;берег.</span></p>
+                Также отдыхающим предоставляются питьевая вода, дрова, котелки и&nbsp;столовая посуда. Для купания в&nbsp;заливе <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttComfortCoast.jpg');" onmouseout="tooltip.hide();">удобный&nbsp;берег</span>. 
+                Любители активно провести время могут <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVolleyball.jpg');" onmouseout="tooltip.hide();">поиграть в волейбол</span>.</p>
             <p>&nbsp;</p> 
             <p class="content">
                 Поляна&nbsp;&#151; отличное место для проведения выездных корпоративных мероприятий.
             </p>
         </div>
+       
         
         <div class="innerVerticalDataBlock">
             <h3 class="shadowed">
@@ -99,6 +105,7 @@
             </h3>
             <ul class="subContent">
                 <li>Катание на&nbsp;<span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBuns.jpg');" onmouseout="tooltip.hide();">&#171;плюшке&#187;</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBanan.jpg');" onmouseout="tooltip.hide();">&#171;банане&#187;</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttWater-skis.jpg');" onmouseout="tooltip.hide();">водных лыжах</span></li>
+                <li>Отличная большая баня</li>
                 <li>Прогулки по&nbsp;Красноярскому&nbsp;морю (в&nbsp;частности, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBiryusa.jpg');" onmouseout="tooltip.hide();">Бирюсинский&nbsp;залив)</span></li>
                 <li><span class="toolTipPlace" onmouseover="tooltip.show(null,'ttShipping.jpg');" onmouseout="tooltip.hide();">Доставка людей и&nbsp;грузов по&nbsp;Красноярскому&nbsp;морю</span></li>
                 <li><span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFishing.jpg');" onmouseout="tooltip.hide();">Доставка до&nbsp;места рыбалки и&nbsp;обратно</span></li>
@@ -148,62 +155,74 @@
                 <li>8 908 219-25-50 <span class="subContent">Людмила</span></li>
                 <li>8 983 280-13-48 <span class="subContent">Юлия</span></li>
             </ul>
-        </div>
-        
-        <div class="innerVerticalDataBlock">
             
-            <!-- Gismeteo informer START -->
-            <!-- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
-            <div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
-              <div class="gsIContent">
-               <div id="cityLink">
-                 <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
-               </div>
-               <div class="gsLinks">
-                 <table>
-                   <tr>
-                     <td>
-                       <div class="leftCol">
-                         <a href="http://www.gismeteo.ru" target="_blank">
-                           <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
-                           <span>Gismeteo</span>
-                         </a>
-                       </div>
-                       <div class="rightCol">
-                         <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
-                       </div>
-                       </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>-->
-            <!-- Gismeteo informer END -->
+            <!-- GoogleMapBlock Start -->
             <div id="map_canvas"></div>
-        </div>
-        
-
-        <div class="clear"></div>
-        
-
-        
-        
-        <div class="end">
-            <!-- ShareButtonsBlock START -->
+            <!-- GoogleMapBlock End -->
             
+            <!-- ShareButtonsBlock START -->
             <div style="float: left; margin-right: 2px;">
                 <div id="goodshare" themecolor="color" themestyle="square" socialnetworks="vkontakte,ok,facebook,lj,twitter,googleplus,mailru" iconsize="24" buttonfixed="none" viewcounter="false"></div>
             </div>
 
-            <div style="font: 10pt Georgia; padding-top: 7px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
+            <div style="font: 10pt Georgia; padding-top: 7px; margin-bottom: 7px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
             <!-- ShareButtonsBlock END -->
+        </div>
+        
+        <div class="innerVerticalDataBlock">
+            <h2 class="shadowed">
+                Отзывы
+            </h2>
+            
+            <!-- VKCommentsBlock START -->
+            <div id="vk_comments" style="margin-top: 15px;"></div>
+            <script type="text/javascript">
+                VK.Widgets.Comments("vk_comments", { limit: 10, width: "520", attach: "*" });
+            </script>
+            <!-- VKCommentsBlock END -->
+
+            <!-- Gismeteo informer START -->
+            <!-- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
+                <div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
+                    <div class="gsIContent">
+                        <div id="cityLink">
+                            <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
+                        </div>
+                        <div class="gsLinks">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="leftCol">
+                                            <a href="http://www.gismeteo.ru" target="_blank">
+                                                <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                                                <span>Gismeteo</span>
+                                            </a>
+                                        </div>
+                                        <div class="rightCol">
+                                            <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>-->
+            <!-- Gismeteo informer END -->
             
         </div>
+        
+        <div class="clear"></div>
+
+        <div class="end">
+            
+        </div>
+
     </div>
 
+
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">var yaParams = {/*Здесь параметры визита*/};
+<script type="text/javascript">var yaParams = {/*Здесь параметры визита*/ };
 </script>
 
     <script type="text/javascript">
