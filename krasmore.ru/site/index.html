@@ -20,7 +20,6 @@
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
     <script type="text/javascript" src="Scripts/Helper.js"></script>
-    <script type="text/javascript" charset="UTF-8" async="async" src="http://share.cntrlmrktng.ru/1.1/goodshare.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="Scripts/Map.js"></script>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
@@ -162,7 +161,9 @@
             
             <!-- ShareButtonsBlock START -->
             <div style="float: left; margin-right: 2px;">
-                <div id="goodshare" themecolor="color" themestyle="square" socialnetworks="vkontakte,ok,facebook,lj,twitter,googleplus,mailru" iconsize="24" buttonfixed="none" viewcounter="false"></div>
+				<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+				<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+				<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,lj,viber,whatsapp"></div>
             </div>
 
             <div style="font: 10pt Georgia; padding-top: 7px; margin-bottom: 7px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
