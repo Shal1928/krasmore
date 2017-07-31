@@ -25,9 +25,14 @@
 //    });
 //}
 
+
+//API key
+// AIzaSyDWJtFBLkRHqk-vXMRsPr9Gto18xyYPGK0
+
+
 function initializeMap() {
 
-    var polyanaLatLng = new google.maps.LatLng(55.831250, 92.251116);
+    // var polyanaLatLng = new google.maps.LatLng(55.831250, 92.251116);
 
     var mapCenter = new google.maps.LatLng(55.830445, 92.255008);
 
@@ -50,7 +55,7 @@ function initializeMap() {
 //    toEnlargeControlDiv.index = 1;
 //    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toEnlargeControlDiv);
 
-    document.getElementById("map_canvas");
+    // document.getElementById("map_canvas");
 
 //    var markerContentString = '<div style="color: #FFF; font: 14 Verdana;">' +
 //                                            'Поляна' +

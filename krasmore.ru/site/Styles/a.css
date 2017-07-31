@@ -1,0 +1,96 @@
+/*isMenuLink*/
+a:link[isMenuLink]
+{
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: -ms-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: -o-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#99ccff), to(#99ccff));
+    background: -webkit-linear-gradient(left, #99ccff, #99ccff 100%);
+    background: linear-gradient(left, #99ccff, #99ccff 100%);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #003366;
+}
+
+a:visited[isMenuLink]
+{
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #dca978, #dca978 100%);
+    background: -ms-linear-gradient(left, #dca978, #dca978 100%);
+    background: -o-linear-gradient(left, #dca978, #dca978 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#dca978), to(#dca978));
+    background: -webkit-linear-gradient(left, #dca978, #dca978 100%);
+    background: linear-gradient(left, #dca978, #dca978 100%);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #b98049;
+}
+
+a:hover[isMenuLink], a:active[isMenuLink] {
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: -ms-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: -o-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#99cc99), to(#99cc99));
+    background: -webkit-linear-gradient(left, #99cc99, #99cc99 100%);
+    background: linear-gradient(left, #99cc99, #99cc99 100%);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #669933;
+}
+
+a[isMenuLink=true]
+{
+    margin: 5px;
+}
+
+/*isInLink*/
+a:link[isInLink]
+{
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #66ccff, #66ccff 60%, transparent 60%);
+    background: -ms-linear-gradient(left, #66ccff, #66ccff 60%, transparent 60%);
+    background: -o-linear-gradient(left, #66ccff, #66ccff 60%, transparent 60%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#66ccff), color-stop(0.6, #66ccff), color-stop(0.6, transparent));
+    background: -webkit-linear-gradient(left, #66ccff, #66ccff 60%, transparent 60%);
+    background: linear-gradient(left, #66ccff, #66ccff 60%, transparent 60%);
+    background-position: 0 100%;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    color: #3399cc;
+}
+
+a:visited[isInLink]
+{
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #dca978, #dca978 60%, transparent 60%);
+    background: -ms-linear-gradient(left, #dca978, #dca978 60%, transparent 60%);
+    background: -o-linear-gradient(left, #dca978, #dca978 60%, transparent 60%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#dca978), color-stop(0.6, #dca978), color-stop(0.6, transparent));
+    background: -webkit-linear-gradient(left, #dca978, #dca978 60%, transparent 60%);
+    background: linear-gradient(left, #dca978, #dca978 60%, transparent 60%);
+    background-position: 0 100%;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    color: #b98049;
+}
+
+
+
+a:hover[isInLink], a:active[isInLink] {
+    text-decoration: none;
+    background: -moz-linear-gradient(left, #99cc99, #99cc99 60%, transparent 60%);
+    background: -ms-linear-gradient(left, #99cc99, #99cc99 60%, transparent 60%);
+    background: -o-linear-gradient(left, #99cc99, #99cc99 60%, transparent 60%);
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#99cc99), color-stop(0.6, #99cc99), color-stop(0.6, transparent));
+    background: -webkit-linear-gradient(left, #99cc99, #99cc99 60%, transparent 60%);
+    background: linear-gradient(left, #99cc99, #99cc99 60%, transparent 60%);
+    background-position: 0 100%;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    color: #669933;
+}
