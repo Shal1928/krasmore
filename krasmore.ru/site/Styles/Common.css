@@ -35,7 +35,14 @@ li
 .break { clear:both; }
 
 /* HEADER */
-#header { height:600px; }
+#header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
 .headerimg 
 {
     margin-top: 50px;
@@ -45,6 +52,18 @@ li
     height:600px; 
     position:absolute;
 }
+
+.splash-img
+{
+    /*margin-top: 100px;*/
+    background-position: center top;
+    background-repeat: no-repeat;
+    width:100%;
+    height:600px;
+    position:absolute;
+    display: block;
+}
+
 .caption 
 {
     /**/
@@ -67,7 +86,7 @@ li
         
     height:60px; 
     padding-top:0px; 
-    position:relative; 
+    position:relative;
     top:0px; 
     
     
@@ -98,7 +117,7 @@ li
     font-size: 12pt;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
-    color: #333;
+    color: #b98049;
     letter-spacing: 0px;
     opacity: initial;
     float: left;
@@ -125,6 +144,25 @@ li
     clear:both; 
     position:absolute; 
     top:150px;
+}
+
+.headertxt2
+{
+    width:800px;
+    left: 150px;
+    clear:both;
+    position: relative;
+    top:150px;
+}
+
+.firstline2
+{
+    background-image:url("../Images/textbg.png");
+    color:#333;
+    font-size:40px;
+    padding:4px 13px 7px;
+    float:left;
+    display:block;
 }
 
 #firstline 
@@ -163,7 +201,7 @@ li
 {
     color:#333; 
     background-color:#eee;
-    position: absolute;
+    position: relative;
 }
 
 .innerDataBlock, .innerHorizontalDataBlock, .innerVerticalDataBlock, .undergroundHorizontalDataBlock
@@ -179,6 +217,15 @@ li
 {
     margin-right: 30%;   
     margin-top: 25px;
+}
+
+.innerHorizontalDataBlock2
+{
+    margin-right: 30%;
+    left: 150px;
+    display: inline-block;
+    float: left;
+    position: relative;
 }
 
 .innerVerticalDataBlock 
@@ -237,6 +284,13 @@ li
     margin-left: 40%;
     padding-top: 70px;
     padding-bottom: 50px;
+}
+
+.empty
+{
+    position:relative;
+    display: block;
+    margin-top: 75px;
 }
 
 
