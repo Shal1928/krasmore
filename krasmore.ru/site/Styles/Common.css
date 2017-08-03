@@ -303,3 +303,28 @@ li
     margin-right: 3px;
     margin-bottom: -3px;
 }
+
+.gallery-pointer-block
+{
+    left: 95%;
+    position: relative;
+    top: 25px;
+}
+
+.gallery-pointer-0
+{
+    width: 15px;
+    height: 15px;
+    border: 2px outset white;
+    float: left;
+    margin-right: 7px;
+}
+
+.gallery-pointer-1
+{
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    margin-top: 4px;
+    margin-left: 4px;
+}
