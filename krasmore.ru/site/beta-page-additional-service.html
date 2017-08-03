@@ -3,6 +3,8 @@
 <head>
     <title>Поляна &#151; отдых на Красноярском море</title>
 
+    <link rel="stylesheet" type="text/css" href="Styles/roof.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/table.css" />
     <link rel="stylesheet" type="text/css" href="Styles/a.css" />
     <!--[if gte IE 9]>
     <style type="text/css">
@@ -21,6 +23,7 @@
     <link rel="apple-touch-icon" href="apple-touch-favicon.png" />
     <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
+    <script type="text/javascript" src="Scripts/cell-image-gallery.js"></script>
     <script type="text/javascript" src="Scripts/Helper.js"></script>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
     <script type="text/javascript">
@@ -30,9 +33,9 @@
 </head>
 <body onload="initializeMap()">
 
-    <div id="header">
+    <div id="roof">
 
-        <div id="Roof">
+        <div class="roof-panel">
 
         </div>
 
@@ -43,7 +46,7 @@
         </div>
         <div class="clear"></div>
 
-        <div id="RoofText">
+        <div class="menu-links">
             <!--*1-->
             <a href="beta24.html" isMenuLink="true">Главная</a>
             <!--<a href="beta-page-photo.html" style="margin: 5px">Фотографии</a>-->
@@ -55,55 +58,195 @@
         </div>
     </div>
 
-    <div class="splash-img" style="background-image: url(Images/waterSkis1.0.jpg); top: 60px; z-index: 1">
-        <div class="headertxt2">2
-            <p class="caption">
-            1
-            <span class="firstline2">Водные лыжи</span>
-            <!--<a href="#" id="secondline"></a>-->
-            </p>
-            <!--<p class="pictured">
-            Pictured: <a href="#" id="pictureduri"></a>
-            </p>-->
+    <div class="table">
+        <div class="row">
+
+            <div class="cell-image" style="background-image: url(Images/waterSkis0.5.jpg);">
+
+                <div style="left: 95%; position: relative; top: 25px;">
+
+                    <div style="width: 15px; height: 15px; border: 2px outset white;">
+                        <div style="width: 7px; height: 7px; background-color: white;
+                        margin-top: 4px; margin-left: 4px;">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--waterSkis1.0.jpg-->
+                <div class="headertxt2">
+                    <p class="caption">
+
+                        <span class="firstline2">Большая баня</span>
+                        <!--<a href="#" id="secondline"></a>-->
+                    </p>
+                </div>
+
+            </div>
+
+
+
+
         </div>
 
-        <!--<div class="innerHorizontalDataBlock" style="margin-top: 550px">-->
+        <div class="row">
+            <div class="cell">
 
-            <!--<p class="content">-->
-            <!--Эта <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttMeadow.jpg');" onmouseout="tooltip.hide();">живописная поляна</span> находится в&nbsp;12&nbsp;км от&nbsp;базы отдыха &#171;Шумиха&#187;,-->
-            <!--напротив Бирюсинского&nbsp;залива,&nbsp;&#151; хорошая возможность отдохнуть от&nbsp;городской суеты-->
-            <!--и&nbsp;провести время семьей или дружной компанией. <span class="menuSubContentBold">Территория ежегодно <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttClearTicks.jpg');" onmouseout="tooltip.hide();">обрабатывается от&nbsp;клещей,</span></span>-->
-            <!--что делает ваш отдых на&nbsp;природе безопасным. Вас&nbsp;доставят на&nbsp;<span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBigBoat.jpg');" onmouseout="tooltip.hide();">большом</span>-->
-            <!--или <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttSmallBoat.jpg');" onmouseout="tooltip.hide();">малом</span> катере (в&nbsp;зависимости от&nbsp;количества человек).-->
-            <!--</p>-->
-            <!--<p>&nbsp;</p>-->
-            <!--<p class="content">-->
-            <!--На поляне для вашего удобства имеется <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVelarium.jpg');" onmouseout="tooltip.hide();">три&nbsp;навеса</span>, оборудованные <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTable.jpg');" onmouseout="tooltip.hide();">столом, скамейками</span>,-->
-            <!--небольшой кухней, освещением и&nbsp;электричеством. Рядом с&nbsp;каждым навесом оборудовано <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFireplaces.jpg');" onmouseout="tooltip.hide();">место для костра</span>.-->
-            <!--Если есть желание приготовить мясо&nbsp;&#151; к&nbsp;вашим услугам мангал, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTrochanter.jpg');" onmouseout="tooltip.hide();">вертел</span> и&nbsp;решетка для барбекю.-->
-            <!--Также отдыхающим предоставляются питьевая вода, дрова, котелки и&nbsp;столовая посуда.-->
-            <!--</p>-->
-            <!--<p>&nbsp;</p>-->
-            <!--<p class="content">-->
-            <!--Для любителей более <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchenTable.jpg');" onmouseout="tooltip.hide();">комфортного отдыха</span> зимой и летом&nbsp;&#151; <span class="menuSubContentBold">теплый 6-местный домик</span> с газовой плиткой,-->
-            <!--<span class="toolTipPlace" onmouseover="tooltip.show(null,'ttStove.jpg');" onmouseout="tooltip.hide();">печкой</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchen.jpg');" onmouseout="tooltip.hide();">холодильником, кухней</span>.-->
-            <!--В доме оборудованы <span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom1.jpg');" onmouseout="tooltip.hide();">две отдельные спальни </span><span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom2.jpg' );" onmouseout=" tooltip.hide();">с 2-местными кроватями,</span> общая комната с 2-местным диваном. Постельное белье предоставляется.-->
-            <!--</p>-->
-            <!--<p>&nbsp;</p>-->
-            <!--<p class="content">-->
-            <!--Для купания в&nbsp;заливе <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttComfortCoast.jpg');" onmouseout="tooltip.hide();">удобный&nbsp;берег</span>.-->
-            <!--Любители активно провести время могут <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVolleyball.jpg');" onmouseout="tooltip.hide();">поиграть в волейбол</span>.-->
-            <!--</p>-->
-            <!--<p>&nbsp;</p>-->
-            <!--<p class="content">-->
-            <!--Поляна&nbsp;&#151; отличное место для проведения выездных корпоративных мероприятий.-->
-            <!--</p>-->
 
-            <!--<div class="empty">-->
+
+                <div class="innerHorizontalDataBlock">
+
+                    <p class="content">
+                        Лучшая баня на правом побережье.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        На поляне для вашего удобства имеется <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVelarium.jpg');" onmouseout="tooltip.hide();">три&nbsp;навеса</span>, оборудованные <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTable.jpg');" onmouseout="tooltip.hide();">столом, скамейками</span>,
+                        небольшой кухней, освещением и&nbsp;электричеством. Рядом с&nbsp;каждым навесом оборудовано <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFireplaces.jpg');" onmouseout="tooltip.hide();">место для костра</span>.
+                        Если есть желание приготовить мясо&nbsp;&#151; к&nbsp;вашим услугам мангал, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTrochanter.jpg');" onmouseout="tooltip.hide();">вертел</span> и&nbsp;решетка для барбекю.
+                        Также отдыхающим предоставляются питьевая вода, дрова, котелки и&nbsp;столовая посуда.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        Для любителей более <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchenTable.jpg');" onmouseout="tooltip.hide();">комфортного отдыха</span> зимой и летом&nbsp;&#151; <span class="menuSubContentBold">теплый 6-местный домик</span> с газовой плиткой,
+                        <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttStove.jpg');" onmouseout="tooltip.hide();">печкой</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchen.jpg');" onmouseout="tooltip.hide();">холодильником, кухней</span>.
+                        В доме оборудованы <span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom1.jpg');" onmouseout="tooltip.hide();">две отдельные спальни </span><span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom2.jpg' );" onmouseout=" tooltip.hide();">с 2-местными кроватями,</span> общая комната с 2-местным диваном. Постельное белье предоставляется.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        Для купания в&nbsp;заливе <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttComfortCoast.jpg');" onmouseout="tooltip.hide();">удобный&nbsp;берег</span>.
+                        Любители активно провести время могут <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVolleyball.jpg');" onmouseout="tooltip.hide();">поиграть в волейбол</span>.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        Поляна&nbsp;&#151; отличное место для проведения выездных корпоративных мероприятий.
+                    </p>
+
+                    <div class="empty">
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="cell-image" style="background-image: url(Images/waterSkis1.0.jpg);">
+
+                <div style="left: 80%; position: relative; top: 80px;">
+
+                    <div style="width: 15px; height: 15px; border: 2px outset white;">
+                        <div style="width: 7px; height: 7px; background-color: white;
+                        margin-top: 4px; margin-left: 4px;">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="headertxt2">
+                    <p class="caption">
+                        <span class="firstline2">Водные лыжи</span>
+                        <!--<a href="#" id="secondline"></a>-->
+                    </p>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="cell">
+
+
+
+                <div class="innerHorizontalDataBlock">
+
+                    <p class="content">
+                        Эта <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttMeadow.jpg');" onmouseout="tooltip.hide();">живописная поляна</span> находится в&nbsp;12&nbsp;км от&nbsp;базы отдыха &#171;Шумиха&#187;,
+                        напротив Бирюсинского&nbsp;залива,&nbsp;&#151; хорошая возможность отдохнуть от&nbsp;городской суеты
+                        и&nbsp;провести время семьей или дружной компанией. <span class="menuSubContentBold">Территория ежегодно <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttClearTicks.jpg');" onmouseout="tooltip.hide();">обрабатывается от&nbsp;клещей,</span></span>
+                        что делает ваш отдых на&nbsp;природе безопасным. Вас&nbsp;доставят на&nbsp;<span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBigBoat.jpg');" onmouseout="tooltip.hide();">большом</span>
+                        или <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttSmallBoat.jpg');" onmouseout="tooltip.hide();">малом</span> катере (в&nbsp;зависимости от&nbsp;количества человек).
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        На поляне для вашего удобства имеется <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVelarium.jpg');" onmouseout="tooltip.hide();">три&nbsp;навеса</span>, оборудованные <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTable.jpg');" onmouseout="tooltip.hide();">столом, скамейками</span>,
+                        небольшой кухней, освещением и&nbsp;электричеством. Рядом с&nbsp;каждым навесом оборудовано <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFireplaces.jpg');" onmouseout="tooltip.hide();">место для костра</span>.
+                        Если есть желание приготовить мясо&nbsp;&#151; к&nbsp;вашим услугам мангал, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTrochanter.jpg');" onmouseout="tooltip.hide();">вертел</span> и&nbsp;решетка для барбекю.
+                        Также отдыхающим предоставляются питьевая вода, дрова, котелки и&nbsp;столовая посуда.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        Для любителей более <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchenTable.jpg');" onmouseout="tooltip.hide();">комфортного отдыха</span> зимой и летом&nbsp;&#151; <span class="menuSubContentBold">теплый 6-местный домик</span> с газовой плиткой,
+                        <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttStove.jpg');" onmouseout="tooltip.hide();">печкой</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchen.jpg');" onmouseout="tooltip.hide();">холодильником, кухней</span>.
+                        В доме оборудованы <span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom1.jpg');" onmouseout="tooltip.hide();">две отдельные спальни </span><span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom2.jpg' );" onmouseout=" tooltip.hide();">с 2-местными кроватями,</span> общая комната с 2-местным диваном. Постельное белье предоставляется.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        Для купания в&nbsp;заливе <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttComfortCoast.jpg');" onmouseout="tooltip.hide();">удобный&nbsp;берег</span>.
+                        Любители активно провести время могут <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVolleyball.jpg');" onmouseout="tooltip.hide();">поиграть в волейбол</span>.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="content">
+                        Поляна&nbsp;&#151; отличное место для проведения выездных корпоративных мероприятий.
+                    </p>
+
+                    <div class="empty">
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <!--<div style="display: table; width: 100%; height: 500px; background-color: red">-->
+
+        <!--<div style="display: table-column; width: 100%; height: 500px; background-color: #7F000C;">-->
+            <!--<div style="display: table-row; width: 100%; height: 200px; background-color: #006699;">-->
+
+
+
+
+
+
+
+
+            <!--</div>-->
+
+            <!--<div style="display: table-row; width: 100%; height: 200px; background-color: #669933;">-->
+
+
+
+
+
+
+
+
+
+
+
+
 
             <!--</div>-->
         <!--</div>-->
-    </div>
+    <!--</div>-->
+
+
 
     <!--<div id="headerimgs">-->
         <!--<div id="headerimg1" class="headerimg"></div>-->

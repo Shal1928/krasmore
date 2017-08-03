@@ -1,0 +1,23 @@
+.table {
+    display: table;
+    width: 100%;
+    top: 80px;
+    z-index: 1;
+    position: absolute;
+}
+
+.row {
+    display: table-row;
+}
+
+.col {
+    display: table-column;
+}
+
+.cell, .cell-image {
+    display: table-cell;
+}
+
+.cell-image {
+    height: 600px;
+}
