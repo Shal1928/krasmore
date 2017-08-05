@@ -10,10 +10,17 @@ var activeContainer = 1;
 var currentZindex = -1;
 
 $(document).ready(function () {
-    for (var i in photos) {
-        var p = photos[i];
+    for (var id in photos) {
+        var p = photos[id];
 
-        showImage(p[0], 1, 2, i);
+        var pointers = $("#" + id + " > div.gallery-pointer-block");
+        for(var j=0; j < p.length; j++) {
+            // var child = j == 0 ? "<div class='gallery-pointer-1'></div>" : "";
+
+            pointers.append("<div id='gallery-pointer-id-"+ j +"' class='gallery-pointer-0'></div>");
+        }
+
+        next(id);
     }
 
     $("div.gallery").on('click', function(e) {
@@ -27,6 +34,11 @@ $(document).ready(function () {
 function next(id) {
     var gallery = photos[id];
 
+    var pointer1 = $("#" + id + " > div.gallery-pointer-block > div.gallery-pointer-0 > div.gallery-pointer-1");
+    if(pointer1) {
+        pointer1.remove();
+    }
+
     currentImg++;
     if (currentImg == gallery.length + 1) {
         currentImg = 1;
@@ -36,7 +48,12 @@ function next(id) {
     var currentContainer = activeContainer;
     activeContainer = activeContainer == 1 ? 2 : 1;
 
-    showImage(gallery[currentImg - 1], currentContainer, activeContainer, id);
+    var i = currentImg - 1;
+
+    $("#"+ id + " > div.gallery-pointer-block > #gallery-pointer-id-" + i)
+        .append("<div class='gallery-pointer-1'></div>");
+
+    showImage(gallery[i], currentContainer, activeContainer, id);
 }
 
 function showImage(img, currentContainer, activeContainer, id) {
@@ -47,7 +64,7 @@ function showImage(img, currentContainer, activeContainer, id) {
 
     // Fade out the current container
     // and display the header text when animation is complete
-    $("#" + id + "-" + currentContainer).fadeOut(function () {
+    $("#" + id + "-" + currentContainer).fadeOut(1, function () {
         // Set the background image of the new active container
         $("#" + id + "-" + activeContainer).css({
             "background-image": "url(Images/" + img + ")",
