@@ -106,9 +106,9 @@ li
 
 .headertxt2
 {
-    width:800px;
+    /*width:800px;*/
     left: 150px;
-    clear:both;
+    /*clear:both;*/
     position: relative;
     top:150px;
 }
