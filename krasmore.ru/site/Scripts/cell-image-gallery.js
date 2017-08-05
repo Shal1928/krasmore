@@ -20,6 +20,9 @@ $(document).ready(function () {
             pointers.append("<div id='gallery-pointer-id-"+ j +"' class='gallery-pointer-0'></div>");
         }
 
+        $("#" + id).append("<div id='"+ id +"-1' class='cell-image'></div>");
+        $("#" + id).append("<div id='"+ id +"-2' class='cell-image'></div>");
+
         next(id);
     }
 
