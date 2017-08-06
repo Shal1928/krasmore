@@ -5,7 +5,7 @@
 //
 // // Variable to store the Images we need to set as background
 // // which also includes some text and url's.
-// var photos = [
+// var gallery = [
 // {
 //     "image": "teaBonfire0.1.jpg",
 //     "firstline": "Чай у костра"
@@ -137,13 +137,13 @@
 //         // Check which current image we need to show
 //         if (direction == "next") {
 //             currentImg++;
-//             if (currentImg == photos.length + 1) {
+//             if (currentImg == gallery.length + 1) {
 //                 currentImg = 1;
 //             }
 //         } else {
 //             currentImg--;
 //             if (currentImg == 0) {
-//                 currentImg = photos.length;
+//                 currentImg = gallery.length;
 //             }
 //         }
 //
@@ -155,7 +155,7 @@
 //             activeContainer = 1;
 //         }
 //
-//         showImage(photos[currentImg - 1], currentContainer, activeContainer);
+//         showImage(gallery[currentImg - 1], currentContainer, activeContainer);
 //
 //     };
 //
