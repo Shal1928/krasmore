@@ -1,9 +1,33 @@
-.table {
-    display: table;
-    width: 100%;
+.table-menu {
+    position:absolute;
+    margin-top: -34px;
+    margin-left: 25%;
+    font-size: 11pt;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    color: #003366;
+    letter-spacing: 0px;
+    opacity: initial;
+    float: left;
+    display: inline;
+}
+
+.table-80 {
     top: 80px;
+}
+
+.table-115 {
+    top: 115px;
+}
+
+.table-menu, .table-80, .table-115 {
+    display: table;
     z-index: 1;
     position: absolute;
+}
+
+.table-80, .table-115 {
+    width: 100%;
 }
 
 .row {

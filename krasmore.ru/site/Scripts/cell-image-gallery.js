@@ -17,10 +17,30 @@ var gallery = {
         position: 0,
         activeContainer: 1,
         currentZindex: -1,
+    },
+    "water-buns": {
+        collection: [
+            "water-buns-1.jpg",
+            "water-buns-2.jpg",
+            "water-buns-3.jpg",
+            "water-buns-4.jpg"
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
+    },
+    "boat": {
+        collection: [
+            "boat-1.jpg",
+            "boat-2.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
     }
 };
 
-var path = "Images/gallery/";
+var path = "images/gallery/";
 
 
 $(document).ready(function () {

@@ -39,10 +39,23 @@
     font-size: 11pt;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
-    color: #b98049;
+    color: #003366;
     letter-spacing: 0px;
     opacity: initial;
     float: left;
+    display: inline;
+}
+
+.sub-menu-links
+{
+    font-size: 9pt;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: #003366;
+    /*background-color: white;*/
+    /*height: 35px;*/
+    margin-top: 15px;
+    /*margin-bottom: 5px;*/
+    margin-left: 40%;
     display: inline;
 }
 
