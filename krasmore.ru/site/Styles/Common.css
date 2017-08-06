@@ -306,9 +306,11 @@ li
 
 .gallery-pointer-block
 {
-    left: 95%;
+    float: right;
+    /*left: 95%;*/
+    right: 15px;
     position: relative;
-    top: 25px;
+    top: 20px;
 }
 
 .gallery-pointer-0
