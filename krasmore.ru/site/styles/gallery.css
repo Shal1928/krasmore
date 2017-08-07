@@ -1,0 +1,39 @@
+.gallery {
+    /*for js*/
+}
+
+.gallery-pointer-block {
+    float: right;
+    /*left: 95%;*/
+    right: 15px;
+    position: relative;
+    top: 20px;
+}
+
+.gallery-pointer-0 {
+    width: 15px;
+    height: 15px;
+    border: 2px outset white;
+    float: left;
+    margin-right: 7px;
+}
+
+.gallery-pointer-1 {
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.gallery-title {
+    background-image:url("../Images/textbg.png");
+    color:#333;
+    font-size:40px;
+    padding:4px 13px 7px;
+    float:left;
+    display:block;
+    left: 150px;
+    top: 150px;
+    position: relative;
+}
