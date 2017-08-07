@@ -109,19 +109,11 @@ li
     /*width:800px;*/
     left: 150px;
     /*clear:both;*/
-    position: relative;
+    /*position: inherit;*/
     top:150px;
 }
 
-.first-line
-{
-    background-image:url("../Images/textbg.png");
-    color:#333;
-    font-size:40px;
-    padding:4px 13px 7px;
-    float:left;
-    display:block;
-}
+
 
 #firstline 
 {
@@ -334,4 +326,17 @@ li
 .gallery
 {
     /*for js*/
+}
+
+.gallery-title
+{
+    background-image:url("../Images/textbg.png");
+    color:#333;
+    font-size:40px;
+    padding:4px 13px 7px;
+    float:left;
+    display:block;
+    left: 150px;
+    top: 150px;
+    position: relative;
 }

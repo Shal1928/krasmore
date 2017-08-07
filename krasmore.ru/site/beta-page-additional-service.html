@@ -3,9 +3,9 @@
 <head>
     <title>Поляна &#151; отдых на Красноярском море</title>
 
-    <link rel="stylesheet" type="text/css" href="Styles/roof.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/table.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/a.css" />
+    <link rel="stylesheet" type="text/css" href="styles/roof.css" />
+    <link rel="stylesheet" type="text/css" href="styles/table.css" />
+    <link rel="stylesheet" type="text/css" href="styles/a.css" />
     <!--[if gte IE 9]>
     <style type="text/css">
         .gradient {
@@ -13,18 +13,20 @@
         }
     </style>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="Styles/Common.css" />
+    <link rel="stylesheet" type="text/css" href="styles/common.css" />
     <!--[if IE]>
-    <link rel="stylesheet" type="text/css" href="Styles/IE.css"></link>
+    <link rel="stylesheet" type="text/css" href="styles/IE.css"></link>
     <![endif]-->
 
 
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-favicon.png" />
-    <script type="text/javascript" src="Scripts/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="Scripts/BackgroundScripts.js"></script>
-    <script type="text/javascript" src="Scripts/cell-image-gallery.js"></script>
-    <script type="text/javascript" src="Scripts/Helper.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.corner.js"></script>
+    <script type="text/javascript" src="scripts/BackgroundScripts.js"></script>
+    <script type="text/javascript" src="scripts/cell-image-gallery.js"></script>
+    <script type="text/javascript" src="scripts/sub-menu-link.js"></script>
+    <script type="text/javascript" src="scripts/Helper.js"></script>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
     <script type="text/javascript">
         VK.init({ apiId: 4494959, onlyWidgets: true });
@@ -87,12 +89,13 @@
                 <div class="cell"></div>
                 <div class="cell"></div>
                 <div class="cell"></div>
-                <div class="cell" style="height: 40px">
+                <div class="cell">
                     <div class="sub-menu-links">
-                        <a href="#bath" isMenuLink="true">Баня</a>
-                        <a href="#water-skies" isMenuLink="true">Водные лыжи</a>
-                        <a href="#water-buns" isMenuLink="true">Плюшки</a>
-                        <a href="#boat" isMenuLink="true">Лодка</a>
+                        <a href="#bath" isInLink="true" class="margin5">Баня</a>
+                        <a href="#water-skies" isInLink="true" class="margin5">Водные лыжи</a>
+                        <a href="#water-buns" isInLink="true" class="margin5">Плюшки</a>
+                        <a href="#boat" isInLink="true" class="margin5">Лодка</a>
+                        <a href="#volleyball" isInLink="true" class="margin5">Волейбол</a>
                     </div>
                 </div>
                 <div class="cell"></div>
@@ -110,11 +113,7 @@
                         <!--display position in gallery collection. (gen dynamically)-->
                     </div>
 
-                    <div class="header-txt">
-                        <p class="caption">
-                            <span class="first-line">Большая баня</span>
-                        </p>
-                    </div>
+                    <span class="gallery-title">Большая баня</span>
                 </div>
             </div>
         </div>
@@ -155,11 +154,7 @@
                         <!--display position in gallery collection. (gen dynamically)-->
                     </div>
 
-                    <div class="header-txt">
-                        <p class="caption">
-                            <span class="first-line">Водные лыжи</span>
-                        </p>
-                    </div>
+                    <span class="gallery-title">Водные лыжи</span>
                 </div>
             </div>
         </div>
@@ -200,11 +195,7 @@
                         <!--display position in gallery collection. (gen dynamically)-->
                     </div>
 
-                    <div class="header-txt">
-                        <p class="caption">
-                            <span class="first-line">Катание на банане и плюшках</span>
-                        </p>
-                    </div>
+                    <span class="gallery-title">Катание на банане и плюшках</span>
                 </div>
             </div>
         </div>
@@ -237,11 +228,7 @@
                         <!--display position in gallery collection. (gen dynamically)-->
                     </div>
 
-                    <div class="header-txt">
-                        <p class="caption">
-                            <span class="first-line">Прогулки на весельной лодке</span>
-                        </p>
-                    </div>
+                    <span class="gallery-title">Прогулки на весельной лодке</span>
                 </div>
             </div>
         </div>
@@ -267,6 +254,41 @@
             </div>
         </div>
         <!--boat-->
+
+        <!--volleyball-->
+        <div class="row">
+            <div class="cell-image">
+                <div class="gallery" id="volleyball">
+                    <div class="gallery-pointer-block">
+                        <!--display position in gallery collection. (gen dynamically)-->
+                    </div>
+
+                    <span class="gallery-title">Волейбол</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell">
+                <div class="innerHorizontalDataBlock">
+
+                    <p class="content">
+                        Вид спорта, командная спортивная игра, в процессе которой две команды соревнуются на
+                        специальной площадке, разделённой сеткой, стремясь направить мяч на сторону соперника таким
+                        образом, чтобы он приземлился на площадке противника (добить до пола), либо чтобы игрок
+                        защищающейся команды допустил ошибку. При этом для организации атаки игрокам одной команды
+                        разрешается не более трёх касаний мяча подряд (в дополнение к касанию на блоке).
+                    </p>
+                    <!--<p>&nbsp;</p>-->
+
+                    <div class="empty">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--volleyball-->
 
     </div>
 

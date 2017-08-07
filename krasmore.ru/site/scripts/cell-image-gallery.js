@@ -37,6 +37,14 @@ var gallery = {
         position: 0,
         activeContainer: 1,
         currentZindex: -1,
+    },
+    "volleyball": {
+        collection: [
+            "volleyball-1.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
     }
 };
 

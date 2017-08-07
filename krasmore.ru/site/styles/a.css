@@ -64,7 +64,7 @@ a:visited[isInLink]
     background-position: 0 100%;
     background-size: 5px 1px;
     background-repeat: repeat-x;
-    color: #b98049;
+    color: #003366;
 }
 
 
@@ -81,4 +81,8 @@ a:hover[isInLink], a:active[isInLink] {
     background-size: 5px 1px;
     background-repeat: repeat-x;
     color: #669933;
+}
+
+.margin5 {
+    margin: 5px;
 }
