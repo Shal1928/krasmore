@@ -3,6 +3,11 @@
 <head>
     <title>Поляна &#151; отдых на Красноярском море</title>
 
+    <link rel="stylesheet" type="text/css" href="styles/a.css" />
+    <link rel="stylesheet" type="text/css" href="styles/menu.css" />
+    <link rel="stylesheet" type="text/css" href="styles/table.css" />
+    <link rel="stylesheet" type="text/css" href="styles/gallery.css" />
+
     <!--[if gte IE 9]>
     <style type="text/css">
         .gradient {
@@ -15,28 +20,26 @@
     <link rel="stylesheet" type="text/css" href="styles/IE.css"></link>
     <![endif]-->
 
+
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-favicon.png" />
-    <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.corner.js"></script>
     <script type="text/javascript" src="scripts/BackgroundScripts.js"></script>
+    <script type="text/javascript" src="scripts/cell-image-gallery.js"></script>
+    <script type="text/javascript" src="scripts/sub-menu-link.js"></script>
     <script type="text/javascript" src="scripts/Helper.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="scripts/Map.js"></script>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
     <script type="text/javascript">
         VK.init({ apiId: 4494959, onlyWidgets: true });
     </script>
 
 </head>
-<body onload="initializeMap()">
-<div id="header">
-    <!-- jQuery handles to place the header background images -->
-    <div id="headerimgs">
-        <div id="headerimg1" class="headerimg"></div>
-        <div id="headerimg2" class="headerimg"></div>
+<body>
 
-    </div>
-    <div id="Roof">
+<div id="roof">
+
+    <div class="roof-panel">
 
     </div>
 
@@ -47,204 +50,249 @@
     </div>
     <div class="clear"></div>
 
-    <div id="RoofText">
-        <!--*1-->
-        <!--<a href="beta-page-photo.html" isMenuLink="true">Фотографии</a>-->
-        <a href="beta-page-path.html" isMenuLink="true">Как добраться</a>
-        Услуги проживания
-        <a href="additional-service.html" isMenuLink="true">Дополнительные услуги и развлечения</a>
-        <a href="beta-page-price.html" isMenuLink="true">Цены</a>
-        <a href="beta-page-faq.html" isMenuLink="true">Часто задоваемые вопросы</a>
-    </div>
-    <div class="clear"></div>
+    <div class="table-menu">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
 
-    <div id="headernav">
-        <div id="back" class="btn">
-        </div>
-        <div id="control" class="btn">
-        </div>
-        <div id="next" class="btn">
-        </div>
-    </div>
+        <div class="row">
 
-    <!-- jQuery handles for the text displayed on top of the images -->
-    <div id="headertxt">
-        <p class="caption">
-            <span id="firstline"></span>
-            <!--<a href="#" id="secondline"></a>-->
-        </p>
-        <!--<p class="pictured">
-            Pictured: <a href="#" id="pictureduri"></a>
-        </p>-->
-    </div>
-</div>
+            <div class="cell">
+                <a href="index.html" isMenuLink="true">Главная</a>
+            </div>
 
-<div class="DataBlock">
+            <div class="cell">
+                <a href="beta-page-path.html" isMenuLink="true">Как добраться</a>
+            </div>
 
-    <div class="innerHorizontalDataBlock">
+            <div class="cell">
+                <span class="current-element">Услуги проживания</span>
+            </div>
 
-        <p class="content">
-            Эта <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttMeadow.jpg');" onmouseout="tooltip.hide();">живописная поляна</span> находится в&nbsp;12&nbsp;км от&nbsp;базы отдыха &#171;Шумиха&#187;,
-            напротив Бирюсинского&nbsp;залива,&nbsp;&#151; хорошая возможность отдохнуть от&nbsp;городской суеты
-            и&nbsp;провести время семьей или дружной компанией. <span class="menuSubContentBold">Территория ежегодно <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttClearTicks.jpg');" onmouseout="tooltip.hide();">обрабатывается от&nbsp;клещей,</span></span>
-            что делает ваш отдых на&nbsp;природе безопасным. Вас&nbsp;доставят на&nbsp;<span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBigBoat.jpg');" onmouseout="tooltip.hide();">большом</span>
-            или <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttSmallBoat.jpg');" onmouseout="tooltip.hide();">малом</span> катере (в&nbsp;зависимости от&nbsp;количества человек).
-        </p>
-        <p>&nbsp;</p>
-        <p class="content">
-            На поляне для вашего удобства имеется <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVelarium.jpg');" onmouseout="tooltip.hide();">три&nbsp;навеса</span>, оборудованные <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTable.jpg');" onmouseout="tooltip.hide();">столом, скамейками</span>,
-            небольшой кухней, освещением и&nbsp;электричеством. Рядом с&nbsp;каждым навесом оборудовано <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFireplaces.jpg');" onmouseout="tooltip.hide();">место для костра</span>.
-            Если есть желание приготовить мясо&nbsp;&#151; к&nbsp;вашим услугам мангал, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttTrochanter.jpg');" onmouseout="tooltip.hide();">вертел</span> и&nbsp;решетка для барбекю.
-            Также отдыхающим предоставляются питьевая вода, дрова, котелки и&nbsp;столовая посуда.
-        </p>
-        <p>&nbsp;</p>
-        <p class="content">
-            Для любителей более <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchenTable.jpg');" onmouseout="tooltip.hide();">комфортного отдыха</span> зимой и летом&nbsp;&#151; <span class="menuSubContentBold">теплый 6-местный домик</span> с газовой плиткой,
-            <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttStove.jpg');" onmouseout="tooltip.hide();">печкой</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttKitchen.jpg');" onmouseout="tooltip.hide();">холодильником, кухней</span>.
-            В доме оборудованы <span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom1.jpg');" onmouseout="tooltip.hide();">две отдельные спальни </span><span class="toolTipPlace" onmouseover="tooltip.show(null, 'ttBedRoom2.jpg' );" onmouseout=" tooltip.hide();">с 2-местными кроватями,</span> общая комната с 2-местным диваном. Постельное белье предоставляется.
-        </p>
-        <p>&nbsp;</p>
-        <p class="content">
-            Для купания в&nbsp;заливе <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttComfortCoast.jpg');" onmouseout="tooltip.hide();">удобный&nbsp;берег</span>.
-            Любители активно провести время могут <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVolleyball.jpg');" onmouseout="tooltip.hide();">поиграть в волейбол</span>.
-        </p>
-        <p>&nbsp;</p>
-        <p class="content">
-            Поляна&nbsp;&#151; отличное место для проведения выездных корпоративных мероприятий.
-        </p>
-    </div>
+            <div class="cell">
+                <a href="additional-service.html" isMenuLink="true">Дополнительные услуги и развлечения</a>
+            </div>
 
+            <div class="cell">
+                <a href="beta-page-price.html" isMenuLink="true">Цены</a>
+            </div>
 
-    <div class="innerVerticalDataBlock">
-        <h3 class="shadowed">
-            Дополнительные услуги
-        </h3>
-        <ul class="subContent">
-            <li>Отличная <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBigBath.jpg');" onmouseout="tooltip.hide();">большая баня</span></li>
-            <li>Катание на&nbsp;<span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBuns.jpg');" onmouseout="tooltip.hide();">&#171;плюшке&#187;</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBanan.jpg');" onmouseout="tooltip.hide();">&#171;банане&#187;</span>, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttWater-skis.jpg');" onmouseout="tooltip.hide();">водных лыжах</span></li>
-            <li>Прогулки по&nbsp;Красноярскому&nbsp;морю (в&nbsp;частности, <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttBiryusa.jpg');" onmouseout="tooltip.hide();">Бирюсинский&nbsp;залив)</span></li>
-            <li><span class="toolTipPlace" onmouseover="tooltip.show(null,'ttShipping.jpg');" onmouseout="tooltip.hide();">Доставка людей и&nbsp;грузов по&nbsp;Красноярскому&nbsp;морю</span></li>
-            <li><span class="toolTipPlace" onmouseover="tooltip.show(null,'ttFishing.jpg');" onmouseout="tooltip.hide();">Доставка до&nbsp;места рыбалки и&nbsp;обратно</span></li>
-        </ul>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <h3 class="shadowed">
-            В зимний период
-        </h3>
-        <ul class="subContent">
-            <li><span class="toolTipPlace" onmouseover="tooltip.show(null,'ttWinter.jpg');" onmouseout="tooltip.hide();">Отличное место</span> для&nbsp;шашлыков, кайтинга и рыбалки</li>
-            <li>Катание на&nbsp;снегоходах, прокат снегоходов</li>
-        </ul>
-
-    </div>
-
-    <div class="innerVerticalDataBlock">
-        <h3 class="shadowed">
-            Стоимость
-        </h3>
-        <ul class="subContent">
-            <li>
-                Доставка от&nbsp;Шумихи до&nbsp;Поляны на&nbsp;катере&nbsp;&#151; 700&nbsp;руб./чел. <span>туда-обратно</span>;<br>
-                менее трех человек&nbsp;&#151; <span>2 000 руб./катер</span> <span>туда-обратно</span>
-            </li>
-            <li>
-                Аренда 6-местного домика&nbsp;&#151; <span>6 000 руб./сутки;</span><br>
-                организация в доме доп. места&nbsp;&#151; <span>500 руб./чел./сутки</span>
-            </li>
-            <li>Отдых в палатках&nbsp;&#151; <span>700 руб./чел./сутки</span></li>
-            <li>Дневное пребывание на базе&nbsp;&#151; <span>350 руб./чел.</span> <span class="toolTipPlace" onmouseover="tooltip.show(null,'ttVelarium.jpg');" onmouseout="tooltip.hide();">с предоставлением навеса</span></li>
-            <li>Баня&nbsp;&#151; <span>1 500 руб./час,</span> веник&nbsp;&#151; 50&nbsp;руб.</li>
-            <li>При бронировании за 10 дней&nbsp;&#151; <span class="menuSubContentBold">скидка 10 %</span></li>
-            <li>Компаниям от 10 человек&nbsp;&#151; <span class="menuSubContentBold">скидка 10 %</span></li>
-            <li>Корпоративным клиентам и большим компаниям&nbsp;&#151; спецпредложения</li>
-            <li>В будние дни (с&nbsp;понедельника по&nbsp;пятницу) <span class="menuSubContentBold">скидки!</span></li>
-            <li>Дополнительные услуги&nbsp;&#151; по&nbsp;договоренности</li>
-        </ul>
-        <p>&nbsp;</p>
-    </div>
-
-    <div class="clear"></div>
-
-    <div class="innerVerticalDataBlock">
-        <h2 class="shadowed">
-            Контактная информация
-        </h2>
-        <p class="subContent">
-            Узнать подробную информацию и&nbsp;забронировать места вы&nbsp;можете<br />
-            в&nbsp;группе&nbsp;<a href="http://vk.com/club18011689">Вконтакте</a>, написав нам письмо&nbsp;на&nbsp;<a href="mailto:email@krasmore.ru">email@krasmore.ru</a><br />
-            или позвонив по&nbsp;телефонам:<br />
-        </p>
-        <p>&nbsp;</p>
-        <ul class="menuSubContentBold">
-            <li>8 923 275-90-09 <span class="subContent">Денис</span></li>
-            <li>8 908 219-25-50 <span class="subContent">Людмила</span></li>
-            <li>8 950 999-52-75 <span class="subContent">Юлия</span></li>
-        </ul>
-
-        <!-- GoogleMapBlock Start -->
-        <div id="map_canvas"></div>
-        <!-- GoogleMapBlock End -->
-        <!-- ShareButtonsBlock START -->
-        <div style="float: left; margin-right: 2px;">
-            <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
-            <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
-            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,lj,viber,whatsapp"></div>
+            <div class="cell">
+                <a href="beta-page-faq.html" isMenuLink="true">Часто задоваемые вопросы</a>
+            </div>
         </div>
 
-        <div style="font: 10pt Georgia; padding-top: 7px; margin-bottom: 7px;">&#151;&nbsp;И&nbsp;я&nbsp;там&nbsp;был!</div>
-        <!-- ShareButtonsBlock END -->
-    </div>
 
-    <div class="innerVerticalDataBlock">
-        <h2 class="shadowed">
-            Отзывы
-        </h2>
+        <div class="row">
 
-        <!-- VKCommentsBlock START -->
-        <div id="vk_comments" style="margin-top: 15px;"></div>
-        <script type="text/javascript">
-            VK.Widgets.Comments("vk_comments", { limit: 10, width: "520", attach: "*" });
-        </script>
-        <!-- VKCommentsBlock END -->
-        <!-- Gismeteo informer START -->
-        <!-- <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
-            <div id="gsInformerID-nVG0i46sYVjAJF" class="gsInformer" style="width:200px;height:166px">
-                <div class="gsIContent">
-                    <div id="cityLink">
-                        <a href="http://www.gismeteo.ru/city/daily/11843/" target="_blank">Погода в Дивногорске</a>
-                    </div>
-                    <div class="gsLinks">
-                        <table>
-                            <tr>
-                                <td>
-                                    <div class="leftCol">
-                                        <a href="http://www.gismeteo.ru" target="_blank">
-                                            <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
-                                            <span>Gismeteo</span>
-                                        </a>
-                                    </div>
-                                    <div class="rightCol">
-                                        <a href="http://www.gismeteo.ru/city/weekly/11843/" target="_blank">Прогноз на 2 недели</a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell">
+                <div class="sub-menu-links">
+                    <a href="#bath" isInLink="true" class="margin5">Баня</a>
+                    <a href="#water-skies" isInLink="true" class="margin5">Водные лыжи</a>
+                    <a href="#water-buns" isInLink="true" class="margin5">Плюшки</a>
+                    <a href="#boat" isInLink="true" class="margin5">Лодка</a>
+                    <a href="#volleyball" isInLink="true" class="margin5">Волейбол</a>
                 </div>
             </div>
-            <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=nVG0i46sYVjAJF" type="text/javascript"></script>-->
-        <!-- Gismeteo informer END -->
-
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
     </div>
-
-    <div class="clear"></div>
-
-    <div class="end">
-
-    </div>
-
 </div>
 
+<div class="table-80">
+    <!--bath-->
+    <div class="row">
+        <div class="cell-image">
+            <div class="gallery" id="bath">
+                <div class="gallery-pointer-block">
+                    <!--display position in gallery collection. (gen dynamically)-->
+                </div>
+
+                <span class="gallery-title">Большая баня</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell">
+            <div class="innerHorizontalDataBlock">
+
+                <p class="content">
+                    Лучшая баня на правом побережье.
+                </p>
+                <p>&nbsp;</p>
+                <p class="content">
+                    Они сняли с себя всякий стыд и всякое стеснение", говорит многократно уже называвшийся нами
+                    датский дворянин Иаков. Мы сами несколько раз видели в Москве, как мужчины и женщины выходили
+                    прохладиться из простых бань, и голые, как их Бог создал, подходили к нам и обращались к нашей
+                    молодежи на ломаном немецком языке с безнравственными речами. ...
+                    В Астрахани я, чтобы видеть лично, как они моются, незамеченным образом отправился в их баню.
+                    Баня была разгорожена бревнами, чтобы мужчины и женщины могли сидеть отдельно. Однако входили
+                    и выходили они через одну и ту же дверь, притом без передников; только некоторые держали спереди
+                    березовый веник до тех пор, пока не усаживались на место. Иные не делали и этого.
+                    Женщины иногда выходили, без стеснения, голые поговорить со своими мужьями.
+                </p>
+
+                <div class="empty">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--bath-->
+
+    <!--water-skies-->
+    <div class="row">
+        <div class="cell-image">
+            <div class="gallery" id="water-skies">
+                <div class="gallery-pointer-block">
+                    <!--display position in gallery collection. (gen dynamically)-->
+                </div>
+
+                <span class="gallery-title">Водные лыжи</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell">
+            <div class="innerHorizontalDataBlock">
+
+                <p class="content">
+                    Водные лыжи в СССР начали развиваться с конца 50-х — начала 60-х годов XX века. В 1964 году,
+                    во многом по инициативе первого космонавта Земли Ю. А. Гагарина, который был горячим поклонником
+                    водных лыж, была создана Федерация воднолыжного спорта страны, в 1965 году проведен первый
+                    чемпионат СССР по водным лыжам. В 1977 году Марина Чересова, воспитанница воднолыжной школы
+                    братьев Валерия и Юрия Нехаевских из города Дубна (Московская область), первой из советских
+                    воднолыжников установила рекорд Европы в фигурном катании на водных лыжах, в 1979 году её
+                    одноклубница Наталья Румянцева, также первой из воднолыжников СССР, установила мировой рекорд
+                    в этом виде и стала чемпионкой мира. Имя этой спортсменки увековечено в Зале Славы Международной
+                    федерации водных лыж и вейкборда (IWWF): на её счету 5 мировых и 7 европейских рекордов в
+                    фигурном катании на водных лыжах, 4 золотые медали чемпионатов мира и 24 золотые медали
+                    чемпионатов Европы.
+                </p>
+                <!--<p>&nbsp;</p>-->
+
+                <div class="empty">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--water-skies-->
+
+    <!--water-buns-->
+    <div class="row">
+        <div class="cell-image">
+            <div class="gallery" id="water-buns">
+                <div class="gallery-pointer-block">
+                    <!--display position in gallery collection. (gen dynamically)-->
+                </div>
+
+                <span class="gallery-title">Катание на банане и плюшках</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell">
+            <div class="innerHorizontalDataBlock">
+
+                <p class="content">
+                    Для этого тюб закрепляют позади катера и тянут его за собой на скорости, как на водных лыжах.
+                    На большой скорости тюб может оторваться от воды и происходит короткий полёт. В последнее время
+                    «полёты» на тюбе приобретают популярность.
+                </p>
+                <!--<p>&nbsp;</p>-->
+
+                <div class="empty">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--water-buns-->
+
+    <!--boat-->
+    <div class="row">
+        <div class="cell-image">
+            <div class="gallery" id="boat">
+                <div class="gallery-pointer-block">
+                    <!--display position in gallery collection. (gen dynamically)-->
+                </div>
+
+                <span class="gallery-title">Прогулки на весельной лодке</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell">
+            <div class="innerHorizontalDataBlock">
+
+                <p class="content">
+                    Лёгкая парусная лодка (швертбот) или транцевая гребная, а также гребно-парусная корабельная
+                    шлюпка с вальковыми вёслами. На судах используется для связи с берегом, работ у борта
+                    (заводка швартовых, верпов и т. д.), перевозки лёгких грузов или людей. Также пользуется
+                    популярностью в спортивно-туристических целях. Мачта на шестивесельном яле одна, называется
+                    фок-мачтой и служит опорой для парусов. Изготовляется из сосны или ели (клееная). Длина 5,5 м.
+                </p>
+                <!--<p>&nbsp;</p>-->
+
+                <div class="empty">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--boat-->
+
+    <!--volleyball-->
+    <div class="row">
+        <div class="cell-image">
+            <div class="gallery" id="volleyball">
+                <div class="gallery-pointer-block">
+                    <!--display position in gallery collection. (gen dynamically)-->
+                </div>
+
+                <span class="gallery-title">Волейбол</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell">
+            <div class="innerHorizontalDataBlock">
+
+                <p class="content">
+                    Вид спорта, командная спортивная игра, в процессе которой две команды соревнуются на
+                    специальной площадке, разделённой сеткой, стремясь направить мяч на сторону соперника таким
+                    образом, чтобы он приземлился на площадке противника (добить до пола), либо чтобы игрок
+                    защищающейся команды допустил ошибку. При этом для организации атаки игрокам одной команды
+                    разрешается не более трёх касаний мяча подряд (в дополнение к касанию на блоке).
+                </p>
+                <!--<p>&nbsp;</p>-->
+
+                <div class="empty">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--volleyball-->
+
+</div>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
