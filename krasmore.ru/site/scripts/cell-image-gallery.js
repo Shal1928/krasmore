@@ -45,6 +45,31 @@ var gallery = {
         position: 0,
         activeContainer: 1,
         currentZindex: -1,
+    },
+
+    //residence
+    "house": {
+        collection: [
+            "house-1.jpg",
+            "house-2.jpg",
+            "house-3.jpg",
+            "house-4.jpg",
+            "house-5.jpg",
+            "house-6.jpg",
+            "house-7.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
+    },
+    "tent": {
+        collection: [
+            "tent-1.jpg",
+            "tent-2.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
     }
 };
 
