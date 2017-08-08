@@ -66,6 +66,20 @@ var gallery = {
         collection: [
             "tent-1.jpg",
             "tent-2.jpg",
+            "tent-3.jpg",
+            "tent-4.jpg",
+            "tent-5.jpg",
+            "tent-6.jpg",
+            "tent-7.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
+    },
+    "сonditions": {
+        collection: [
+            "сonditions-1.jpg",
+            "сonditions-2.jpg",
         ],
         position: 0,
         activeContainer: 1,

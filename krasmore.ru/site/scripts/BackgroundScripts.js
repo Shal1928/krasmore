@@ -7,15 +7,15 @@
 // // which also includes some text and url's.
 // var gallery = [
 // {
-//     "image": "teaBonfire0.1.jpg",
+//     "image": "tent-4.jpg",
 //     "firstline": "Чай у костра"
 // },
 // {
-//     "image": "teaBonfire1.0.jpg",
+//     "image": "tent-5.jpg",
 //     "firstline": "Чай у костра"
 // },
 // {
-//     "image": "goodPlace1.0.jpg",
+//     "image": "tent-3.jpg",
 //     "firstline": "Отдых в палатках"
 // },
 // {
