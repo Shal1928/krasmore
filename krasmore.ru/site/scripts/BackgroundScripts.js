@@ -23,7 +23,7 @@
 //     "firstline": "Отдых в палатках"
 // },
 // {
-//     "image": "goodPlace0.1.jpg",
+//     "image": "water-buns-1.jpg",
 //     "firstline": "Отличное место для дружных компаний"
 // },
 // {
@@ -83,11 +83,11 @@
 //     "firstline": "Удобный берег"
 // },
 // {
-//     "image": "excursionsBiryusa0.1.jpg",
+//     "image": "excursions-1.jpg",
 //     "firstline": "Прогулки по Красноярскому морю"
 // },
 // {
-//     "image": "excursionsBiryusa0.2.jpg",
+//     "image": "excursions-2.jpg",
 //     "firstline": "Прогулки по Красноярскому морю"
 // }
 // ];

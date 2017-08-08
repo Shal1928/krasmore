@@ -9,6 +9,15 @@ var gallery = {
         activeContainer: 1,
         currentZindex: -1,
     },
+    "excursions": {
+        collection: [
+            "excursions-1.jpg",
+            "excursions-2.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
+    },
     "water-skies": {
         collection: [
             "water-skies-1.jpg",
@@ -22,6 +31,7 @@ var gallery = {
         collection: [
             "water-buns-1.jpg",
             "water-buns-2.jpg",
+            "water-buns-3.jpg",
             "water-buns-3.jpg",
             "water-buns-4.jpg"
         ],
