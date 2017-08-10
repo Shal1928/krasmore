@@ -119,6 +119,7 @@ li
     margin-left: 25px;
     position:absolute;
     float: left;
+    z-index: 9999;
 }
 
 .logoImage 
