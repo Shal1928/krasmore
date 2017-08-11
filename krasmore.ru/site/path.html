@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="styles/menu.css" />
     <link rel="stylesheet" type="text/css" href="styles/table.css" />
     <link rel="stylesheet" type="text/css" href="styles/gallery.css" />
-
+    <link rel="stylesheet" type="text/css" href="styles/map.css" />
+    
     <!--[if gte IE 9]>
     <style type="text/css">
         .gradient {
@@ -26,6 +27,7 @@
     <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.corner.js"></script>
     <script type="text/javascript" src="scripts/BackgroundScripts.js"></script>
+    <script type="text/javascript" src="scripts/path-map.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFdiszdcMZLHnib6iGIc3oADvRK4DFFtw&callback=initializeMap" type="text/javascript"></script>
     <script type="text/javascript" src="scripts/cell-image-gallery.js"></script>
@@ -37,7 +39,7 @@
     </script>
 
 </head>
-<body>
+<body onload="initializeMap()">
 
 <div id="roof">
 
@@ -89,34 +91,30 @@
         </div>
     </div>
 
-    <!--<div class="table-sub-menu">-->
-        <!--<div class="row">-->
-            <!--<div class="cell">-->
-                <!--<div class="sub-menu-links">-->
-                    <!--<a href="#bath" isInLink="true" class="margin5">Баня</a>-->
-                    <!--<a href="#excursions" isInLink="true" class="margin5">Экскурсии</a>-->
-                    <!--<a href="#water-skies" isInLink="true" class="margin5">Водные лыжи</a>-->
-                    <!--<a href="#water-buns" isInLink="true" class="margin5">Плюшки</a>-->
-                    <!--<a href="#boat" isInLink="true" class="margin5">Лодка</a>-->
-                    <!--<a href="#volleyball" isInLink="true" class="margin5">Волейбол</a>-->
-                <!--</div>-->
-            <!--</div>-->
+    <div class="table-sub-menu">
+        <div class="row">
+            <div class="cell">
+                <div class="sub-menu-links">
+                    <a href="#map_canvas" isInLink="true" class="margin5">Карта</a>
+                    <a href="#big-boat" isInLink="true" class="margin5">Большой катер</a>
+                    <a href="#small-boat" isInLink="true" class="margin5">Малый катер</a>
+                </div>
+            </div>
 
-        <!--</div>-->
-    <!--</div>-->
+        </div>
+    </div>
 </div>
 
 <div class="table-80">
-    <!--bath-->
+    <!--map-->
     <div class="row">
         <div class="cell-image">
-            <div class="gallery" id="bath">
-                <div class="gallery-pointer-block">
-                    <!--display position in gallery collection. (gen dynamically)-->
-                </div>
+            <div id="map_canvas"></div>
 
-                <span class="gallery-title">Большая баня</span>
-            </div>
+            <!--<span class="gallery-title">-->
+                <!---->
+            <!--</span>-->
+
         </div>
     </div>
 
@@ -125,19 +123,20 @@
             <div class="innerHorizontalDataBlock">
 
                 <p class="content">
-                    Лучшая баня на правом побережье.
+                    Выезжаем из Красноярска в сторону г. Дивногорска по трассе
+                    <a href="javascript:window.onclick=initializeMap();" isInLink>Р257 «Енисей» (М-54).</a>
+                    Проезжаем г. Дивногорск и продолжаем движение до ГЭС, после пересечения моста напротив ГЭС с
+                    правого на левый берег и подъема в гору, проезжаем первый поворот налево (судоподъемник) и
+                    сворачиваем во второй
+                    <a href="javascript:window.onclick=showShumihaPlease();" isInLink>(залив Шумиха).</a>
+                    Едем по основной дороге до самого конца.
                 </p>
                 <p>&nbsp;</p>
                 <p class="content">
-                    Они сняли с себя всякий стыд и всякое стеснение", говорит многократно уже называвшийся нами
-                    датский дворянин Иаков. Мы сами несколько раз видели в Москве, как мужчины и женщины выходили
-                    прохладиться из простых бань, и голые, как их Бог создал, подходили к нам и обращались к нашей
-                    молодежи на ломаном немецком языке с безнравственными речами. ...
-                    В Астрахани я, чтобы видеть лично, как они моются, незамеченным образом отправился в их баню.
-                    Баня была разгорожена бревнами, чтобы мужчины и женщины могли сидеть отдельно. Однако входили
-                    и выходили они через одну и ту же дверь, притом без передников; только некоторые держали спереди
-                    березовый веник до тех пор, пока не усаживались на место. Иные не делали и этого.
-                    Женщины иногда выходили, без стеснения, голые поговорить со своими мужьями.
+                    Здесь можно оставить машину на платной парковке (100 руб.) и сообщить о том что вы прибыли
+                    по тел. 8 923 275-90-09 (Денис). После загрузки на катер дорога по морю до
+                    <a href="javascript:window.onclick=showPolyanaPlease();" isInLink>«Поляны»</a> займет около 40
+                    мин.
                 </p>
 
                 <div class="empty">
@@ -146,17 +145,17 @@
             </div>
         </div>
     </div>
-    <!--bath-->
+    <!--map-->
 
-    <!--excursions-->
+    <!--big-boat-->
     <div class="row">
         <div class="cell-image">
-            <div class="gallery" id="excursions">
+            <div class="gallery" id="big-boat">
                 <div class="gallery-pointer-block">
                     <!--display position in gallery collection. (gen dynamically)-->
                 </div>
 
-                <span class="gallery-title">Прогулки по Красноярскому морю</span>
+                <span class="gallery-title">Большой катер</span>
             </div>
         </div>
     </div>
@@ -186,17 +185,17 @@
             </div>
         </div>
     </div>
-    <!--excursions-->
+    <!--big-boat-->
 
-    <!--water-skies-->
+    <!--small-boat-->
     <div class="row">
         <div class="cell-image">
-            <div class="gallery" id="water-skies">
+            <div class="gallery" id="small-boat">
                 <div class="gallery-pointer-block">
                     <!--display position in gallery collection. (gen dynamically)-->
                 </div>
 
-                <span class="gallery-title">Водные лыжи</span>
+                <span class="gallery-title">Малый катер</span>
             </div>
         </div>
     </div>
@@ -227,111 +226,8 @@
 
         </div>
     </div>
-    <!--water-skies-->
-
-    <!--water-buns-->
-    <div class="row">
-        <div class="cell-image">
-            <div class="gallery" id="water-buns">
-                <div class="gallery-pointer-block">
-                    <!--display position in gallery collection. (gen dynamically)-->
-                </div>
-
-                <span class="gallery-title">Катание на банане и плюшках</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="cell">
-            <div class="innerHorizontalDataBlock">
-
-                <p class="content">
-                    Для этого тюб закрепляют позади катера и тянут его за собой на скорости, как на водных лыжах.
-                    На большой скорости тюб может оторваться от воды и происходит короткий полёт. В последнее время
-                    «полёты» на тюбе приобретают популярность.
-                </p>
-                <!--<p>&nbsp;</p>-->
-
-                <div class="empty">
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!--water-buns-->
-
-    <!--boat-->
-    <div class="row">
-        <div class="cell-image">
-            <div class="gallery" id="boat">
-                <div class="gallery-pointer-block">
-                    <!--display position in gallery collection. (gen dynamically)-->
-                </div>
-
-                <span class="gallery-title">Прогулки на весельной лодке</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="cell">
-            <div class="innerHorizontalDataBlock">
-
-                <p class="content">
-                    Лёгкая парусная лодка (швертбот) или транцевая гребная, а также гребно-парусная корабельная
-                    шлюпка с вальковыми вёслами. На судах используется для связи с берегом, работ у борта
-                    (заводка швартовых, верпов и т. д.), перевозки лёгких грузов или людей. Также пользуется
-                    популярностью в спортивно-туристических целях. Мачта на шестивесельном яле одна, называется
-                    фок-мачтой и служит опорой для парусов. Изготовляется из сосны или ели (клееная). Длина 5,5 м.
-                </p>
-                <!--<p>&nbsp;</p>-->
-
-                <div class="empty">
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!--boat-->
-
-    <!--volleyball-->
-    <div class="row">
-        <div class="cell-image">
-            <div class="gallery" id="volleyball">
-                <div class="gallery-pointer-block">
-                    <!--display position in gallery collection. (gen dynamically)-->
-                </div>
-
-                <span class="gallery-title">Волейбол</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="cell">
-            <div class="innerHorizontalDataBlock">
-
-                <p class="content">
-                    Вид спорта, командная спортивная игра, в процессе которой две команды соревнуются на
-                    специальной площадке, разделённой сеткой, стремясь направить мяч на сторону соперника таким
-                    образом, чтобы он приземлился на площадке противника (добить до пола), либо чтобы игрок
-                    защищающейся команды допустил ошибку. При этом для организации атаки игрокам одной команды
-                    разрешается не более трёх касаний мяча подряд (в дополнение к касанию на блоке).
-                </p>
-                <!--<p>&nbsp;</p>-->
-
-                <div class="empty">
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!--volleyball-->
-
+    <!--small-boat-->
+    
 </div>
 
 <!-- Yandex.Metrika counter -->

@@ -94,6 +94,27 @@ var gallery = {
         position: 0,
         activeContainer: 1,
         currentZindex: -1,
+    },
+
+    //path
+    "big-boat": {
+        collection: [
+            "big-boat-1.jpg",
+            "big-and-small-boat-1.jpg",
+            "big-boat-3.jpg",
+            "big-boat-4.jpg"
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
+    },
+    "small-boat": {
+        collection: [
+            "small-boat-1.jpg",
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
     }
 };
 
