@@ -30,16 +30,20 @@ var panorama;
 
 //API key
 // AIzaSyDWJtFBLkRHqk-vXMRsPr9Gto18xyYPGK0
-
+var map;
 
 function initializeMap() {
 
     // http://maps.googleapis.com/maps/api/directions/json?origin=55.976095,92.808392&destination=55.923785,92.266862&key=AIzaSyDFdiszdcMZLHnib6iGIc3oADvRK4DFFtw
 
-    var mapCenter = new google.maps.LatLng(55.938251, 92.880060);
+    // var mapCenter = new google.maps.LatLng(55.938251, 92.880060);
 
     var pointA = new google.maps.LatLng(55.976095, 92.808392),
-        pointB = new google.maps.LatLng(55.923785, 92.266862),
+        waypoints =  [{
+                location: new google.maps.LatLng(55.923910, 92.267963),
+                stopover: false
+        }],
+        pointB = new google.maps.LatLng(55.923179, 92.268066),
         myOptions = {
             // zoom: 13,
             // center: mapCenter,
@@ -49,33 +53,24 @@ function initializeMap() {
             zoomControOptions: { style: google.maps.ZoomControlStyle.LARGE, position: google.maps.ControlPosition.TOP_LEFT },
             mapTypeId: google.maps.MapTypeId.HYBRID,
             streetViewControl: false
-        },
-        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions),
+        };
+
+        this.map = new google.maps.Map(document.getElementById('map_canvas'), myOptions),
         // Instantiate a directions service.
         directionsService = new google.maps.DirectionsService,
         directionsDisplay = new google.maps.DirectionsRenderer({
-            map: map
-        }),
-        markerA = new google.maps.Marker({
-            position: pointA,
-            title: "съезд с 4-го моста в сторону Дивногорска",
-            label: "A",
-            map: map
-        }),
-        markerB = new google.maps.Marker({
-            position: pointB,
-            title: "залив Шумиха",
-            label: "B",
-            map: map
+            map: this.map
         });
 
     // get route from A to B
-    calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
+    calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB, waypoints);
 }
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB) {
+function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB, waypoints) {
+    var self = this;
     directionsService.route({
         origin: pointA,
+        waypoints: waypoints,
         destination: pointB,
         travelMode: google.maps.TravelMode.DRIVING
     }, function(response, status) {
@@ -88,7 +83,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, 
 }
 
 function showShumihaPlease() {
-    var mapCenter = new google.maps.LatLng(55.922899, 92.267084);
+    var mapCenter = new google.maps.LatLng(55.923179, 92.268066);
 
     var options = {
         zoom: 16,
@@ -104,8 +99,8 @@ function showShumihaPlease() {
     var map = new google.maps.Map(document.getElementById("map_canvas"), options);
 
     var placesArray = {};
-    placesArray['polyana'] = {
-        center: new google.maps.LatLng(55.831150, 92.251516)
+    placesArray['shumiha'] = {
+        center: new google.maps.LatLng(55.923179, 92.268066)
     };
 
     var placeCircle;
