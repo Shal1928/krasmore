@@ -83,7 +83,7 @@
 //     "firstline": "Удобный берег"
 // },
 // {
-//     "image": "excursions-1.jpg",
+//     "image": "excursions-5.jpg",
 //     "firstline": "Прогулки по Красноярскому морю"
 // },
 // {

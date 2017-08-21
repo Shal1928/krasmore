@@ -13,6 +13,8 @@ var gallery = {
         collection: [
             "excursions-1.jpg",
             "excursions-2.jpg",
+            "excursions-3.jpg",
+            "excursions-4.jpg",
         ],
         position: 0,
         activeContainer: 1,
