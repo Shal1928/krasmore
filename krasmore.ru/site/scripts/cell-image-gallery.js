@@ -1,4 +1,17 @@
 var gallery = {
+    //index
+    "general": {
+        collection: [
+            "general-1.jpg",
+            "general-2.jpg",
+            "general-3.jpg"
+        ],
+        position: 0,
+        activeContainer: 1,
+        currentZindex: -1,
+    },
+
+    //additional-service
     "bath": {
         collection: [
             "bath-1.jpg",
