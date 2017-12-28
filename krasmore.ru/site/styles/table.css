@@ -1,5 +1,5 @@
 /* table */
-.table-menu, .table-80, .table-115, .table-sub-menu {
+.table-menu, .table, .table-80, .table-115, .table-sub-menu {
     display: table;
     z-index: 1;
 }
@@ -8,11 +8,11 @@
     position: absolute;
 }
 
-.table-80, .table-115 {
+.table, .table-80, .table-115 {
     width: 100%;
 }
 
-.table-sub-menu, .table-menu {
+.table, .table-sub-menu, .table-menu {
     margin: auto;
     position: relative
 }
@@ -26,7 +26,7 @@
 }
 
 .table-sub-menu {
-    margin-top: 24px;
+    margin-top: 8px;
 }
 
 .table-80 {
@@ -39,10 +39,6 @@
 /* table */
 
 /* col, row */
-.col {
-    display: table-column;
-}
-
 .row {
     display: table-row;
 }
@@ -60,5 +56,10 @@
 .cell-image {
     height: 600px;
     cursor: hand;
+}
+
+.row-group {
+    display: table-row-group;
+    clear: both;
 }
 /* cell */
