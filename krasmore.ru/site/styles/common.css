@@ -225,7 +225,7 @@ li
 
 .title {
     color:#333;
-    font-size:40px;
+    font: 40px Georgia;
     padding:4px 13px 7px;
     float:left;
     display:block;
