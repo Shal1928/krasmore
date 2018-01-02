@@ -38,3 +38,10 @@
     top: 150px;
     position: relative;
 }
+
+.thumbnail-insta {
+    background-color: mediumvioletred;
+    width: 320px;
+    height: 318px;
+    margin: 25px auto;
+}
