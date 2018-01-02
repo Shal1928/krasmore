@@ -223,6 +223,15 @@ li
     display: block;
 }
 
+.title {
+    color:#333;
+    font-size:40px;
+    padding:4px 13px 7px;
+    float:left;
+    display:block;
+    position: relative;
+}
+
 .content, .subContent
 {
     padding-top: 10px; 
