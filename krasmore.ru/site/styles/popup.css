@@ -8,13 +8,14 @@
     left:0px;
     background:rgba(0,0,0,0.75);
     z-index: 999;
+
 }
 
 /* Inner */
 .popup-inner {
-    max-width:700px;
+    max-width:640px;
     width:90%;
-    padding:40px;
+    padding:20px;
     position:absolute;
     top:50%;
     left:50%;
@@ -25,34 +26,6 @@
     background:#fff;
 }
 
-/* Close Button */
-.popup-close {
-    width:30px;
-    height:30px;
-    padding-top:4px;
-    display:inline-block;
-    position:absolute;
-    top:0px;
-    right:0px;
-    transition:ease 0.25s all;
-    -webkit-transform:translate(50%, -50%);
-    transform:translate(50%, -50%);
-    border-radius:1000px;
-    background:rgba(0,0,0,0.8);
-    font-family:Arial, Sans-Serif;
-    font-size:20px;
-    text-align:center;
-    line-height:100%;
-    color:#fff;
-}
-
-.popup-close:hover {
-    -webkit-transform:translate(50%, -50%) rotate(180deg);
-    transform:translate(50%, -50%) rotate(180deg);
-    background:rgba(0,0,0,1);
-    text-decoration:none;
-}
-
 .popup-img {
     width: 640px;
     height: 636px;
@@ -60,4 +33,46 @@
 
 .popup-gallery {
     /*for js*/
+}
+
+/* Close Button */
+.popup-p-close {
+    margin-top: 20px;
+    float: right;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.popup-close, .popup-close-x  {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.popup-close-x {
+    width:30px;
+    height:27px;
+    padding-top:3px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius: 1000px;
+    background: #a60000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+    text-decoration:none;
+}
+
+.popup-close-x:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    text-decoration:none;
+    padding-bottom:4px;
+    width:34px;
+    font-size:24px;
+    background: #ff4040;
 }
