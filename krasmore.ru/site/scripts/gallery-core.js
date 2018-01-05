@@ -16,6 +16,8 @@ function GalleryCore(gallery, isReInit) {
 
         if(isReInit) {
             pointers.empty();
+            $("#"+ id +"-1").off();
+            $("#"+ id +"-2").off();
             $("#"+ id +"-1").remove();
             $("#"+ id +"-2").remove();
         }
