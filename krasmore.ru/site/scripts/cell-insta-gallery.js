@@ -21,11 +21,26 @@ $(document).ready(function () {
             generateGallery(response.data.length - 1);
             var containers = $('div.' + THUMBNAIL_INSTA);
             fillRecordsAndFillGallery(response.data, containers);
-
-
         }
     });
 });
+
+function generateGalleryObject(record) {
+    return {
+        galleryCssClass: "popup-gallery",
+        pointerBlockCssClass: "gallery-pointer-block",
+        pointerCssClass: "gallery-pointer",
+        imageCssClass: "popup-img",
+        pathToGallery: "",
+
+        "carousel": {
+            collection: record.media,
+            position: 0,
+            activeContainer: 1,
+            currentZindex: -1,
+        }
+    };
+}
 
 function generateGallery(instaFetchCount) {
     var screenWidth = $(window).width();
@@ -61,7 +76,9 @@ function generateGallery(instaFetchCount) {
     $('[data-popup-open]').on('click', function(e)  {
         var recordIndex = jQuery(this).attr('data-popup-open');
         var record = records[recordIndex];
-        $('div.popup-img').css("background-image", "url('"+ record.media[0] +"')");
+
+        var instaG = new GalleryCore(generateGalleryObject(record), true);
+
         $('#caption').text(record.caption);
         $('div.popup-insta').fadeIn(350);
 

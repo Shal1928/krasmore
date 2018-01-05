@@ -1,15 +1,25 @@
-function GalleryCore(gallery, galleryCssClass, pointerBlockCssClass, pointerCssClass, imageCssClass, pathToGallery) {
+function GalleryCore(gallery, isReInit) {
     this.gallery = gallery;
-    this.galleryCssClass = galleryCssClass;
-    this.pointerBlockCssClass = pointerBlockCssClass;
-    this.pointerCssClass = pointerCssClass;
-    this.imageCssClass = imageCssClass;
-    this.pathToGallery = pathToGallery ? pathToGallery : "";
+    this.galleryCssClass = gallery.galleryCssClass;
+    this.pointerBlockCssClass = gallery.pointerBlockCssClass;
+    this.pointerCssClass = gallery.pointerCssClass;
+    this.imageCssClass = gallery.imageCssClass;
+    this.pathToGallery = gallery.pathToGallery ? gallery.pathToGallery : "";
 
     for (var id in this.gallery) {
         var p = this.gallery[id].collection;
+        if(!p) {
+            continue;
+        }
 
         var pointers = $("#" + id + " > div." + this.pointerBlockCssClass);
+
+        if(isReInit) {
+            pointers.empty();
+            $("#"+ id +"-1").remove();
+            $("#"+ id +"-2").remove();
+        }
+
         for(var j=0; j < p.length; j++) {
             pointers.append("<div id='gallery-pointer-id-"+ j +"' class='" + this.pointerCssClass + "-0'></div>");
         }
