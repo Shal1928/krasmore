@@ -128,17 +128,19 @@ function getMedia(record) {
             }
 
             var record = mediaContainer[c];
-            media.push(getMediaByType(record));
+            media.push(getMediaElement(record));
         }
     } else {
-        media.push(getMediaByType(record));
+        media.push(getMediaElement(record));
     }
 
     return media;
 }
 
-function getMediaByType(record) {
-    return record.type === "image" ? record.images.standard_resolution.url : record.videos.standard_resolution.url
+function getMediaElement(record) {
+    return {
+        url: record.type === "image" ? record.images.standard_resolution.url : record.videos.standard_resolution.url,
+        type: record.type}
 }
 
 function fillGallery(container, record) {

@@ -28,7 +28,8 @@
 
 .popup-img {
     width: 640px;
-    height: 636px;
+    height: 640px;
+    cursor: hand;
 }
 
 .popup-gallery {
