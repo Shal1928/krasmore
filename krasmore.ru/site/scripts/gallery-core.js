@@ -1,26 +1,32 @@
-function GalleryCore(gallery, isReInit, isVideoSupport) {
+function GalleryCore(gallery, isReInit) {
     this.gallery = gallery;
     this.galleryCssClass = gallery.galleryCssClass;
     this.pointerBlockCssClass = gallery.pointerBlockCssClass;
     this.pointerCssClass = gallery.pointerCssClass;
     this.imageCssClass = gallery.imageCssClass;
     this.pathToGallery = gallery.pathToGallery ? gallery.pathToGallery : "";
+    this.videoElements = [];
 
-    var prepareContainers = function (id, imageCssClass) {
+    var prepareContainers = function (id) {
         //Добавляем контейнеры для изображений
-        $("#" + id).append("<div id='"+ id +"-image-1' class='" + imageCssClass + "'></div>");
-        $("#" + id).append("<div id='"+ id +"-image-2' class='" + imageCssClass + "'></div>");
+        $("#" + id).append("<div id='"+ id +"-image-1' class='" + this.imageCssClass + "'></div>");
+        $("#" + id).append("<div id='"+ id +"-image-2' class='" + this.imageCssClass + "'></div>");
 
-        prepareVideoContainers(id, "1");
-        prepareVideoContainers(id, "2");
-    };
+        this.videoElements.push(prepareVideoContainers(id, "1"));
+        this.videoElements.push(prepareVideoContainers(id, "2"));
+    }.bind(this);
 
     var prepareVideoContainers = function (id, index) {
         var idVideo = id + "-video-" + index;
-        var videoElement = $("#" + id);
-        videoElement.append("<video controls autoplay width='640' height='640' id='" + idVideo + "'></video>");
-        $("#" + idVideo).append("<source id='"+ idVideo +"-s' src='' type='video/mp4' />");
+        $("#" + id).append("<video controls autoplay width='640' height='640' id='" + idVideo + "'></video>");
+        var videoElement = $("#" + idVideo);
+        videoElement.append("<source id='"+ idVideo +"-s' src='' type='video/mp4' />");
+        videoElement.css({
+            "display": "none"
+        });
         prepareFlashVideoContainers(idVideo);
+
+        return videoElement;
     }
 
     var prepareFlashVideoContainers = function (idVideo) {
@@ -43,17 +49,21 @@ function GalleryCore(gallery, isReInit, isVideoSupport) {
 
         if(isReInit) {
             pointers.empty();
-            $("#"+ id +"-1").off();
-            $("#"+ id +"-2").off();
-            $("#"+ id +"-1").remove();
-            $("#"+ id +"-2").remove();
+            $("#"+ id +"-image-1").off();
+            $("#"+ id +"-image-2").off();
+            $("#"+ id +"-image-1").remove();
+            $("#"+ id +"-image-2").remove();
+            $("#"+ id +"-video-1").off();
+            $("#"+ id +"-video-2").off();
+            $("#"+ id +"-video-1").remove();
+            $("#"+ id +"-video-2").remove();
         }
 
         for(var j=0; j < p.length; j++) {
             pointers.append("<div id='gallery-pointer-id-"+ j +"' class='" + this.pointerCssClass + "-0'></div>");
         }
 
-        prepareContainers(id, this.imageCssClass)
+        prepareContainers(id)
         this.next(id, true);
     }
 
@@ -72,7 +82,7 @@ GalleryCore.prototype.next = function(id, isFirstExecution) {
     if(length == 1) {
         pointerBlock.css({
             "display": "none"
-        })
+        });
 
         if(!isFirstExecution) {
             return;
@@ -80,7 +90,7 @@ GalleryCore.prototype.next = function(id, isFirstExecution) {
     } else {
         pointerBlock.css({
             "display": "block"
-        })
+        });
     }
 
     var pointer1 = $("#" + id + " > div." + this.pointerBlockCssClass + " > div." + this.pointerCssClass + "-0 > div." + this.pointerCssClass + "-1");
@@ -118,17 +128,17 @@ GalleryCore.prototype.showImage = function(media, currentContainer, activeContai
     currentContainerElement.fadeOut(1, function () {
 
         var activeContainerElement = $(selectorFirstPart + activeContainer);
-        var url = "url(" + this.pathToGallery + media.url + ")";
         if(media.type === "image") {
             // Set the background image of the new active container
             activeContainerElement.css({
-                "background-image": url,
+                "background-image": "url(" + this.pathToGallery + media.url + ")",
                 "display": "block",
                 "z-index": galleryObj.currentZindex
             });
         } else {
             currentContainerElement[0].pause();
 
+            var url = this.pathToGallery + media.url;
             activeContainerElement.attr("src", url);
             activeContainerElement.css({
                 "display": "block",
@@ -138,4 +148,10 @@ GalleryCore.prototype.showImage = function(media, currentContainer, activeContai
         }
 
     }.bind(this));
+}
+
+GalleryCore.prototype.videoStop = function () {
+    for(var e in this.videoElements) {
+        this.videoElements[e][0].pause();
+    }
 }

@@ -72,12 +72,13 @@ function generateGallery(instaFetchCount) {
         }
     }
 
+    var instaG;
     //----- OPEN
     $('[data-popup-open]').on('click', function(e)  {
         var recordIndex = jQuery(this).attr('data-popup-open');
         var record = records[recordIndex];
 
-        var instaG = new GalleryCore(generateGalleryObject(record), true);
+        instaG = new GalleryCore(generateGalleryObject(record), true);
 
         $('#caption').text(record.caption);
         $('div.popup-insta').fadeIn(350);
@@ -87,6 +88,7 @@ function generateGallery(instaFetchCount) {
 
     //----- CLOSE
     $('[data-popup-close]').on('click', function(e)  {
+        instaG.videoStop();
         $('div.popup-insta').fadeOut(350);
         e.preventDefault();
     });
