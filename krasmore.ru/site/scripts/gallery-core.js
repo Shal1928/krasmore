@@ -6,17 +6,19 @@ function GalleryCore(gallery, isReInit, isVideoSupport) {
     this.imageCssClass = gallery.imageCssClass;
     this.pathToGallery = gallery.pathToGallery ? gallery.pathToGallery : "";
 
-    var prepareContainers = function (id) {
+    var prepareContainers = function (id, imageCssClass) {
         //Добавляем контейнеры для изображений
-        $("#" + id).append("<div id='"+ id +"-image-1' class='" + this.imageCssClass + "'></div>");
-        $("#" + id).append("<div id='"+ id +"-image-2' class='" + this.imageCssClass + "'></div>");
+        $("#" + id).append("<div id='"+ id +"-image-1' class='" + imageCssClass + "'></div>");
+        $("#" + id).append("<div id='"+ id +"-image-2' class='" + imageCssClass + "'></div>");
 
-        prepareVideoContainers(id + "-video-1");
-        prepareVideoContainers(id + "-video-2");
+        prepareVideoContainers(id, "1");
+        prepareVideoContainers(id, "2");
     };
 
-    var prepareVideoContainers = function (idVideo) {
-        $("#" + id).append("<video controls autoplay width='640' height='640' id='" + idVideo + "'></video>");
+    var prepareVideoContainers = function (id, index) {
+        var idVideo = id + "-video-" + index;
+        var videoElement = $("#" + id);
+        videoElement.append("<video controls autoplay width='640' height='640' id='" + idVideo + "'></video>");
         $("#" + idVideo).append("<source id='"+ idVideo +"-s' src='' type='video/mp4' />");
         prepareFlashVideoContainers(idVideo);
     }
@@ -51,13 +53,13 @@ function GalleryCore(gallery, isReInit, isVideoSupport) {
             pointers.append("<div id='gallery-pointer-id-"+ j +"' class='" + this.pointerCssClass + "-0'></div>");
         }
 
-        prepareContainers(id)
+        prepareContainers(id, this.imageCssClass)
         this.next(id, true);
     }
 
     $("div." + this.galleryCssClass).on('click', function(e) {
         var id = e.target.id;
-        var i = id.lastIndexOf("-");
+        var i = id.lastIndexOf("-") - 6;
         this.next(id.substring(0, i), false);
     }.bind(this));
 }
