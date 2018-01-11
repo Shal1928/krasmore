@@ -6,11 +6,22 @@ function GalleryCore(gallery, isReInit) {
     this.imageCssClass = gallery.imageCssClass;
     this.pathToGallery = gallery.pathToGallery ? gallery.pathToGallery : "";
     this.videoElements = [];
+    this.previousElement = null;
 
     var prepareContainers = function (id) {
         //Добавляем контейнеры для изображений
-        $("#" + id).append("<div id='"+ id +"-image-1' class='" + this.imageCssClass + "'></div>");
-        $("#" + id).append("<div id='"+ id +"-image-2' class='" + this.imageCssClass + "'></div>");
+        var imageId1 = id + "-image-1";
+        var imageId2 = id + "-image-2";
+
+        $("#" + id).append("<div id='"+ imageId1 +"' class='" + this.imageCssClass + "'></div>");
+        $("#" + id).append("<div id='"+ imageId2 +"' class='" + this.imageCssClass + "'></div>");
+
+        $("#" + imageId1).css({
+            "display": "none"
+        });
+        $("#" + imageId2).css({
+            "display": "none"
+        });
 
         this.videoElements.push(prepareVideoContainers(id, "1"));
         this.videoElements.push(prepareVideoContainers(id, "2"));
@@ -123,7 +134,8 @@ GalleryCore.prototype.showImage = function(media, currentContainer, activeContai
     media = media.type ? media : {url: media, type: "image"};
 
     var selectorFirstPart = "#" + id + "-" + media.type + "-";
-    var currentContainerElement = $(selectorFirstPart + currentContainer);
+
+    var currentContainerElement = this.previousElement ? this.previousElement : $(selectorFirstPart + currentContainer);
     // Fade out the current container
     currentContainerElement.fadeOut(1, function () {
 
