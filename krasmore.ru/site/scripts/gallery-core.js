@@ -115,30 +115,32 @@ GalleryCore.prototype.next = function(id, isFirstExecution) {
     }
 
     // Check which container we need to use
-    var currentContainer = galleryObj.activeContainer;
-    galleryObj.activeContainer = galleryObj.activeContainer == 1 ? 2 : 1;
-
     var i = galleryObj.position - 1;
+    var media = galleryObj.collection[i];
+    media = media.type ? media : {url: media, type: "image"};
+
+    var currentContainer = galleryObj.activeContainer;
+    var currentContainerType = isFirstExecution ? media.type : galleryObj.activeContainerType;
+    galleryObj.activeContainer = galleryObj.activeContainer == 1 ? 2 : 1;
+    galleryObj.activeContainerType = media.type;
+
 
     $("#"+ id + " > div." + this.pointerBlockCssClass + " > #gallery-pointer-id-" + i)
         .append("<div class='" + this.pointerCssClass + "-1'></div>");
 
-    this.showImage(galleryObj.collection[i], currentContainer, galleryObj.activeContainer, id);
+    this.showImage(media, currentContainer, currentContainerType, galleryObj.activeContainer, id);
 }
 
-GalleryCore.prototype.showImage = function(media, currentContainer, activeContainer, id) {
+GalleryCore.prototype.showImage = function(media, currentContainer, currentContainerType, activeContainer, id) {
     // Make sure the new container is always on the background
     var galleryObj = this.gallery[id];
     galleryObj.currentZindex--;
 
-    media = media.type ? media : {url: media, type: "image"};
-
-    var selectorFirstPart = "#" + id + "-" + media.type + "-";
-
-    var currentContainerElement = this.previousElement ? this.previousElement : $(selectorFirstPart + currentContainer);
+    var currentContainerElement = $("#" + id + "-" + currentContainerType + "-" + currentContainer);
     // Fade out the current container
     currentContainerElement.fadeOut(1, function () {
 
+        var selectorFirstPart = "#" + id + "-" + galleryObj.activeContainerType + "-";
         var activeContainerElement = $(selectorFirstPart + activeContainer);
         if(media.type === "image") {
             // Set the background image of the new active container
@@ -158,7 +160,6 @@ GalleryCore.prototype.showImage = function(media, currentContainer, activeContai
             });
             $(selectorFirstPart + activeContainer + "-f-p").attr("value", "config={'playlist':[{'url': '" + url + "','autoPlay': true}]}'");
         }
-
     }.bind(this));
 }
 
