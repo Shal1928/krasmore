@@ -6,7 +6,6 @@ function GalleryCore(gallery, isReInit) {
     this.imageCssClass = gallery.imageCssClass;
     this.pathToGallery = gallery.pathToGallery ? gallery.pathToGallery : "";
     this.videoElements = [];
-    this.previousElement = null;
 
     var prepareContainers = function (id) {
         //Добавляем контейнеры для изображений
@@ -50,6 +49,8 @@ function GalleryCore(gallery, isReInit) {
         $("#" + idVideoF).append("<param id='" + idVideoF + "-p' name='flashVars' value='' />");
     }
 
+    var galleryElement = $("div." + this.galleryCssClass);
+
     for (var id in this.gallery) {
         var p = this.gallery[id].collection;
         if(!p) {
@@ -60,15 +61,25 @@ function GalleryCore(gallery, isReInit) {
 
         if(isReInit) {
             pointers.empty();
-            $("#"+ id +"-image-1").off();
-            $("#"+ id +"-image-2").off();
+            $("#"+ id +"-image-1").css({
+                "background-image": null,
+            });
+            $("#"+ id +"-image-2").css({
+                "background-image": null,
+            });
+
+            $("#"+ id +"-video-1").attr("src", null);
+            $("#"+ id +"-video-1-f-p").attr("value", null);
+            $("#"+ id +"-video-2").attr("src", null);
+            $("#"+ id +"-video-2-f-p").attr("value", null);
+
+            galleryElement.off('click');
+
             $("#"+ id +"-image-1").remove();
             $("#"+ id +"-image-2").remove();
-            $("#"+ id +"-video-1").off();
-            $("#"+ id +"-video-2").off();
             $("#"+ id +"-video-1").remove();
             $("#"+ id +"-video-2").remove();
-        }
+    }
 
         for(var j=0; j < p.length; j++) {
             pointers.append("<div id='gallery-pointer-id-"+ j +"' class='" + this.pointerCssClass + "-0'></div>");
@@ -78,7 +89,7 @@ function GalleryCore(gallery, isReInit) {
         this.next(id, true);
     }
 
-    $("div." + this.galleryCssClass).on('click', function(e) {
+    galleryElement.on('click', function(e) {
         var id = e.target.id;
         var i = id.lastIndexOf("-") - 6;
         this.next(id.substring(0, i), false);
@@ -140,6 +151,20 @@ GalleryCore.prototype.showImage = function(media, currentContainer, currentConta
     // Fade out the current container
     currentContainerElement.fadeOut(1, function () {
 
+        if(currentContainerType === "video") {
+            currentContainerElement[0].pause();
+        }
+
+        $("#" + id + "-" + currentContainerType + "-" + 1).css({
+            "display": "none"
+        });
+        $("#" + id + "-" + currentContainerType + "-" + 2).css({
+            "display": "none"
+        });
+        $("#" + id + "-" + media.type + "-" + currentContainer).css({
+            "display": "none"
+        });
+
         var selectorFirstPart = "#" + id + "-" + galleryObj.activeContainerType + "-";
         var activeContainerElement = $(selectorFirstPart + activeContainer);
         if(media.type === "image") {
@@ -150,7 +175,6 @@ GalleryCore.prototype.showImage = function(media, currentContainer, currentConta
                 "z-index": galleryObj.currentZindex
             });
         } else {
-            currentContainerElement[0].pause();
 
             var url = this.pathToGallery + media.url;
             activeContainerElement.attr("src", url);
