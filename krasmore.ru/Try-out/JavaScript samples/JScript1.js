@@ -1,4 +1,4 @@
-﻿//    var imagePreview = $("<img src='Images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
+﻿//    var imagePreview = $("<img src='images/lookMe.png' alt='' class='ttPreview' />").appendTo(".toolTipPlace");
 //    imagePreview.css({ opacity: 0 });
 
 
@@ -27,7 +27,7 @@
 
 
 //                if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
-//                    $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
+//                    $("<img src='images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
 ////                    var divElement = $("<img width='1px' height='50px' id='ShowTrigger'></img>").appendTo(this);
 ////                    $(divElement).hide();
 //                }
@@ -79,7 +79,7 @@
 
 
 //                  if ((y == toolTipPlacesCollection[key]['y']) && (!imagePreviewCollection.length)) {
-//                      $("<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
+//                      $("<img src='images/lookMe.png' alt='' class='ttPreview' id='" + idConst + x + "_" + y + "' />").appendTo(this);
 //                  }
 //              });
 //          }

@@ -8,7 +8,7 @@ var panorama;
 //    controlDiv.title = 'Увеличить карту';
 //
 //    var controlUI = document.createElement('img');
-//    controlUI.setAttribute('src', 'Images/ToBigAdvanced.png');
+//    controlUI.setAttribute('src', 'images/ToBigAdvanced.png');
 //    controlUI.setAttribute('width', 22);
 //    controlUI.setAttribute('height', 22);
 //    controlUI.setAttribute('alt', 'Увеличить карту');

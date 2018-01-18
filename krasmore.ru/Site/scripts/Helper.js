@@ -35,7 +35,7 @@ var tooltip = function () {
                 document.onmousemove = this.pos;
             }
 
-            image.setAttribute('src', 'Images/' + imgSrc);
+            image.setAttribute('src', 'images/' + imgSrc);
             image.setAttribute('width', imgWidth);
 
             tt.style.display = 'block';
@@ -128,7 +128,7 @@ function FillToolTipPlaceCollection()
             var toolTipPlaceX = toolTipPlacesCollection[key]["x"];
             var toolTipPlaceY = toolTipPlacesCollection[key]["y"];
             var imagePreviewId = idConst + toolTipPlaceX + "_" + toolTipPlaceY;
-            var ttPreviewImage = "<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
+            var ttPreviewImage = "<img src='images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
             var toolTipPlaceTargetId = ttPlaceIdConst + toolTipPlaceX + "_" + toolTipPlaceY;
 
             $("span.toolTipPlace").each(function () {
@@ -161,7 +161,7 @@ function FillToolTipPlaceCollection()
 //        var toolTipPlaceX = toolTipPlacesCollection[key]["x"];
 //        var toolTipPlaceY = toolTipPlacesCollection[key]["y"];
 //        var imagePreviewId = idConst + toolTipPlaceX + "_" + toolTipPlaceY;
-//        var ttPreviewImage = "<img src='Images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
+//        var ttPreviewImage = "<img src='images/lookMe.png' alt='' class='ttPreview' id='" + imagePreviewId + "' />";
 //        var toolTipPlaceTargetId = ttPlaceIdConst + toolTipPlaceX + "_" + toolTipPlaceY;
 
 //        var previewTop = toolTipPlaceY - toleranceConst;

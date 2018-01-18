@@ -113,7 +113,7 @@
 //         stopAnimation();
 //     }, function () {
 //         // Change the background image to "pause"
-//         $(this).css({ "background-image": "url(Images/btn_pause_i.gif)" });
+//         $(this).css({ "background-image": "url(images/btn_pause_i.gif)" });
 //
 //         // Show the next image
 //         navigate("next");
@@ -168,7 +168,7 @@
 //
 //         // Set the background image of the new active container
 //         $("#headerimg" + activeContainer).css({
-//             "background-image": "url(Images/" + photoObject.image + ")",
+//             "background-image": "url(images/" + photoObject.image + ")",
 //             "display": "block",
 //             "z-index": currentZindex
 //         });
@@ -198,7 +198,7 @@
 //
 //     var stopAnimation = function () {
 //         // Change the background image to "play"
-//         $("#control").css({ "background-image": "url(Images/btn_play_i.gif)" });
+//         $("#control").css({ "background-image": "url(images/btn_play_i.gif)" });
 //
 //         // Clear the interval
 //         clearInterval(interval);
