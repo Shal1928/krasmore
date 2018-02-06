@@ -1,11 +1,4 @@
 *.cache
-krasmore.ru/krasmore.ru.v11.suo
-krasmore.ru/site/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-krasmore.ru/site/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-krasmore.ru/Try-out/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
-krasmore.ru/Try-out/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-krasmore.ru/Try-out/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-krasmore.ru/site/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
 /.idea/
-/krasmore.ru/.vs/
-/krasmore.ru/readme.md
+/readme.md
+/krasmore.iml
