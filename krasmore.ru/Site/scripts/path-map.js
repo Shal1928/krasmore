@@ -1,43 +1,4 @@
-var panorama;
-
-//var mapDiv;
-
-//function ToEnlargeControl(controlDiv, map)
-//{
-//    controlDiv.style.padding = '5px';
-//    controlDiv.title = 'Увеличить карту';
-//
-//    var controlUI = document.createElement('img');
-//    controlUI.setAttribute('src', 'images/ToBigAdvanced.png');
-//    controlUI.setAttribute('width', 22);
-//    controlUI.setAttribute('height', 22);
-//    controlUI.setAttribute('alt', 'Увеличить карту');
-//    controlUI.style.cursor = 'pointer';
-//    controlDiv.appendChild(controlUI);
-
-//    google.maps.event.addDomListener(controlUI, 'click', function () {
-//        var mapCanvas = document.getElementById("map_canvas");
-
-//        mapCanvas.style.width = 800 + 'px';
-//        //mapCanvas.setAttribute('width', 500 + 'px');
-//        //mapCanvas.setAttribute('height', 500 + 'px');
-//        alert(mapCanvas.style.width);
-//        //mapCanvas.setAttribute('zIndex', 99);
-
-//    });
-//}
-
-
-//API key
-// AIzaSyDWJtFBLkRHqk-vXMRsPr9Gto18xyYPGK0
-var map;
-
 function initializeMap() {
-
-    // http://maps.googleapis.com/maps/api/directions/json?origin=55.976095,92.808392&destination=55.923785,92.266862&key=AIzaSyDFdiszdcMZLHnib6iGIc3oADvRK4DFFtw
-
-    // var mapCenter = new google.maps.LatLng(55.938251, 92.880060);
-
     var pointA = new google.maps.LatLng(55.976095, 92.808392),
         waypoints =  [{
                 location: new google.maps.LatLng(55.923910, 92.267963),
@@ -55,19 +16,17 @@ function initializeMap() {
             streetViewControl: false
         };
 
-        this.map = new google.maps.Map(document.getElementById('map_canvas'), myOptions),
-        // Instantiate a directions service.
+    var map = new google.maps.Map(
+        document.getElementById('map_canvas'), myOptions),
         directionsService = new google.maps.DirectionsService,
         directionsDisplay = new google.maps.DirectionsRenderer({
-            map: this.map
+            map: map
         });
-
-    // get route from A to B
+    
     calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB, waypoints);
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB, waypoints) {
-    var self = this;
     directionsService.route({
         origin: pointA,
         waypoints: waypoints,

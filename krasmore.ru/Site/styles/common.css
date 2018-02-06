@@ -157,12 +157,6 @@ li
      display:block;
 }
 
-/* CONTROLS */
-.btn { height:10px; width:10px; float:left; cursor:pointer; margin: 3px; }
-#back { background-image:url("../images/btn_back_i.gif"); }
-#next { background-image:url("../images/btn_next_i.gif"); }
-#control { background-image:url("../images/btn_pause_i.gif"); }
-
 /* HEADER HAVIGATION */
 #headernav-outer 
 {
