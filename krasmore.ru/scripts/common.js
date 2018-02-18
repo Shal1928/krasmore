@@ -146,6 +146,16 @@ $(document).ready(function(){
             position: 0,
             activeContainer: 1,
             currentZindex: -1,
+        },
+
+        //fiasko
+        "fiasko": {
+            collection: [
+                "fiasco-1.jpg"
+            ],
+            position: 0,
+            activeContainer: 1,
+            currentZindex: -1,
         }
     };
 
