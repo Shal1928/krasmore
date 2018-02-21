@@ -148,10 +148,10 @@ $(document).ready(function(){
             currentZindex: -1,
         },
 
-        //fiasko
-        "fiasko": {
+        //error-404
+        "fiasco": {
             collection: [
-                "fiasco-1.jpg"
+                "fiasco-1.jpg",
             ],
             position: 0,
             activeContainer: 1,
