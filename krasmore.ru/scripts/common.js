@@ -63,7 +63,6 @@ $(document).ready(function(){
                 "water-buns-1.jpg",
                 "water-buns-2.jpg",
                 "water-buns-3.jpg",
-                "water-buns-3.jpg",
                 "water-buns-4.jpg"
             ],
             position: 0,
