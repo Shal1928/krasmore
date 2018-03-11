@@ -24,7 +24,7 @@ $(document).ready(function(){
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
 
         //additional-service
@@ -36,27 +36,27 @@ $(document).ready(function(){
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "excursions": {
             collection: [
                 "excursions-1.jpg",
                 "excursions-2.jpg",
                 "excursions-3.jpg",
-                "excursions-4.jpg",
+                "excursions-4.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "water-skies": {
             collection: [
                 "water-skies-1.jpg",
-                "water-skies-2.jpg",
+                "water-skies-2.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "water-buns": {
             collection: [
@@ -68,24 +68,32 @@ $(document).ready(function(){
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "boat": {
             collection: [
                 "boat-1.jpg",
-                "boat-2.jpg",
+                "boat-2.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "volleyball": {
             collection: [
-                "volleyball-1.jpg",
+                "volleyball-1.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
+        },
+        "cargo": {
+            collection: [
+                "cargo-1.jpg"
+            ],
+            position: 0,
+            activeContainer: 1,
+            currentZindex: -1
         },
 
         //residence
@@ -97,11 +105,11 @@ $(document).ready(function(){
                 "house-4.jpg",
                 "house-5.jpg",
                 "house-6.jpg",
-                "house-7.jpg",
+                "house-7.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "tent": {
             collection: [
@@ -115,7 +123,7 @@ $(document).ready(function(){
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "сonditions": {
             collection: [
@@ -124,7 +132,7 @@ $(document).ready(function(){
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
 
         //path
@@ -132,30 +140,29 @@ $(document).ready(function(){
             collection: [
                 "big-boat-1.jpg",
                 "big-and-small-boat-1.jpg",
-                "big-boat-3.jpg",
-                "big-boat-4.jpg"
+                "big-boat-3.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
         "small-boat": {
             collection: [
-                "small-boat-1.jpg",
+                "small-boat-1.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         },
 
         //error-404
         "fiasco": {
             collection: [
-                "fiasco-1.jpg",
+                "fiasco-1.jpg"
             ],
             position: 0,
             activeContainer: 1,
-            currentZindex: -1,
+            currentZindex: -1
         }
     };
 
