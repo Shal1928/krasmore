@@ -49,38 +49,15 @@ $(document).ready(function(){
             activeContainer: 1,
             currentZindex: -1
         },
-        "water-skies": {
+        "active-entertainment": {
             collection: [
-                "water-skies-1.jpg",
-                "water-skies-2.jpg"
-            ],
-            position: 0,
-            activeContainer: 1,
-            currentZindex: -1
-        },
-        "water-buns": {
-            collection: [
-                "water-buns-1.jpg",
-                "water-buns-2.jpg",
-                "water-buns-3.jpg",
-                "water-buns-4.jpg"
-            ],
-            position: 0,
-            activeContainer: 1,
-            currentZindex: -1
-        },
-        "boat": {
-            collection: [
-                "boat-1.jpg",
-                "boat-2.jpg"
-            ],
-            position: 0,
-            activeContainer: 1,
-            currentZindex: -1
-        },
-        "volleyball": {
-            collection: [
-                "volleyball-1.jpg"
+                "active-entertainment-1.jpg",
+                "active-entertainment-2.jpg",
+                "active-entertainment-3.jpg",
+                "active-entertainment-4.jpg",
+                "active-entertainment-5.jpg",
+                "active-entertainment-6.jpg",
+                "active-entertainment-7.jpg",
             ],
             position: 0,
             activeContainer: 1,
