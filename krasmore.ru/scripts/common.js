@@ -20,7 +20,8 @@ $(document).ready(function(){
             collection: [
                 "general-1.jpg",
                 "general-2.jpg",
-                "general-3.jpg"
+                "general-3.jpg",
+                "general-4.jpg"
             ],
             position: 0,
             activeContainer: 1,
