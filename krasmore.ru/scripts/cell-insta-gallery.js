@@ -104,9 +104,10 @@ function fillRecordsAndFillGallery(datas, containers) {
         }
         
         var r = datas[d];
+        var text = r.caption ? r.caption.text : "";
         var record = {
             thumbnail: r.images.low_resolution.url,
-            caption: r.caption.text,
+            caption: text,
             media: getMedia(r)
         };
 

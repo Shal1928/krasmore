@@ -1,0 +1,2 @@
+DirectoryIndex index.php index.html index.html.var index.shtml index.cfm index.htm
+ErrorDocument 404 /error404.html
