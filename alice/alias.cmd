@@ -1,0 +1,1 @@
+now alias https://src-xckgjiqbtn.now.sh/ krasmore.now.sh
