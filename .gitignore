@@ -2,3 +2,9 @@
 /.idea/
 /readme.md
 /krasmore.iml
+*.iml
+alice/.idea/workspace.xml
+alice/.idea/vcs.xml
+alice/.idea/modules.xml
+alice/.idea/misc.xml
+alice/.idea/inspectionProfiles/Project_Default.xml

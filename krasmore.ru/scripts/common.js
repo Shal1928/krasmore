@@ -104,8 +104,7 @@ $(document).ready(function(){
         },
         "сonditions": {
             collection: [
-                "сonditions-1.jpg",
-                "сonditions-2.jpg",
+                "сonditions-1.jpg"
             ],
             position: 0,
             activeContainer: 1,
